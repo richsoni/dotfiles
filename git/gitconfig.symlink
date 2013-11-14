@@ -2,11 +2,10 @@
 [alias]
   type = "!git config -l | grep alias | cut -c 7-"
 
-
   c = commit
   scc = "!SKIP_CHECKS=all git commit"
-  aua= add -u .
-  aa= add .
+  au= add -u .
+  a=add
   ab= add !$
   pr = pull --rebase
   poh = push origin HEAD
@@ -29,7 +28,7 @@
 
   br = branch
   sb = show branch
-  sprint = "!git fetch; git branch --list -a | grep '^\\s*remotes' | grep 'sprint' | cut -d / -f 4 | sort | tail -1 | xargs -I{} git branch --list -a *{} | grep '\\s*remotes' | cut -d / -f 3,4"
+  sprint = "!git fetch; git branch --list -a | grep '^\\s*remotes' | grep 'sprint' | cut -d / -f 3 | sort | tail -1 | xargs -I{} git branch --list -a *{} | grep '\\s*remotes' | cut -d / -f 3,4"
   done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; f"
   ch = checkout
   cl = checkout @{-1}
@@ -79,7 +78,7 @@
   name = Rich Soni
   email = rich@richsoni.com
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+  path =
 [url "git@github.com:"]
     pushInsteadOf = git://github.com/
     pushInsteadOf = https://github.com/

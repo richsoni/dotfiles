@@ -18,8 +18,11 @@
 #Join the dots
   alias cdf='cd ~/dotfiles/'
 #Personal Stuff
+  alias rgraph='cd Meta/stats/R'
+  alias biodocs='cd ~/Documents/Notes/Biostat'
   alias docs='cd ~/Documents'  
   alias code='cd ~/Code'
+  alias rsource='cd ~/Code/libs/rails'
   alias todo='vi ~/Dropbox/Todotxt/todo.txt'
   alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
   alias remote_canary='canary --remote-debugging-port=9222'
@@ -36,6 +39,7 @@
   alias tmux_rails='~/dotfiles/tmux_sessions/railsmux'
   alias r='rails'
   alias rrg='rake routes | grep'
+  alias becsdc='bundle exec cap staging deploy:current'
 #vlc
   alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -cvlc'
   alias vlci='/Applications/VLC.app/Contents/MacOS/VLC -I rc'

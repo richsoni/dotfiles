@@ -1,4 +1,6 @@
 set completion-ignore-case on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
 # for vi mode
 set editing-mode vi
 $if mode=vi
@@ -20,4 +22,7 @@ $if mode=vi
   Control-n: next-history
   Control-p: previous-history
   Control-l: clear-screen
+  Control-r: menu-complete
+  Control-s: menu-complete-backward
 $endif
+

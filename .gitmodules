@@ -97,3 +97,9 @@
 [submodule "vim/vim.symlink/bundle/tagbar"]
 	path = vim/vim.symlink/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim/vim.symlink/bundle/vim-dispatch"]
+	path = vim/vim.symlink/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "vim/vim.symlink/bundle/vim-ragtag"]
+	path = vim/vim.symlink/bundle/vim-ragtag
+	url = https://github.com/tpope/vim-ragtag.git

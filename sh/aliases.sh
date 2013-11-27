@@ -29,6 +29,7 @@
 #Ticket Evo Stuff
   alias temux='~/dotfiles/tmux_sessions/temux'
   alias retemux='tmux kill-session -t temux;sudo ls; ds restart;temux'
+  alias tev='cd ~/workspace/ticketevo.vim'
   alias tegem='cd ~/workspace/ticketevolution-ruby'
   alias teex='cd ~/workspace/pos-chrome-extension/Robotester/tests/'
   alias tedocs='cd ~/Documents/TicketEvolution'

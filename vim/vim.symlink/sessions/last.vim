@@ -21,12 +21,6 @@ nnoremap QK k:q!
 nnoremap QL l:q!
 nnoremap QH h:q!
 xmap S <Plug>VSurround
-onoremap <silent> [< :call NextIndent(1, 0, 1, 1)
-onoremap <silent> [, :call NextIndent(0, 0, 0, 1)
-vnoremap <silent> [< :call NextIndent(0, 0, 1, 1)m'gv''
-vnoremap <silent> [, :call NextIndent(0, 0, 0, 1)m'gv''
-nnoremap <silent> [< :call NextIndent(0, 0, 1, 1)
-nnoremap <silent> [, :call NextIndent(0, 0, 0, 1)
 nmap [xx <Plug>unimpaired_line_xml_encode
 xmap [x <Plug>unimpaired_xml_encode
 nmap [x <Plug>unimpaired_xml_encode
@@ -67,8 +61,31 @@ nmap <silent> [b <Plug>unimpairedBPrevious
 nmap <silent> [A <Plug>unimpairedAFirst
 nmap <silent> [a <Plug>unimpairedAPrevious
 vmap [% [%m'gv``
+onoremap <silent> [< :call NextIndent(1, 0, 1, 1)
+onoremap <silent> [, :call NextIndent(0, 0, 0, 1)
+vnoremap <silent> [< :call NextIndent(0, 0, 1, 1)m'gv''
+vnoremap <silent> [, :call NextIndent(0, 0, 0, 1)m'gv''
+nnoremap <silent> [< :call NextIndent(0, 0, 1, 1)
+nnoremap <silent> [, :call NextIndent(0, 0, 0, 1)
+map \<F2> :call HexHighlight()
+nmap <silent> \s :set spell!
 nnoremap <silent> \md :call MarkdownPreview()
+nnoremap <silent> \cp :! coffee --compile %:p
+nnoremap <silent> \cr :CoffeeRun
+nnoremap <silent> \cc :CoffeeCompile vert
+nnoremap \rc :let VimuxUseNearestPane = 1
+nnoremap \rx :VimuxCloseRunner
+nnoremap \rl :VimuxRunLastCommand
+vnoremap \rr y:call VimuxRunCommand('"')
+nnoremap \rr Vy:call VimuxRunCommand('"')
+nnoremap \RR :VimuxPromptCommand
+noremap <silent> \r :
 nnoremap \z :ZoomWin
+vnoremap <silent> \A y:AgFile "
+vnoremap <silent> \a y:Ag! "
+nnoremap \A :AgFromSearch -QS
+nnoremap \a :Ag! -QS 
+vnoremap \= :Tabularize /
 nnoremap \f :find 
 nnoremap \b :call CloseUnloadedBuffers()
 nnoremap \eal :vsp ~/dotfiles/sh/aliases.sh
@@ -80,35 +97,12 @@ nnoremap \em :vsp ~/Code/Projects/vim/vim-emacs-and-cheese/plugin/emacs-and-chee
 nnoremap \ek :vsp ~/.vim/init/keybindings.vim
 nnoremap \erc :vsp ~/.vimrc
 nnoremap \rs :call ReloadAllSnippets()
-map \<F2> :call HexHighlight()
-nmap <silent> \s :set spell!
-nnoremap <silent> \cp :! coffee --compile %:p
-nnoremap <silent> \cr :CoffeeRun
-nnoremap <silent> \cc :CoffeeCompile vert
-nnoremap \rc :let VimuxUseNearestPane = 1
-nnoremap \rx :VimuxCloseRunner
-nnoremap \rl :VimuxRunLastCommand
-vnoremap \rr y:call VimuxRunCommand('"')
-nnoremap \rr Vy:call VimuxRunCommand('"')
-nnoremap \RR :VimuxPromptCommand
-noremap <silent> \r :
-vnoremap <silent> \A y:AgFile "
-vnoremap <silent> \a y:Ag! "
-nnoremap \A :AgFromSearch -QS
-nnoremap \a :Ag! -QS 
-vnoremap \= :Tabularize /
 nnoremap \rv :source $MYVIMRC
 nnoremap \rb :w! ~/scrap.rb:r !ruby %
 noremap \OO :source ~/.vim/sessions/
 noremap \oo :source ~/.vim/sessions/last.vim
 noremap \SS :mksession! ~/.vim/sessions/
 noremap \ss :mksession! ~/.vim/sessions/last.vim
-onoremap <silent> ]< :call NextIndent(1, 1, 1, 1)
-onoremap <silent> ], :call NextIndent(0, 1, 0, 1)
-vnoremap <silent> ]< :call NextIndent(0, 1, 1, 1)m'gv''
-vnoremap <silent> ], :call NextIndent(0, 1, 0, 1)m'gv''
-nnoremap <silent> ]< :call NextIndent(0, 1, 1, 1)
-nnoremap <silent> ], :call NextIndent(0, 1, 0, 1)
 nmap ]xx <Plug>unimpaired_line_xml_decode
 xmap ]x <Plug>unimpaired_xml_decode
 nmap ]x <Plug>unimpaired_xml_decode
@@ -149,6 +143,12 @@ nmap <silent> ]b <Plug>unimpairedBNext
 nmap <silent> ]A <Plug>unimpairedALast
 nmap <silent> ]a <Plug>unimpairedANext
 vmap ]% ]%m'gv``
+onoremap <silent> ]< :call NextIndent(1, 1, 1, 1)
+onoremap <silent> ], :call NextIndent(0, 1, 0, 1)
+vnoremap <silent> ]< :call NextIndent(0, 1, 1, 1)m'gv''
+vnoremap <silent> ], :call NextIndent(0, 1, 0, 1)m'gv''
+nnoremap <silent> ]< :call NextIndent(0, 1, 1, 1)
+nnoremap <silent> ], :call NextIndent(0, 1, 0, 1)
 vmap a% [%v]%
 nnoremap cox :set =&cursorline && &cursorcolumn ? 'nocursorline nocursorcolumn' : 'cursorline cursorcolumn'
 nnoremap cod :=&diff ? 'diffoff' : 'diffthis'
@@ -205,9 +205,6 @@ imap s <Plug>Isurround
 imap  <Plug>DiscretionaryEnd
 imap  <Plug>Isurround
 imap  <Plug>AlwaysEnd
-cabbr W w
-iabbr bpp binding.pry
-iabbr ddb debugger
 iabbr tehn then
 iabbr teh the
 let &cpo=s:cpo_save
@@ -215,9 +212,7 @@ unlet s:cpo_save
 set autoread
 set background=dark
 set backspace=2
-set balloonexpr=SyntasticBalloonsExprNotifier()
 set cmdheight=2
-set errorformat=Error:\ In\ %f\\,\ %m\ on\ line\ %l,Error:\ In\ %f\\,\ Parse\ error\ on\ line\ %l:\ %m,SyntaxError:\ In\ %f\\,\ %m,%-G%.%#
 set expandtab
 set fileencodings=ucs-bom,utf-8,default,latin1
 set guifont=Inconsolata:h20
@@ -227,7 +222,7 @@ set history=200
 set hlsearch
 set ignorecase
 set incsearch
-set indentkeys=o,O,<Return>,<>>,{,},!^F
+set indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
 set isident=@,48-57,_,192-255,$
 set iskeyword=@,48-57,_,192-255,$
 set langmenu=none
@@ -250,324 +245,45 @@ set ttimeout
 set visualbell
 set wildcharm=26
 set wildmode=list:full
-set window=30
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd /Users/dev/workspace/pos.rb
+cd /Users/dev/Code/Projects/Sites/Personal/Richsoni/data/projects
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +18 app/assets/javascripts/backbone/views/ticket_groups/complete_purchase_form_view.js
-badd +0 app/assets/javascripts/backbone/views/buy/complete_view.js
-badd +1 spec.bak/javascripts/backbone/views/po/complete_spec.js
-badd +6 app/assets/javascripts/backbone/views/po/complete_view.js
-badd +0 app/assets/templates/ticket_groups/payment_dropdown.jst.ejs
-badd +1 app/assets/javascripts/lib/helpers/access.js.coffee
-badd +0 app/views/layouts/application.html.haml
+badd +1 /Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/models/project.rb
+badd +31 /Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/db/schema.rb
+badd +1 /Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/controllers/welcome_controller.rb
+badd +0 /Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/views/welcome/_project.html.erb
+badd +0 coding/bash/impromp2.md
 silent! argdel *
-edit app/assets/javascripts/backbone/views/ticket_groups/complete_purchase_form_view.js
+edit /Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/models/project.rb
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 21 + 15) / 31)
-exe 'vert 1resize ' . ((&columns * 47 + 55) / 110)
-exe '2resize ' . ((&lines * 21 + 15) / 31)
-exe 'vert 2resize ' . ((&columns * 47 + 55) / 110)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
+nnoremap <buffer> <silent> g} :exe        "ptjump =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> } :exe          "ptag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g] :exe      "stselect =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g :exe        "stjump =RubyCursorIdentifier()"
+nnoremap <buffer> <silent>  :exe v:count1."stag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> ] :exe v:count1."stag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent>  :exe  v:count1."tag =RubyCursorIdentifier()"
 nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> g] :exe       "tselect =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g :exe         "tjump =RubyCursorIdentifier()"
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
-setlocal balloonexpr=
-setlocal nobinary
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal cindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=j1,J1
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
-setlocal commentstring=//%s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-set cursorline
-setlocal cursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'javascript'
-setlocal filetype=javascript
-endif
-setlocal foldcolumn=0
-set nofoldenable
-setlocal nofoldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-set foldmethod=indent
-setlocal foldmethod=indent
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
-setlocal include=
-setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-set list
-setlocal list
-setlocal nomacmeta
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=javascriptcomplete#CompleteJS
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-set relativenumber
-setlocal relativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=.rb
-setlocal noswapfile
-setlocal synmaxcol=3000
-if &syntax != 'javascript'
-setlocal syntax=javascript
-endif
-setlocal tabstop=2
-setlocal tags=/Users/dev/workspace/pos.rb/tmp/tags,/Users/dev/workspace/pos.rb/.git/tags,./tags,tags,/Users/dev/workspace/pos.rb/tags
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal nowinfixheight
-setlocal nowinfixwidth
-set nowrap
-setlocal nowrap
-setlocal wrapmargin=0
-let s:l = 121 - ((10 * winheight(0) + 10) / 21)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-121
-normal! 02|
-wincmd w
-argglobal
-edit app/assets/templates/ticket_groups/payment_dropdown.jst.ejs
-let s:cpo_save=&cpo
-set cpo&vim
-imap <buffer> <SNR>52_ragtagOclose  ><Left><Left>
-inoremap <buffer> <SNR>52_ragtagOopen <%= 
-inoremap <buffer> <SNR>52_xhtmltrans <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-inoremap <buffer> <SNR>52_html5 <!DOCTYPE html>
-nmap <buffer> gf <Plug>RailsTabFind
-nmap <buffer> f <Plug>RailsSplitFind
-nmap <buffer> gf <Plug>RailsFind
-imap <buffer> & <Plug>ragtagXmlV
-imap <buffer> % <Plug>ragtagUrlV
-imap <buffer> & <Plug>ragtagXmlEncode
-imap <buffer> % <Plug>ragtagUrlEncode
-inoremap <buffer> " <NL>I<!-- A -->F<NL>s
-inoremap <buffer> ' <!--  -->3hi
-imap <buffer> _ <NL>I< A >F<NL>s
-imap <buffer> - <  >2hi
-inoremap <buffer> > %>
-inoremap <buffer> < <%
-imap <buffer>  /
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal noautoindent
-setlocal balloonexpr=
-setlocal nobinary
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s:<!--,m:\ \ \ \ ,e:-->
-setlocal commentstring=<!--%s-->
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-set cursorline
-setlocal cursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'html'
-setlocal filetype=html
-endif
-setlocal foldcolumn=0
-set nofoldenable
-setlocal nofoldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-set foldmethod=indent
-setlocal foldmethod=indent
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
-setlocal include=
-setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=HtmlIndent()
-setlocal indentkeys=o,O,<Return>,<>>,{,},!^F
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,$
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-set list
-setlocal list
-setlocal nomacmeta
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:],<:>
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=htmlcomplete#CompleteTags
-setlocal path=.,/Users/dev/workspace/pos.rb,/Users/dev/workspace/pos.rb/app,/Users/dev/workspace/pos.rb/app/models,/Users/dev/workspace/pos.rb/app/controllers,/Users/dev/workspace/pos.rb/app/helpers,/Users/dev/workspace/pos.rb/config,/Users/dev/workspace/pos.rb/lib,/Users/dev/workspace/pos.rb/app/views,/Users/dev/workspace/pos.rb/spec,/Users/dev/workspace/pos.rb/spec/models,/Users/dev/workspace/pos.rb/spec/controllers,/Users/dev/workspace/pos.rb/spec/helpers,/Users/dev/workspace/pos.rb/spec/views,/Users/dev/workspace/pos.rb/spec/lib,/Users/dev/workspace/pos.rb/spec/requests,/Users/dev/workspace/pos.rb/spec/integration,/Users/dev/workspace/pos.rb/app/*,/Users/dev/workspace/pos.rb/vendor,/Users/dev/workspace/pos.rb/vendor/plugins/*/lib,/Users/dev/workspace/pos.rb/vendor/plugins/*/test,/Users/dev/workspace/pos.rb/vendor/rails/*/lib,/Users/dev/workspace/pos.rb/vendor/rails/*/test,/usr/include,,,**
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-set relativenumber
-setlocal relativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=.rb
-setlocal noswapfile
-setlocal synmaxcol=3000
-if &syntax != 'html'
-setlocal syntax=html
-endif
-setlocal tabstop=2
-setlocal tags=/Users/dev/workspace/pos.rb/tmp/tags,/Users/dev/workspace/pos.rb/.git/tags,./tags,tags,/Users/dev/workspace/pos.rb/tags
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal nowinfixheight
-setlocal nowinfixwidth
-set nowrap
-setlocal nowrap
-setlocal wrapmargin=0
-let s:l = 6 - ((5 * winheight(0) + 10) / 21)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-6
-normal! 05|
-wincmd w
-exe '1resize ' . ((&lines * 21 + 15) / 31)
-exe 'vert 1resize ' . ((&columns * 47 + 55) / 110)
-exe '2resize ' . ((&lines * 21 + 15) / 31)
-exe 'vert 2resize ' . ((&columns * 47 + 55) / 110)
-tabedit app/assets/javascripts/lib/helpers/access.js.coffee
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-wincmd t
-set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 54 + 55) / 110)
-exe 'vert 2resize ' . ((&columns * 55 + 55) / 110)
-argglobal
-let s:cpo_save=&cpo
-set cpo&vim
-nmap <buffer> gf <Plug>RailsTabFind
-nmap <buffer> f <Plug>RailsSplitFind
-nmap <buffer> gf <Plug>RailsFind
-iabbr <buffer> this @ 
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal balloonexpr=
+setlocal balloonexpr=RubyBalloonexpr()
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -589,148 +305,14 @@ setlocal nocursorbind
 setlocal nocursorcolumn
 set cursorline
 setlocal cursorline
-setlocal define=
+setlocal define=^\\s*def\\s\\+\\(self\\.\\)\\=
 setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'coffee'
-setlocal filetype=coffee
-endif
-setlocal foldcolumn=0
-set nofoldenable
-setlocal nofoldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-set foldmethod=indent
-setlocal foldmethod=indent
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=croql
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
-setlocal include=
-setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=GetCoffeeIndent(v:lnum)
-setlocal indentkeys=o,O,<Return>,<>>,{,},!^F,0],0),0.,=else,=when,=catch,=finally
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,$
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-set list
-setlocal list
-setlocal nomacmeta
-setlocal makeprg=coffee\ -c\ \ $*\ app/assets/javascripts/lib/helpers/access.js.coffee
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=javascriptcomplete#CompleteJS
-setlocal path=.,/Users/dev/workspace/pos.rb,/Users/dev/workspace/pos.rb/app,/Users/dev/workspace/pos.rb/app/models,/Users/dev/workspace/pos.rb/app/controllers,/Users/dev/workspace/pos.rb/app/helpers,/Users/dev/workspace/pos.rb/config,/Users/dev/workspace/pos.rb/lib,/Users/dev/workspace/pos.rb/app/views,/Users/dev/workspace/pos.rb/app/views/lib/helpers/access,/Users/dev/workspace/pos.rb/public,/Users/dev/workspace/pos.rb/spec,/Users/dev/workspace/pos.rb/spec/models,/Users/dev/workspace/pos.rb/spec/controllers,/Users/dev/workspace/pos.rb/spec/helpers,/Users/dev/workspace/pos.rb/spec/views,/Users/dev/workspace/pos.rb/spec/lib,/Users/dev/workspace/pos.rb/spec/requests,/Users/dev/workspace/pos.rb/spec/integration,/Users/dev/workspace/pos.rb/app/*,/Users/dev/workspace/pos.rb/vendor,/Users/dev/workspace/pos.rb/vendor/plugins/*/lib,/Users/dev/workspace/pos.rb/vendor/plugins/*/test,/Users/dev/workspace/pos.rb/vendor/rails/*/lib,/Users/dev/workspace/pos.rb/vendor/rails/*/test,/usr/include,,,**
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-set relativenumber
-setlocal relativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal nosmartindent
-setlocal softtabstop=2
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=.rb
-setlocal noswapfile
-setlocal synmaxcol=3000
-if &syntax != 'coffee'
-setlocal syntax=coffee
-endif
-setlocal tabstop=2
-setlocal tags=/Users/dev/workspace/pos.rb/tmp/tags,/Users/dev/workspace/pos.rb/.git/tags,./tags,tags,/Users/dev/workspace/pos.rb/tags
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal nowinfixheight
-setlocal nowinfixwidth
-set nowrap
-setlocal nowrap
-setlocal wrapmargin=0
-let s:l = 165 - ((13 * winheight(0) + 13) / 27)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-165
-normal! 04|
-lcd /Users/dev/workspace/pos.rb
-wincmd w
-argglobal
-edit /Users/dev/workspace/pos.rb/app/views/layouts/application.html.haml
-nnoremap <buffer> <silent> g} :exe        "ptjump =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> } :exe          "ptag =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> g] :exe      "stselect =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> g :exe        "stjump =RubyCursorIdentifier()"
-nnoremap <buffer> <silent>  :exe v:count1."stag =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> ] :exe v:count1."stag =RubyCursorIdentifier()"
-let s:cpo_save=&cpo
-set cpo&vim
-nmap <buffer> gf <Plug>RailsTabFind
-nmap <buffer> f <Plug>RailsSplitFind
-nnoremap <buffer> <silent>  :exe  v:count1."tag =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> g] :exe       "tselect =RubyCursorIdentifier()"
-nnoremap <buffer> <silent> g :exe         "tjump =RubyCursorIdentifier()"
-nmap <buffer> gf <Plug>RailsFind
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal balloonexpr=RubyBalloonexpr()
-setlocal nobinary
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=
-setlocal commentstring=-#\ %s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=syntaxcomplete#Complete
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-set cursorline
-setlocal cursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'haml'
-setlocal filetype=haml
+if &filetype != 'ruby'
+setlocal filetype=ruby
 endif
 setlocal foldcolumn=0
 set nofoldenable
@@ -752,10 +334,10 @@ setlocal iminsert=2
 setlocal imsearch=2
 setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
 setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=GetHamlIndent()
-setlocal indentkeys=o,O,*<Return>,},],0),!^F,=end,=else,=elsif,=rescue,=ensure,=when
+setlocal indentexpr=GetRubyIndent(v:lnum)
+setlocal indentkeys=0{,0},0),0],!^F,o,O,e,=end,=else,=elsif,=when,=ensure,=rescue,==begin,==end
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,$
+setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=ri
 setlocal nolinebreak
 setlocal nolisp
@@ -771,7 +353,7 @@ set number
 setlocal number
 setlocal numberwidth=4
 setlocal omnifunc=rubycomplete#Complete
-setlocal path=/Users/dev/workspace/pos.rb,/Users/dev/workspace/pos.rb/app,/Users/dev/workspace/pos.rb/app/models,/Users/dev/workspace/pos.rb/app/controllers,/Users/dev/workspace/pos.rb/app/helpers,/Users/dev/workspace/pos.rb/config,/Users/dev/workspace/pos.rb/lib,/Users/dev/workspace/pos.rb/app/views,/Users/dev/workspace/pos.rb/app/views/application,/Users/dev/workspace/pos.rb/public,/Users/dev/workspace/pos.rb/spec,/Users/dev/workspace/pos.rb/spec/models,/Users/dev/workspace/pos.rb/spec/controllers,/Users/dev/workspace/pos.rb/spec/helpers,/Users/dev/workspace/pos.rb/spec/views,/Users/dev/workspace/pos.rb/spec/lib,/Users/dev/workspace/pos.rb/spec/requests,/Users/dev/workspace/pos.rb/spec/integration,/Users/dev/workspace/pos.rb/app/*,/Users/dev/workspace/pos.rb/vendor,/Users/dev/workspace/pos.rb/vendor/plugins/*/lib,/Users/dev/workspace/pos.rb/vendor/plugins/*/test,/Users/dev/workspace/pos.rb/vendor/rails/*/lib,/Users/dev/workspace/pos.rb/vendor/rails/*/test,Warning!\\\ PATH\\\ is\\\ not\\\ properly\\\ set\\\ up,\\\ '/Users/rich/.rvm/ge
+setlocal path=/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/models,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/controllers,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/helpers,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/config,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/lib,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/views,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/test,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/test/unit,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/test/functional,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/test/integration,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/*,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/vendor,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/vendor/plugins/*/lib,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/vendor/plugin
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -793,11 +375,11 @@ setlocal statusline=
 setlocal suffixesadd=.rb
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'haml'
-setlocal syntax=haml
+if &syntax != 'ruby'
+setlocal syntax=ruby
 endif
 setlocal tabstop=2
-setlocal tags=/Users/dev/workspace/pos.rb/tmp/tags,/Users/dev/workspace/pos.rb/.git/tags,./tags,tags,/Users/dev/workspace/pos.rb/tags
+setlocal tags=/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/tmp/tags,./tags,tags,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/tags
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
@@ -806,22 +388,283 @@ setlocal nowinfixwidth
 set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 40 - ((13 * winheight(0) + 13) / 27)
+let s:l = 1 - ((0 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-40
-let s:c = 61 - ((34 * winwidth(0) + 27) / 55)
-if s:c > 0
-  exe 'normal! ' . s:c . '|zs' . 61 . '|'
-else
-  normal! 061|
+1
+normal! 0
+tabedit /Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/views/welcome/_project.html.erb
+set splitbelow splitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+imap <buffer> <SNR>52_ragtagOclose  ><Left><Left>
+inoremap <buffer> <SNR>52_ragtagOopen <%= 
+inoremap <buffer> <SNR>52_xhtmltrans <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+inoremap <buffer> <SNR>52_html5 <!DOCTYPE html>
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
+nnoremap <buffer> <silent> g} :exe        "ptjump =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> } :exe          "ptag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g] :exe      "stselect =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g :exe        "stjump =RubyCursorIdentifier()"
+nnoremap <buffer> <silent>  :exe v:count1."stag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> ] :exe v:count1."stag =RubyCursorIdentifier()"
+nnoremap <buffer> <silent>  :exe  v:count1."tag =RubyCursorIdentifier()"
+nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> g] :exe       "tselect =RubyCursorIdentifier()"
+nnoremap <buffer> <silent> g :exe         "tjump =RubyCursorIdentifier()"
+imap <buffer> & <Plug>ragtagXmlV
+imap <buffer> % <Plug>ragtagUrlV
+imap <buffer> & <Plug>ragtagXmlEncode
+imap <buffer> % <Plug>ragtagUrlEncode
+imap <buffer> " <NL>I<# A >F<NL>s
+imap <buffer> ' <#  >2hi
+inoremap <buffer> _ <NL>I<% A %>F<NL>s
+inoremap <buffer> - <%  %>2hi
+imap <buffer> ] <>O
+inoremap <buffer> > %>
+inoremap <buffer> < <%
+imap <buffer>  /
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal balloonexpr=RubyBalloonexpr()
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=:#
+setlocal commentstring=<%#%s%>
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=syntaxcomplete#Complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+set cursorline
+setlocal cursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'eruby'
+setlocal filetype=eruby
 endif
-lcd /Users/dev/workspace/pos.rb
-wincmd w
-exe 'vert 1resize ' . ((&columns * 54 + 55) / 110)
-exe 'vert 2resize ' . ((&columns * 55 + 55) / 110)
-tabnext 2
+setlocal foldcolumn=0
+set nofoldenable
+setlocal nofoldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+set foldmethod=indent
+setlocal foldmethod=indent
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=ql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
+setlocal includeexpr=RailsIncludeexpr()
+setlocal indentexpr=GetErubyIndent()
+setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,$
+setlocal keywordprg=ri
+setlocal nolinebreak
+setlocal nolisp
+set list
+setlocal list
+setlocal nomacmeta
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:],<:>
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=rubycomplete#Complete
+setlocal path=/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/models,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/controllers,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/helpers,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/config,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/lib,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/views,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/views/welcome,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/public,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/test,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/test/unit,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/test/functional,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/test/integration,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/app/*,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/vendor,/Users/de
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+set relativenumber
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.rb
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'eruby'
+setlocal syntax=eruby
+endif
+setlocal tabstop=2
+setlocal tags=/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/tmp/tags,./tags,tags,/Users/dev/Code/Projects/Sites/Personal/Richsoni/flat/tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+let s:l = 3 - ((2 * winheight(0) + 10) / 21)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3
+normal! 024|
+tabedit coding/bash/impromp2.md
+set splitbelow splitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=fb:*,fb:-,fb:+,n:>
+setlocal commentstring=>\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+set cursorline
+setlocal cursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'markdown'
+setlocal filetype=markdown
+endif
+setlocal foldcolumn=0
+set nofoldenable
+setlocal nofoldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+set foldmethod=indent
+setlocal foldmethod=indent
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcqln
+setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^[-*+]\\s\\+
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=elsif,=rescue,=ensure,=when
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,$
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+set list
+setlocal list
+setlocal nomacmeta
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:],<:>
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=htmlcomplete#CompleteTags
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+set relativenumber
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'markdown'
+setlocal syntax=markdown
+endif
+setlocal tabstop=2
+setlocal tags=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+let s:l = 6 - ((5 * winheight(0) + 10) / 21)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+6
+normal! 0
+tabnext 3
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif

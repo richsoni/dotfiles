@@ -6,7 +6,6 @@
   scc = "!SKIP_CHECKS=all git commit"
   au= add -u .
   a=add
-  ab= add !$
   pr = pull --rebase
   poh = push origin HEAD
   rhh = reset --hard HEAD
@@ -25,6 +24,9 @@
 
   d = diff
   dc = diff --cached
+  dno = diff --name-only
+  dnof = "!git dno | head -n1"
+
 
   br = branch
   sb = show branch

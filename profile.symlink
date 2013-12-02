@@ -24,3 +24,5 @@ source ~/.bashrc
   export HISTCONTROL=ignoredups
 #setup rvm
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#lynx
+  export WWW_HOME='http://duckduckgo.com'

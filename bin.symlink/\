@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+#import words
+unless ARG[0]
+  puts 'bad'
+end
+
+#sort words by rating if it exists
+#grab last and quiz
+#record score

@@ -24,6 +24,9 @@
   alias code='cd ~/Code'
   alias rsource='cd ~/Code/libs/rails'
   alias todo='vi ~/Dropbox/Todotxt/todo.txt'
+  alias togo='vi ~/Dropbox/togo.txt'
+  alias irish='vi ~/Dropbox/irish.txt'
+  alias gifts='vi ~/Dropbox/Public/gift_ideas.txt'
   alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
   alias remote_canary='canary --remote-debugging-port=9222'
 #Ticket Evo Stuff

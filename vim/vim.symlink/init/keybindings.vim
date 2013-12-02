@@ -102,8 +102,8 @@ nnoremap <leader>b :call CloseUnloadedBuffers()<cr>
       no <silent><leader>r :<cr>
     "prompt for a command to run
       nnoremap <leader>RR  :VimuxPromptCommand<cr>
-      nnoremap <leader>rr  Vy:call VimuxRunCommand('<c-r>"')<CR>
-      vnoremap <leader>rr  y:call VimuxRunCommand('<c-r>"')<CR>
+      nnoremap <leader>rr  V"vy:call VimuxRunCommand(escape(@v, '`'))<CR>
+      vnoremap <leader>rr  "vy:call VimuxRunCommand(escape(@v, '`'))<CR>
       nnoremap <leader>rl  :VimuxRunLastCommand<cr>
       nnoremap <leader>rx  :VimuxCloseRunner<cr>
       nnoremap <leader>rc  :let VimuxUseNearestPane = 1<cr>

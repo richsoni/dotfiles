@@ -17,7 +17,7 @@
     attr_accessor :line_number, :question, :answer, :num_asked, :num_right, :src, :filename
 
     def initialize(line_src, filename, line_number)
-      line = self.format line_src
+      line = Line.format line_src
       self.question    = line[0]
       self.answer      = line[1]
       self.num_asked   = line[2] if line.length > 2
@@ -36,7 +36,7 @@
 
     def score
       return 0 if num_asked == 0
-      (1.00 * num_right) / num_asked
+      ((1.00 * num_right) / num_asked).round(1) - 0.1
     end
 
     def quiz!

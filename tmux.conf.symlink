@@ -1,8 +1,5 @@
 # act like GNU screen
   bind C-k send-keys -R \; clear-history
-#switch sessions
-  bind -r ( switch-client -p
-  bind -r ) switch-client -n
 #source file
   bind r source-file ~/.tmux.conf \; display "Reloaded ~/.tmux.conf"
 # act more responsively
@@ -10,9 +7,6 @@
 # rename window numbers
    setw -g pane-base-index 1
    set-option -g base-index 1
-# splits
-  bind | split-window -h
-  bind - split-window -v
 # vim bindings
   #pane movement
     bind h select-pane -L

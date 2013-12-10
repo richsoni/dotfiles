@@ -36,21 +36,21 @@
 
     def score
       return 0 if num_asked == 0
-      ((1.00 * num_right) / num_asked).round(1) - 0.1
+      (((1.00 * num_right) / num_asked) - 0.1).round(1)
     end
 
     def quiz!
       puts "#{question}?"
       STDOUT.flush
       ans = STDIN.gets.chomp
+      self.num_asked = num_asked + 1
       if ans == answer
-        puts "correct! Score is now #{score}"
         self.num_right = num_right + 1
+        puts "correct! Score is now #{score}"
       else
         puts "incorrect! Score is now #{score}. Correct answer is:"
         puts "  #{answer}"
       end
-      self.num_asked = num_asked + 1
       write_results
     end
 
@@ -100,5 +100,6 @@ begin
   end
 
   lines.sort! { |a, b| a.score <=> b.score }
-  lines.first.quiz!
+  score = lines.first.score
+  current_score = lines.map {|line| line.score == score}
 end while operation == 'drill'

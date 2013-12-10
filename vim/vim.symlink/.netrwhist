@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/dev/Code/Projects/richsoni.github.com/fonts'
 let g:netrw_dirhist_2='/Users/dev/Code/Projects/richsoni.github.com/images'
 let g:netrw_dirhist_3='/Users/dev/Code/Projects/richsoni.github.com/js'
 let g:netrw_dirhist_4='/Users/dev/Code/Projects/richsoni.github.com/projects'
 let g:netrw_dirhist_5='/Users/dev/Code/Projects/richsoni.github.com/projects/_site'
 let g:netrw_dirhist_6='/Users/dev/workspace/pos.rb/app/assets/javascripts/backbone/controllers'
+let g:netrw_dirhist_7='/Users/dev/workspace/carbon/app/views/layouts'

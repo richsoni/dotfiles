@@ -14,6 +14,7 @@
   alias ll="ls -Ghla"
   alias lsd="ls -d */"
   alias rm='rm -i'
+  alias dsstart='( ds kill && ds start ) || dsstart'
 #META
 #Join the dots
   alias cdf='cd ~/dotfiles/'

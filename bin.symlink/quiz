@@ -101,5 +101,6 @@ begin
 
   lines.sort! { |a, b| a.score <=> b.score }
   score = lines.first.score
-  current_score = lines.map {|line| line.score == score}
+  lines.select {|line| line.score == score}.shuffle[0].quiz!
+
 end while operation == 'drill'

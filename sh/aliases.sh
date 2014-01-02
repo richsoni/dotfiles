@@ -1,5 +1,6 @@
 #MAC OS X STUFF
   alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+  alias gr='Rscript ~/dotfiles/graph.r'
   alias wifion="networksetup -setairportpower 'en1' on"
   alias wifioff="networksetup -setairportpower 'en1' off"
   alias wifils="airport -s"
@@ -10,6 +11,7 @@
   alias ..="cd .."
   alias ...="cd ../.."
   alias ls="ls -G"
+  alias q='cd ~/quicklinks'
   alias l="ls -G"
   alias ll="ls -Ghla"
   alias lsd="ls -d */"

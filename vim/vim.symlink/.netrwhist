@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/dev/dotfiles/vim/vim.symlink/bundle/todo.txt-vim/ftdetect'
-let g:netrw_dirhist_2='/Users/dev/Code/Projects/richsoni.github.com/_layouts'
-let g:netrw_dirhist_3='/Users/dev/Code/Projects/richsoni.github.com'
+let g:netrw_dirhist_1='/Users/dev/workspace/carbon/app/views/vendors'
+let g:netrw_dirhist_2='/Users/dev/workspace/carbon/app/views/vendors/vendor_sessions'
+let g:netrw_dirhist_3='/Users/rich/Documents/personal/roadmap/2014/misc'

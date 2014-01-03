@@ -1,7 +1,5 @@
   alias g='git'
   __git_complete g _git
-  alias gs='echo "use g s"'
-  alias gsl='git stash list'
   gbd(){
     echo "Files To Remove:"
     for br in $( git branch | grep $1 )
@@ -27,3 +25,4 @@
 #cooked up
   alias gbad='git status --short | grep --color=always " M\|UU\|AA|DU"'
   alias gbad_s='gbad |  grep -o "[^ ]*$"'
+  alias gbrd="gbrt | grep -e '\wdev\/.*$'"

@@ -1,3 +1,4 @@
+set clipboard=unnamed
 set nocompatible
 set wildcharm=<C-Z>
 set path+=**

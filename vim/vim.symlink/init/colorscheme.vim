@@ -1,4 +1,4 @@
-set background=dark
+set background=light
 " solarized options 
  let g:solarized_termcolors = 16
  let g:solarized_visibility = "high"

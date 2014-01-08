@@ -62,7 +62,7 @@ underline_prompt(){
     else
       _repeat - $AVAIL_WIDTH_PARTIAL
     fi
-    ch_fg_col "1;37"
+    ch_fg_col "241"
     echo ""
   fi
 }

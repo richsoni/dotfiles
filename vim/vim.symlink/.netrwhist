@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/dev/workspace/carbon/app/views/vendors'
 let g:netrw_dirhist_2='/Users/dev/workspace/carbon/app/views/vendors/vendor_sessions'
 let g:netrw_dirhist_3='/Users/rich/Documents/personal/roadmap/2014/misc'
 let g:netrw_dirhist_4='/Users/rich/Documents/personal/roadmap/2014/excersize'
+let g:netrw_dirhist_5='/Users/rich/Documents/personal/creative/tech/coderiffs/mock'
+let g:netrw_dirhist_6='/Users/dev/Code/Projects/Sites/Personal/wip/cr_frontend/.git'
+let g:netrw_dirhist_7='/Users/dev/Code/Projects/Sites/Personal/wip/cr_frontend/server'
+let g:netrw_dirhist_8='/Users/dev/Code/Projects/Sites/Personal/wip/cr_frontend/.git'

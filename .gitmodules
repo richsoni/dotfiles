@@ -60,7 +60,7 @@
 	url = git://github.com/richsoni/vim-grep.git
 [submodule "vim/vim.symlink/bundle/todo.txt-vim"]
 	path = vim/vim.symlink/bundle/todo.txt-vim
-	url = git://github.com/freitass/todo.txt-vim.git
+	url = git://github.com/richsoni/todo.txt-vim.git
 [submodule "vim/vim.symlink/bundle/vim-ruby"]
 	path = vim/vim.symlink/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
@@ -109,3 +109,6 @@
 [submodule "vim/vim.symlink/bundle/jade"]
 	path = vim/vim.symlink/bundle/jade
 	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "vim/vim.symlink/bundle/table-mode"]
+	path = vim/vim.symlink/bundle/table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode.git

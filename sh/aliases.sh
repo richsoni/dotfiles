@@ -9,7 +9,6 @@
   alias wifipwd="networksetup -getairportnetwork 'en1'"
 #General Stuff
   alias ..="cd .."
-  alias ...="cd ../.."
   alias ls="ls -G"
   alias q='cd ~/quicklinks;clear; ls'
   alias l="ls -G"

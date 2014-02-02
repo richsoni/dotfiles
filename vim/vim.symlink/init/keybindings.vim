@@ -3,9 +3,12 @@
 """"""
 noremap K <NOP> #run command is not useless
 command! W w
+command! Tabe tabe
+nnoremap [ot :TableModeEnable<cr>
+nnoremap ]ot :TableModeDisable<cr>
 "General
   vnoremap * y/<c-r>"<cr>
-  nnoremap <leader>] : !bundle show --paths \| xargs ctags -R; ctags -R -a *<cr>
+  nnoremap <leader>] : !bundle show --paths \| xargs ctags -Rf.git/tags; ctags -R -a *<cr>
 "plugins
   "Tabular
     vnoremap  <leader>=  :Tabularize /

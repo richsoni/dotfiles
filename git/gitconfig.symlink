@@ -19,6 +19,7 @@
 
   g = grep
   s = status --short
+  st = status
   bad = "!git status --short | grep --color=always ' M|UU|AA|DU'"
 ;  bad_s = "!git bad | grep -o '[^ ]*$'"
 
@@ -29,8 +30,9 @@
 
 
   br = branch
+  cb = "!git branch | grep -e '^*' | cut -d' ' -f2"
   sb = show branch
-  sprint = "!git fetch; git branch --list -a | grep '^\\s*remotes' | grep 'sprint' | cut -d / -f 3 | sort | tail -1 | xargs -I{} git branch --list -a *{} | grep '\\s*remotes' | cut -d / -f 3,4"
+  sprint = "!git fetch; git branch --list -a | grep '^\\s*remotes' | grep 'sprint' | cut -d / -f 3,4 | sort | tail -1 | xargs git checkout "
   done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; f"
   ch = checkout
   cl = checkout @{-1}

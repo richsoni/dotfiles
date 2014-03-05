@@ -150,6 +150,7 @@
 <Plug>unimpairedTLast	vim/vim.symlink/sessions/last.vim	/^nnoremap <silent> <Plug>unimpairedTLast :exe "tlast ".(v:count ? v:count : "")$/;"	m
 <Plug>unimpairedTNext	vim/vim.symlink/sessions/last.vim	/^nnoremap <silent> <Plug>unimpairedTNext :exe "tnext ".(v:count ? v:count : "")$/;"	m
 <Plug>unimpairedTPrevious	vim/vim.symlink/sessions/last.vim	/^nnoremap <silent> <Plug>unimpairedTPrevious :exe "tprevious ".(v:count ? v:count : "")$/;"	m
+<SID>	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^nnoremap <SID> <SID>$/;"	m
 <SID>AlwaysEnd	vim/vim.symlink/bundle/vim-endwise/plugin/endwise.vim	/^  inoremap <silent> <SID>AlwaysEnd        <C-R>=<SID>crend(1)<CR>$/;"	m
 <SID>DiscretionaryEnd	vim/vim.symlink/bundle/vim-endwise/plugin/endwise.vim	/^  inoremap <silent> <SID>DiscretionaryEnd <C-R>=<SID>crend(0)<CR>$/;"	m
 <SID>TogBG	vim/vim.symlink/bundle/vim-colors-solarized/autoload/togglebg.vim	/^noremap <SID>TogBG  :call <SID>TogBG()<CR>$/;"	m
@@ -245,6 +246,7 @@ AgAdd	vim/vim.symlink/bundle/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -com
 AgFile	vim/vim.symlink/bundle/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file AgFile call ag#Ag('grep<bang> -g', <q-args>)$/;"	c
 AgFromSearch	vim/vim.symlink/bundle/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file AgFromSearch call ag#AgFromSearch('grep<bang>', <q-args>)$/;"	c
 AgHelp	vim/vim.symlink/bundle/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=help AgHelp call ag#AgHelp('grep<bang>',<q-args>)$/;"	c
+Align	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Align(lines) "{{{3$/;"	f
 AllTests	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-Fargs2String.vim	/^function! AllTests()$/;"	f
 AllmlInit	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! AllmlInit()$/;"	f
 Alternate	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:Alternate(cmd,line1,line2,count,...)$/;"	f
@@ -253,6 +255,7 @@ Args	vim/vim.symlink/bundle/syntastic/syntax_checkers/javascript/jshint.vim	/^fu
 AskOneMenu	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/askvim.vim	/^function! s:AskOneMenu(menuact, res)$/;"	f
 AskOneMenu	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/askvim.vim	/^function! s:AskOneMenu(menuact, res)$/;"	f
 AutoUpdate	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:AutoUpdate(fname, force) abort$/;"	f
+Average	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Average(list) "{{{2$/;"	f
 BMenu	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/menu.vim	/^function! s:BMenu(b)$/;"	f
 BMenu	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/menu.vim	/^function! s:BMenu(b)$/;"	f
 BTW	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/command.vim	/^function! s:BTW(command, ...)$/;"	f
@@ -353,6 +356,8 @@ Commit	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:Com
 CommitComplete	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:CommitComplete(A,L,P) abort$/;"	f
 CompareByKind	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:CompareByKind(tag1, tag2) abort$/;"	f
 CompareByLine	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:CompareByLine(tag1, tag2) abort$/;"	f
+CompareLines	vim/vim.symlink/bundle/todo.txt-vim/plugin/IndentSort.vim	/^function! s:CompareLines(l1, l2)$/;"	f
+CompareLines	vim/vim.symlink/bundle/todo.txt-vim/plugin/RecursiveIndentSort.vim	/^function! s:CompareLines(l1, l2)$/;"	f
 CompilerSet	vim/vim.symlink/bundle/vim-elixir/compiler/exunit.vim	/^  command -nargs=* CompilerSet setlocal <args>$/;"	c
 CompilerSet	vim/vim.symlink/bundle/vim-haml/compiler/haml.vim	/^  command -nargs=* CompilerSet setlocal <args>$/;"	c
 CompilerSet	vim/vim.symlink/bundle/vim-haml/compiler/sass.vim	/^  command -nargs=* CompilerSet setlocal <args>$/;"	c
@@ -386,7 +391,12 @@ ConfFlag	vim/vim.symlink/bundle/syntastic/syntax_checkers/javascript/jsl.vim	/^f
 Contains	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/gundo_test_utils.vim	/^function! g:Contains(text)"{{{$/;"	f
 Context	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^function! s:Context(reverse)$/;"	f
 ContextMotion	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^function! s:ContextMotion(reverse)$/;"	f
+ConvertDelimiterToSeparator	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:ConvertDelimiterToSeparator(line, ...) "{{{2$/;"	f
 Copen	vim/vim.symlink/bundle/vim-dispatch/plugin/dispatch.vim	/^command! -bang Copen call dispatch#copen(<bang>0)$/;"	c
+CopyDate	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^command! -nargs=0 -bar CopyDate :call <SID>CopyDate()$/;"	c
+CopyDate	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^function! s:CopyDate()$/;"	f
+CopyTag	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^command! -nargs=0 -bar CopyTag :call <SID>CopyTag()$/;"	c
+CopyTag	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^function! s:CopyTag()$/;"	f
 CorrectFocusOnStartup	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:CorrectFocusOnStartup() abort$/;"	f
 Count	vim/vim.symlink/bundle/snipmate/autoload/snipMate.vim	/^fun s:Count(haystack, needle)$/;"	f
 CreateAutocommands	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:CreateAutocommands() abort$/;"	f
@@ -420,6 +430,7 @@ CurrentFiletypes	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^functio
 CurrentLineContains	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/gundo_test_utils.vim	/^function! g:CurrentLineContains(text)"{{{$/;"	f
 CustomComplete	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:CustomComplete(A,L,P,cmd)$/;"	f
 CygwinPath	vim/vim.symlink/bundle/syntastic/syntax_checkers/java/javac.vim	/^function! s:CygwinPath(path)$/;"	f
+DIRS	vim/vim.symlink/bundle/todo.txt-vim/Makefile	/^DIRS=doc ftdetect ftplugin plugin syntax$/;"	m
 Data	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-toggle-menu.vim	/^let Data = {$/;"	v
 Data2	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-toggle-menu.vim	/^let Data2 = {$/;"	v
 Data3	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-toggle-menu.vim	/^let Data3 = {$/;"	v
@@ -428,6 +439,7 @@ Decode	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	
 Decode	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/lh/UT.vim	/^function! s:Decode(expression)$/;"	f
 Decode	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/UT.vim	/^function! s:Decode(expression)$/;"	f
 DefRuby	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:DefRuby()$/;"	f
+DefaultHeaderBorder	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:DefaultHeaderBorder() "{{{2$/;"	f
 DefineCommands	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	/^function! s:DefineCommands()$/;"	f
 DefineCommands	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/lh/UT.vim	/^function! s:DefineCommands()$/;"	f
 DefineCommands	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/UT.vim	/^function! s:DefineCommands()$/;"	f
@@ -450,6 +462,8 @@ DoBindString	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/f
 DoBindString	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/function.vim	/^function! s:DoBindString(expr, real)$/;"	f
 DoTestOrder	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/topological-sort.vim	/^function! s:DoTestOrder(elements)$/;"	f
 Doc	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:Doc(bang, string)$/;"	f
+DueDate	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^command! -nargs=1 DueDate :call <SID>DueDate(<f-args>)$/;"	c
+DueDate	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^function! s:DueDate(days)$/;"	f
 E2T	vim/vim.symlink/bundle/vim-vividchalk/colors/vividchalk.vim	/^function! E2T(a)$/;"	f
 Echo	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-command.vim	/^function! Echo(params)$/;"	f
 Edit	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:Edit(cmd,bang,...) abort$/;"	f
@@ -460,6 +474,8 @@ EditRunComplete	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^functi
 EditSimpleRb	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:EditSimpleRb(cmd,name,target,prefix,suffix,...)$/;"	f
 Empty	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/graph/tsort.vim	/^function! s:Empty(dag)$/;"	f
 Empty	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/graph/tsort.vim	/^function! s:Empty(dag)$/;"	f
+EndCommentExpr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:EndCommentExpr() "{{{2$/;"	f
+EndExpr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:EndExpr() "{{{2$/;"	f
 Env	vim/vim.symlink/bundle/vim-ruby/bin/vim-ruby-install.rb	/^class Env$/;"	c
 ErrMsg	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:ErrMsg(msg)$/;"	f
 Errors	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^command! Errors call s:ShowLocList()$/;"	c
@@ -503,19 +519,29 @@ ForceUpdate	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:ForceUpd
 ForwardToZshChecker	vim/vim.symlink/bundle/syntastic/syntax_checkers/sh/sh.vim	/^function! s:ForwardToZshChecker()$/;"	f
 GF	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:GF(mode) abort$/;"	f
 GTabularize	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^   \\ GTabularize <line1>,<line2>$/;"	c
+GenerateHeaderBorder	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GenerateHeaderBorder(line) "{{{2$/;"	f
 GetBufferRubyClass	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:GetBufferRubyClass(name, ...)$/;"	f
 GetBufferRubyEntity	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:GetBufferRubyEntity( name, type, ... )$/;"	f
 GetBufferRubyModule	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:GetBufferRubyModule(name, ...)$/;"	f
 GetBufferRubySingletonMethods	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:GetBufferRubySingletonMethods(name)$/;"	f
+GetCell	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetCell(...) "{{{2$/;"	f
+GetCellRange	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetCellRange(range, ...) abort$/;"	f
+GetCells	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetCells(line, ...) abort$/;"	f
 GetCoffeeIndent	vim/vim.symlink/bundle/vim-coffee-script/indent/coffee.vim	/^function! GetCoffeeIndent(curlinenum)$/;"	f
+GetColumn	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetColumn(col, ...) abort "{{{2$/;"	f
+GetColumnRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetColumnRow(row, ...) abort "{{{2$/;"	f
+GetCommentEnd	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetCommentEnd() "{{{2$/;"	f
+GetCommentStart	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetCommentStart() "{{{2$/;"	f
 GetCurrentKeyword	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/plugin/words_tools.vim	/^function! GetCurrentKeyword()$/;"	f
 GetCurrentKeyword	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/words_tools.vim	/^function! GetCurrentKeyword()$/;"	f
 GetCurrentWord	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/plugin/words_tools.vim	/^function! GetCurrentWord()$/;"	f
 GetCurrentWord	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/words_tools.vim	/^function! GetCurrentWord()$/;"	f
 GetElixirIndent	vim/vim.symlink/bundle/vim-elixir/indent/elixir.vim	/^function! GetElixirIndent(...)$/;"	f
 GetErubyIndent	vim/vim.symlink/bundle/vim-ruby/indent/eruby.vim	/^function! GetErubyIndent(...)$/;"	f
+GetFirstRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetFirstRow(line) "{{{2$/;"	f
 GetHamlIndent	vim/vim.symlink/bundle/vim-haml/indent/haml.vim	/^function! GetHamlIndent()$/;"	f
 GetJadeIndent	vim/vim.symlink/bundle/jade/indent/jade.vim	/^function! GetJadeIndent()$/;"	f
+GetLastRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetLastRow(line) "{{{2$/;"	f
 GetLikeCTRL_W	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/plugin/words_tools.vim	/^function! GetLikeCTRL_W()$/;"	f
 GetLikeCTRL_W	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/words_tools.vim	/^function! GetLikeCTRL_W()$/;"	f
 GetMSL	vim/vim.symlink/bundle/vim-ruby/indent/ruby.vim	/^function s:GetMSL(lnum)$/;"	f
@@ -538,6 +564,8 @@ GetPreviousWord	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/words_tools.v
 GetResult	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	/^function! s:GetResult(expr)$/;"	f
 GetResult	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/lh/UT.vim	/^function! s:GetResult(expr)$/;"	f
 GetResult	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/UT.vim	/^function! s:GetResult(expr)$/;"	f
+GetRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetRow(row, ...) abort "{{{2$/;"	f
+GetRowColumn	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetRowColumn(col, ...) abort "{{{2$/;"	f
 GetRubyIndent	vim/vim.symlink/bundle/vim-ruby/indent/ruby.vim	/^function GetRubyIndent(...)$/;"	f
 GetRubyVarType	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:GetRubyVarType(v)$/;"	f
 GetSassIndent	vim/vim.symlink/bundle/vim-haml/indent/sass.vim	/^function! GetSassIndent()$/;"	f
@@ -630,11 +658,14 @@ H	vim/vim.symlink/sessions/last.vim	/^onoremap H 0$/;"	m
 HandleTextObjectMapping	vim/vim.symlink/bundle/vim-indent-object/plugin/indent-object.vim	/^function! <Sid>HandleTextObjectMapping(inner, incbelow, vis, range)$/;"	f
 HasIncomingEgde	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/graph/tsort.vim	/^function! s:HasIncomingEgde(dag, node)$/;"	f
 HasIncomingEgde	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/graph/tsort.vim	/^function! s:HasIncomingEgde(dag, node)$/;"	f
+HeaderBorderExpr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:HeaderBorderExpr() "{{{2$/;"	f
 Help_NbL	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/buffer/dialog.vim	/^function! s:Help_NbL()$/;"	f
 Help_NbL	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/buffer/dialog.vim	/^function! s:Help_NbL()$/;"	f
 Helptags	vim/vim.symlink/autoload/pathogen.vim	/^command! -bar Helptags :call pathogen#helptags()$/;"	c
 HexHighlight	vim/vim.symlink/plugin/hexHighlight.vim	/^function! HexHighlight()$/;"	f
 HiDefaults	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:HiDefaults()$/;"	f
+HiLink	vim/vim.symlink/bundle/todo.txt-vim/syntax/todotxt.vim	/^    command -nargs=+ HiLink hi def link <args>$/;"	c
+HiLink	vim/vim.symlink/bundle/todo.txt-vim/syntax/todotxt.vim	/^    command -nargs=+ HiLink hi link <args>$/;"	c
 HighlightTag	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:HighlightTag(openfolds, ...) abort$/;"	f
 IF	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/plugin/ui-functions.vim	/^function! IF(var,then, else)$/;"	f
 IF	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/ui-functions.vim	/^function! IF(var,then, else)$/;"	f
@@ -651,6 +682,8 @@ IgnoreFile	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^function! s:I
 IgnoreTests	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	/^function! s:IgnoreTests(...) dict$/;"	f
 IgnoreTests	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/lh/UT.vim	/^function! s:IgnoreTests(...) dict$/;"	f
 IgnoreTests	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/UT.vim	/^function! s:IgnoreTests(...) dict$/;"	f
+IndentSort	vim/vim.symlink/bundle/todo.txt-vim/plugin/IndentSort.vim	/^command! -nargs=0 -range -bar IndentSort :<line1>,<line2>call <SID>IndentSort()$/;"	c
+IndentSort	vim/vim.symlink/bundle/todo.txt-vim/plugin/IndentSort.vim	/^function! s:IndentSort() range$/;"	f
 Init	vim/vim.symlink/bundle/syntastic/autoload/syntastic/c.vim	/^function! s:Init()$/;"	f
 Init	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:Init(silent) abort$/;"	f
 Init	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:Init()$/;"	f
@@ -662,15 +695,18 @@ IsCommentLine	vim/vim.symlink/bundle/vim-coffee-script/indent/coffee.vim	/^funct
 IsCommentOrString	vim/vim.symlink/bundle/vim-coffee-script/indent/coffee.vim	/^function! s:IsCommentOrString(linenum, col)$/;"	f
 IsEmpty	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/option.vim	/^function! s:IsEmpty(variable)$/;"	f
 IsEmpty	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/option.vim	/^function! s:IsEmpty(variable)$/;"	f
+IsFirstCell	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:IsFirstCell() "{{{2$/;"	f
 IsInClassDef	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:IsInClassDef()$/;"	f
 IsInString	vim/vim.symlink/bundle/vim-ruby/indent/ruby.vim	/^function s:IsInString(lnum, col)$/;"	f
 IsInStringDelimiter	vim/vim.symlink/bundle/vim-ruby/indent/ruby.vim	/^function s:IsInStringDelimiter(lnum, col)$/;"	f
 IsInStringOrComment	vim/vim.symlink/bundle/vim-ruby/indent/ruby.vim	/^function s:IsInStringOrComment(lnum, col)$/;"	f
 IsInStringOrDocumentation	vim/vim.symlink/bundle/vim-ruby/indent/ruby.vim	/^function s:IsInStringOrDocumentation(lnum, col)$/;"	f
+IsLastCell	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:IsLastCell() "{{{2$/;"	f
 IsPosInClassDef	vim/vim.symlink/bundle/vim-ruby/autoload/rubycomplete.vim	/^function! s:IsPosInClassDef(pos)$/;"	f
 IsRedrawRequiredAfterMake	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^function! s:IsRedrawRequiredAfterMake()$/;"	f
 IsShellValid	vim/vim.symlink/bundle/syntastic/syntax_checkers/sh/sh.vim	/^function! s:IsShellValid()$/;"	f
 IsString	vim/vim.symlink/bundle/vim-coffee-script/indent/coffee.vim	/^function! s:IsString(linenum, col)$/;"	f
+IsTableModeActive	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:IsTableModeActive() "{{{2$/;"	f
 IsValidFile	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:IsValidFile(fname, ftype) abort$/;"	f
 Join	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/function.vim	/^function! s:Join(args)$/;"	f
 Join	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/function.vim	/^function! s:Join(args)$/;"	f
@@ -704,6 +740,8 @@ LetIfUndef	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/plugin/let.vim	
 LetIfUndef	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/let.vim	/^command! -nargs=+ LetIfUndef call s:LetIfUndef(<f-args>)$/;"	c
 LetIfUndef	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/let.vim	/^function! s:LetIfUndef(var, value)$/;"	f
 Line	bin.symlink/quiz	/^  class Line$/;"	c
+Line	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Line(line) "{{{2$/;"	f
+LineNr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:LineNr(row) "{{{2$/;"	f
 LoadClasspathFromConfigFile	vim/vim.symlink/bundle/syntastic/syntax_checkers/java/javac.vim	/^function! s:LoadClasspathFromConfigFile()$/;"	f
 LoadUserTypeDefs	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:LoadUserTypeDefs(...) abort$/;"	f
 LocalModelines	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:LocalModelines(lnum)$/;"	f
@@ -723,6 +761,8 @@ MapNorms	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:MapNorms()$
 MapSpecs	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:MapSpecs()$/;"	f
 Mappings	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/buffer/dialog.vim	/^function! s:Mappings(abuffer)$/;"	f
 Mappings	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/buffer/dialog.vim	/^function! s:Mappings(abuffer)$/;"	f
+MarkDue	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^command! -nargs=0 MarkDue :call <SID>MarkDue()$/;"	c
+MarkDue	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^function! s:MarkDue()$/;"	f
 MarkToOpen	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:MarkToOpen()$/;"	f
 MarkdownPreview	vim/vim.symlink/init/keybindings.vim	/^      function! MarkdownPreview()$/;"	f
 Match	vim/vim.symlink/bundle/vim-ruby/indent/ruby.vim	/^function s:Match(lnum, regex)$/;"	f
@@ -737,6 +777,9 @@ Move	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:Move(
 Move	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^function! s:Move(cmd, count, map) abort$/;"	f
 MoveComplete	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:MoveComplete(A,L,P)$/;"	f
 MoveDown	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/gundo_test_utils.vim	/^function! g:MoveDown()"{{{$/;"	f
+MoveToFirstRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:MoveToFirstRow() "{{{2$/;"	f
+MoveToLastRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:MoveToLastRow() "{{{2$/;"	f
+MoveToStartOfCell	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:MoveToStartOfCell() "{{{2$/;"	f
 MoveUp	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/gundo_test_utils.vim	/^function! g:MoveUp()"{{{$/;"	f
 NMAP	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/macros/menu-map.vim	/^command! -nargs=+           NMAP     nmap       <args>$/;"	c
 NMAP	vim/vim.symlink/bundle/gundo/tests/vim_test/macros/menu-map.vim	/^command! -nargs=+           NMAP     nmap       <args>$/;"	c
@@ -789,7 +832,9 @@ Opt_type	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/plugin/ui-functio
 Opt_type	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/ui-functions.vim	/^function! s:Opt_type() " {{{2$/;"	f
 Option	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/plugin/ui-functions.vim	/^function! s:Option(name, default) " {{{2$/;"	f
 Option	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/ui-functions.vim	/^function! s:Option(name, default) " {{{2$/;"	f
+Padding	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Padding(string, length, where) "{{{3$/;"	f
 ParsePattern	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^function! s:ParsePattern(string)$/;"	f
+ParseRange	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:ParseRange(range, ...) "{{{2$/;"	f
 ParseTagline	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:ParseTagline(part1, part2, typeinfo, fileinfo) abort$/;"	f
 PlayTests	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	/^function! s:PlayTests(...) dict$/;"	f
 PlayTests	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/lh/UT.vim	/^function! s:PlayTests(...) dict$/;"	f
@@ -865,6 +910,8 @@ RailsRoot	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! RailsR
 Rake	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:Rake(bang,lnum,arg)$/;"	f
 RecursiveDTSort	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/graph/tsort.vim	/^function! s:RecursiveDTSort(dag, start_nodes, results, visited_nodes)$/;"	f
 RecursiveDTSort	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/graph/tsort.vim	/^function! s:RecursiveDTSort(dag, start_nodes, results, visited_nodes)$/;"	f
+RecursiveIndentSort	vim/vim.symlink/bundle/todo.txt-vim/plugin/RecursiveIndentSort.vim	/^command! -nargs=0 -range -bar RecursiveIndentSort :<line1>,<line2>call <SID>RecursiveIndentSort()$/;"	c
+RecursiveIndentSort	vim/vim.symlink/bundle/todo.txt-vim/plugin/RecursiveIndentSort.vim	/^function! s:RecursiveIndentSort() range$/;"	f
 RedisplayHelp	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/buffer/dialog.vim	/^function! s:RedisplayHelp(dialog)$/;"	f
 RedisplayHelp	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/buffer/dialog.vim	/^function! s:RedisplayHelp(dialog)$/;"	f
 Redraw	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^function! s:Redraw()$/;"	f
@@ -895,7 +942,10 @@ RestoreSession	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:R
 RestoreUserSettings	vim/vim.symlink/bundle/zoomwin/autoload/ZoomWin.vim	/^fun! s:RestoreUserSettings()$/;"	f
 RestoreWinSettings	vim/vim.symlink/bundle/zoomwin/autoload/ZoomWin.vim	/^fun! s:RestoreWinSettings()$/;"	f
 RestoreWinVars	vim/vim.symlink/bundle/zoomwin/autoload/ZoomWin.vim	/^fun! s:RestoreWinVars()$/;"	f
+Retab	vim/vim.symlink/bundle/todo.txt-vim/plugin/IndentSort.vim	/^function! s:Retab(string)$/;"	f
+Retab	vim/vim.symlink/bundle/todo.txt-vim/plugin/RecursiveIndentSort.vim	/^function! s:Retab(string)$/;"	f
 Right	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! s:Right(string, fieldwidth)$/;"	f
+RowGap	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:RowGap() "{{{2$/;"	f
 RubyBalloonexpr	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^function! RubyBalloonexpr()$/;"	f
 RubyCursorIdentifier	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^function! RubyCursorIdentifier()$/;"	f
 RunOneFile	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	/^function! s:RunOneFile(file)$/;"	f
@@ -924,10 +974,14 @@ SessionLoad	vim/vim.symlink/sessions/last.vim	/^let SessionLoad = 1$/;"	v
 Set	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/menu.vim	/^function! s:Set(Data)$/;"	f
 Set	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/menu.vim	/^function! s:Set(Data)$/;"	f
 Set	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:Set(bang,...)$/;"	f
+SetActive	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:SetActive(bool) "{{{2$/;"	f
 SetBasePath	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:SetBasePath()$/;"	f
+SetBufferOptDefault	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:SetBufferOptDefault(opt, val) "{{{2$/;"	f
+SetCell	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:SetCell(val, ...) abort "{{{2$/;"	f
 SetDefTxt	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:SetDefTxt()$/;"	f
 SetFoldLevel	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:SetFoldLevel(level, force) abort$/;"	f
 SetFoldLevelRecursive	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:SetFoldLevelRecursive(fileinfo, tags, level) abort$/;"	f
+SetGlobalOptDefault	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^function! s:SetGlobalOptDefault(opt, val) "{{{1$/;"	f
 SetLines	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! s:SetLines(start, len, strings)$/;"	f
 SetMakePrg	vim/vim.symlink/bundle/vim-coffee-script/compiler/coffee.vim	/^function! s:SetMakePrg()$/;"	f
 SetOptDefault	vim/vim.symlink/bundle/vim-rails/plugin/rails.vim	/^function! s:SetOptDefault(opt,val)$/;"	f
@@ -957,6 +1011,7 @@ SolarizedOptions	vim/vim.symlink/bundle/vim-colors-solarized/colors/solarized.vi
 SortTags	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:SortTags(tags, comparemethod) abort$/;"	f
 SpecInputs	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:SpecInputs(str)$/;"	f
 SpeedDatingFormat	vim/vim.symlink/bundle/vim-speeddating/plugin/speeddating.vim	/^command! -bar -bang -count=0 -nargs=? SpeedDatingFormat :call s:add_format(<q-args>,<count>,<bang>0)$/;"	c
+Split	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Split(string, delim)$/;"	f
 SplitCDeclarations	vim/vim.symlink/bundle/tabular/after/plugin/TabularMaps.vim	/^function! SplitCDeclarations(lines)$/;"	f
 SplitCommands	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^function! s:SplitCommands(string)$/;"	f
 SplitDelim	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! s:SplitDelim(string, delim)$/;"	f
@@ -970,14 +1025,19 @@ StagePrevious	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function
 StageReloadSeek	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:StageReloadSeek(target,lnum1,lnum2)$/;"	f
 StageToggle	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:StageToggle(lnum1,lnum2) abort$/;"	f
 Start	vim/vim.symlink/bundle/vim-dispatch/plugin/dispatch.vim	/^command! -bang -nargs=* -complete=custom,dispatch#command_complete Start$/;"	c
+StartCommentExpr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:StartCommentExpr() "{{{2$/;"	f
 StartDebug	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:StartDebug(filename) abort$/;"	f
+StartExpr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:StartExpr() "{{{2$/;"	f
 Status	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:Status() abort$/;"	f
 StopDebug	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:StopDebug() abort$/;"	f
+Strip	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Strip(string) "{{{2$/;"	f
 StripLeadingSpaces	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! s:StripLeadingSpaces(string)$/;"	f
 StripResultAndDecode	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	/^function! s:StripResultAndDecode(expr)$/;"	f
 StripResultAndDecode	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/lh/UT.vim	/^function! s:StripResultAndDecode(expr)$/;"	f
 StripResultAndDecode	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/UT.vim	/^function! s:StripResultAndDecode(expr)$/;"	f
+StripTrailingSpaces	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:StripTrailingSpaces(string)$/;"	f
 StripTrailingSpaces	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! s:StripTrailingSpaces(string)$/;"	f
+Strlen	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Strlen(text)$/;"	f
 Strlen	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^  function! s:Strlen(string)$/;"	f
 SubComplete	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:SubComplete(A,L,P)$/;"	f
 Subvert	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^command! -nargs=1 -bang -bar -range=0 -complete=custom,s:SubComplete Subvert$/;"	c
@@ -985,6 +1045,7 @@ Successors_fully_defined	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/a
 Successors_fully_defined	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/graph/tsort.vim	/^function! s:Successors_fully_defined(node) dict$/;"	f
 Successors_lazy	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/graph/tsort.vim	/^function! s:Successors_lazy(node) dict$/;"	f
 Successors_lazy	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/graph/tsort.vim	/^function! s:Successors_lazy(node) dict$/;"	f
+Sum	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Sum(list) "{{{2$/;"	f
 Support	vim/vim.symlink/bundle/vim-elixir/spec/spec_helper.rb	/^module Support$/;"	m
 Support	vim/vim.symlink/bundle/vim-ruby/spec/spec_helper.rb	/^module Support$/;"	m
 SynShow	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/syntax.vim	/^command! SynShow echo 'hi<'.lh#syntax#name_at_mark('.',1).'> trans<'$/;"	c
@@ -1333,6 +1394,16 @@ TEds	vim/vim.symlink/bundle/ticketevo.vim/plugin/ticketevo.vim	/^function! s:TEd
 TEdsCompletion	vim/vim.symlink/bundle/ticketevo.vim/plugin/ticketevo.vim	/^function! s:TEdsCompletion(A, L, P)$/;"	f
 TEdss	vim/vim.symlink/bundle/ticketevo.vim/plugin/ticketevo.vim	/^function! s:TEdss(command)$/;"	f
 TElcd	vim/vim.symlink/bundle/ticketevo.vim/plugin/ticketevo.vim	/^function! s:TElcd(project_name)$/;"	f
+Tabe	vim/vim.symlink/init/keybindings.vim	/^command! Tabe tabe$/;"	c
+TableAddFormula	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^command! TableAddFormula call tablemode#AddFormula()$/;"	c
+TableEchoCell	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^function! s:TableEchoCell() "{{{1$/;"	f
+TableEvalFormulaLine	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^command! TableEvalFormulaLine call tablemode#EvaluateFormulaLine()$/;"	c
+TableModeDisable	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^  command! -nargs=0 TableModeDisable call tablemode#TableModeDisable()$/;"	c
+TableModeEnable	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^  command! -nargs=0 TableModeEnable call tablemode#TableModeEnable()$/;"	c
+TableModeToggle	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^  command! -nargs=0 TableModeToggle call tablemode#TableModeToggle()$/;"	c
+TableMotion	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^function! s:TableMotion() "{{{1$/;"	f
+Tableize	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^command! -nargs=? -range Tableize <line1>,<line2>call tablemode#TableizeRange(<q-args>)$/;"	c
+Tableizeline	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Tableizeline(line, ...) "{{{2$/;"	f
 Tabularize	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^   \\ Tabularize <line1>,<line2>call Tabularize(<q-args>)$/;"	c
 Tabularize	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^function! Tabularize(command, ...) range$/;"	f
 Tagbar	vim/vim.symlink/bundle/tagbar/plugin/tagbar.vim	/^command! -nargs=0 Tagbar              call tagbar#ToggleWindow()$/;"	c
@@ -1423,6 +1494,10 @@ TidyEncOptByFenc	vim/vim.symlink/bundle/syntastic/syntax_checkers/html/tidy.vim	
 TidyEncOptByFenc	vim/vim.symlink/bundle/syntastic/syntax_checkers/xhtml/tidy.vim	/^function! s:TidyEncOptByFenc()$/;"	f
 ToString	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/function.vim	/^function! s:ToString(expr)$/;"	f
 ToString	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/function.vim	/^function! s:ToString(expr)$/;"	f
+TodoCancelled	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^command! -nargs=? TodoCancelled :call <SID>TodoCancelled(<f-args>)$/;"	c
+TodoCancelled	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^function! s:TodoCancelled(...)$/;"	f
+TodoDone	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^command! -nargs=? TodoDone :call <SID>TodoDone(<f-args>)$/;"	c
+TodoDone	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^function! s:TodoDone(...)$/;"	f
 TodoFoldLevel	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todo.vim	/^function! TodoFoldLevel(lnum)$/;"	f
 TodoFoldText	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todo.vim	/^function! TodoFoldText()$/;"	f
 TogBG	vim/vim.symlink/bundle/vim-colors-solarized/autoload/togglebg.vim	/^function! s:TogBG()$/;"	f
@@ -1438,6 +1513,7 @@ ToggleHelp	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/buffer/dialog
 ToggleHelp	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:ToggleHelp() abort$/;"	f
 ToggleKeyLoop	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:ToggleKeyLoop()$/;"	f
 ToggleMRURelative	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:ToggleMRURelative()$/;"	f
+ToggleMapping	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:ToggleMapping() "{{{2$/;"	f
 ToggleMode	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^function! s:ToggleMode()$/;"	f
 ToggleRegex	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:ToggleRegex()$/;"	f
 ToggleSort	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:ToggleSort() abort$/;"	f
@@ -1601,12 +1677,19 @@ ZoomWindow	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:ZoomW
 []	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^  nnoremap <silent> <buffer> [] :<C-U>call <SID>searchsyn('\\<end\\>','rubyModule\\<Bar>rubyClass','b','n')<CR>$/;"	m
 [a	vim/vim.symlink/sessions/last.vim	/^nmap <silent> [a <Plug>unimpairedAPrevious$/;"	m
 [b	vim/vim.symlink/sessions/last.vim	/^nmap <silent> [b <Plug>unimpairedBPrevious$/;"	m
+[c	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [c   :set lazyredraw<CR>kmrj\/^\\s\\+x <CR>ddGp:s\/^\\s\\+\/\/<CR>'r:nohlsearch<CR>$/;"	m
+[d	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [d   :TodoDone<CR>$/;"	m
+[d	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^vmap [d   :TodoDone<CR>$/;"	m
 [e	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^nmap [e <Plug>unimpairedMoveUp$/;"	m
 [e	vim/vim.symlink/sessions/last.vim	/^nmap [e <Plug>unimpairedMoveUp$/;"	m
 [f	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^nmap [f <Plug>unimpairedDirectoryPrevious$/;"	m
 [f	vim/vim.symlink/sessions/last.vim	/^nmap [f <Plug>unimpairedDirectoryPrevious$/;"	m
 [h	vim/vim.symlink/bundle/vim-gitgutter/plugin/gitgutter.vim	/^  nmap [h <Plug>GitGutterPrevHunk$/;"	m
+[j	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [j   $:CopyTag<CR>:CopyDate<CR>:TodoDone<CR>$/;"	m
+[j	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^vmap [j   $:CopyTag<CR>:CopyDate<CR>::TodoDone<CR>$/;"	m
 [l	vim/vim.symlink/sessions/last.vim	/^nmap <silent> [l <Plug>unimpairedLPrevious$/;"	m
+[m	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [m   :DueDate 30<CR>$/;"	m
+[m	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^vmap [m   :DueDate 30<CR>$/;"	m
 [m	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^  nnoremap <silent> <buffer> [m :<C-U>call <SID>searchsyn('\\<def\\>','rubyDefine','b','n')<CR>$/;"	m
 [n	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^nmap [n <Plug>unimpairedContextPrevious$/;"	m
 [n	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^omap [n <Plug>unimpairedContextPrevious$/;"	m
@@ -1624,14 +1707,25 @@ ZoomWindow	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:ZoomW
 [on	vim/vim.symlink/sessions/last.vim	/^nnoremap [on :set =(exists('+rnu') && &rnu ? 'norelativenumber ' : '')$/;"	m
 [or	vim/vim.symlink/sessions/last.vim	/^nnoremap [or :set relativenumber$/;"	m
 [os	vim/vim.symlink/sessions/last.vim	/^nnoremap [os :set spell$/;"	m
+[ot	vim/vim.symlink/init/keybindings.vim	/^nnoremap [ot :TableModeEnable<cr>$/;"	m
 [ou	vim/vim.symlink/sessions/last.vim	/^nnoremap [ou :set cursorcolumn$/;"	m
 [ow	vim/vim.symlink/sessions/last.vim	/^nnoremap [ow :set wrap$/;"	m
 [ox	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^nnoremap [ox :set cursorline cursorcolumn<CR>$/;"	m
 [ox	vim/vim.symlink/sessions/last.vim	/^nnoremap [ox :set cursorline cursorcolumn$/;"	m
 [q	vim/vim.symlink/sessions/last.vim	/^nmap <silent> [q <Plug>unimpairedQPrevious$/;"	m
+[r	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [r   zRmr:%RecursiveIndentSort<CR>'r$/;"	m
+[r	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^vmap [r   zRmr:%RecursiveIndentSort<CR>'r$/;"	m
+[s	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [s   :%IndentSort<CR>$/;"	m
+[s	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^vmap [s   :%IndentSort<CR>$/;"	m
+[t	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [t   $:CopyTag<CR>$/;"	m
+[t	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^vmap [t   $:CopyTag<CR>$/;"	m
 [t	vim/vim.symlink/sessions/last.vim	/^nmap <silent> [t <Plug>unimpairedTPrevious$/;"	m
 [u	vim/vim.symlink/sessions/last.vim	/^nmap [u <Plug>unimpaired_url_encode$/;"	m
 [uu	vim/vim.symlink/sessions/last.vim	/^nmap [uu <Plug>unimpaired_line_url_encode$/;"	m
+[w	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [w   :DueDate 7<CR>$/;"	m
+[w	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^vmap [w   :DueDate 7<CR>$/;"	m
+[x	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^map  [x   :TodoCancelled<CR>$/;"	m
+[x	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^vmap [x   :TodoCancelled<CR>$/;"	m
 [x	vim/vim.symlink/sessions/last.vim	/^nmap [x <Plug>unimpaired_xml_encode$/;"	m
 [xx	vim/vim.symlink/sessions/last.vim	/^nmap [xx <Plug>unimpaired_line_xml_encode$/;"	m
 [y	vim/vim.symlink/sessions/last.vim	/^nmap [y <Plug>unimpaired_string_encode$/;"	m
@@ -1722,6 +1816,7 @@ ZoomWindow	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:ZoomW
 ]on	vim/vim.symlink/sessions/last.vim	/^nnoremap ]on :set =(exists('+rnu') && &rnu ? 'norelativenumber ' : '')$/;"	m
 ]or	vim/vim.symlink/sessions/last.vim	/^nnoremap ]or :set norelativenumber$/;"	m
 ]os	vim/vim.symlink/sessions/last.vim	/^nnoremap ]os :set nospell$/;"	m
+]ot	vim/vim.symlink/init/keybindings.vim	/^nnoremap ]ot :TableModeDisable<cr>$/;"	m
 ]ou	vim/vim.symlink/sessions/last.vim	/^nnoremap ]ou :set nocursorcolumn$/;"	m
 ]ow	vim/vim.symlink/sessions/last.vim	/^nnoremap ]ow :set nowrap$/;"	m
 ]ox	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^nnoremap ]ox :set nocursorline nocursorcolumn<CR>$/;"	m
@@ -1950,6 +2045,7 @@ b:browsefilter	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^  let b:brows
 b:current_syntax	vim/vim.symlink/bundle/jade/syntax/jade.vim	/^let b:current_syntax = "jade"$/;"	v
 b:current_syntax	vim/vim.symlink/bundle/tagbar/syntax/tagbar.vim	/^let b:current_syntax = "tagbar"$/;"	v
 b:current_syntax	vim/vim.symlink/bundle/todo.txt-vim/syntax/todo.vim	/^let b:current_syntax = "todo"$/;"	v
+b:current_syntax	vim/vim.symlink/bundle/todo.txt-vim/syntax/todotxt.vim	/^let b:current_syntax = "todotxt"$/;"	v
 b:current_syntax	vim/vim.symlink/bundle/vim-coffee-script/syntax/coffee.vim	/^  let b:current_syntax = 'coffee'$/;"	v
 b:current_syntax	vim/vim.symlink/bundle/vim-coffee-script/syntax/eco.vim	/^let b:current_syntax = 'eco'$/;"	v
 b:current_syntax	vim/vim.symlink/bundle/vim-haml/syntax/haml.vim	/^let b:current_syntax = "haml"$/;"	v
@@ -2012,6 +2108,7 @@ b:match_words	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^  let b:match_
 b:ruby_no_expensive	vim/vim.symlink/bundle/vim-haml/syntax/haml.vim	/^let b:ruby_no_expensive = 1$/;"	v
 b:ruby_no_expensive	vim/vim.symlink/bundle/vim-ruby/syntax/ruby.vim	/^  let b:ruby_no_expensive = 1$/;"	v
 b:ruby_version	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^    let b:ruby_version = get(readfile(s:version_file, '', 1), '')$/;"	v
+b:surround_33	vim/vim.symlink/init/surround.vim	/^let b:surround_33 = "<!-- \\r -->"$/;"	v
 b:undo_ftplugin	vim/vim.symlink/bundle/jade/ftplugin/jade.vim	/^let b:undo_ftplugin = "setl cms< com< "$/;"	v
 b:undo_ftplugin	vim/vim.symlink/bundle/vim-haml/ftplugin/haml.vim	/^let b:undo_ftplugin = "setl cms< com< "$/;"	v
 b:undo_ftplugin	vim/vim.symlink/bundle/vim-haml/ftplugin/sass.vim	/^let b:undo_ftplugin = "setl cms< def< inc< inex< ofu< sua<"$/;"	v
@@ -2300,6 +2397,7 @@ determine_target_os	vim/vim.symlink/bundle/vim-ruby/bin/vim-ruby-install.rb	/^  
 determine_vim_dir	vim/vim.symlink/bundle/vim-ruby/bin/vim-ruby-install.rb	/^  def Env.determine_vim_dir$/;"	F	class:Env
 dict2list	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/undo.vim	/^fu! s:dict2list(dict)$/;"	f
 dictindex	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:dictindex(dict, expr)$/;"	f
+did_todo_syntax_inits	vim/vim.symlink/bundle/todo.txt-vim/syntax/todotxt.vim	/^    let did_todo_syntax_inits = 1$/;"	v
 diff_window_count	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:diff_window_count()$/;"	f
 differences	vim/vim.symlink/bundle/vim-gitgutter/plugin/gitgutter.vim	/^function! s:differences(hunks)$/;"	f
 diffidx	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/String.vim	/^function! s:diffidx(a, b)$/;"	f
@@ -2541,6 +2639,7 @@ g:autoloaded_dispatch_tmux	vim/vim.symlink/bundle/vim-dispatch/autoload/dispatch
 g:autoloaded_dispatch_windows	vim/vim.symlink/bundle/vim-dispatch/autoload/dispatch/windows.vim	/^let g:autoloaded_dispatch_windows = 1$/;"	v
 g:autoloaded_dispatch_x11	vim/vim.symlink/bundle/vim-dispatch/autoload/dispatch/x11.vim	/^let g:autoloaded_dispatch_x11 = 1$/;"	v
 g:autoloaded_rails	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^let g:autoloaded_rails = '4.4'$/;"	v
+g:autoloaded_table_mode	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^let g:autoloaded_table_mode = 1$/;"	v
 g:colors_name	vim/vim.symlink/bundle/gundo/tests/vim_test/colors/desert.vim	/^let g:colors_name="desert"$/;"	v
 g:colors_name	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow-Night-Blue.vim	/^let g:colors_name = "Tomorrow-Night-Blue"$/;"	v
 g:colors_name	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow-Night-Bright.vim	/^let g:colors_name = "Tomorrow-Night-Bright"$/;"	v
@@ -2548,7 +2647,9 @@ g:colors_name	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow-Night-Eighti
 g:colors_name	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow-Night.vim	/^let g:colors_name = "Tomorrow-Night"$/;"	v
 g:colors_name	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow.vim	/^let g:colors_name = "Tomorrow"$/;"	v
 g:colors_name	vim/vim.symlink/bundle/vim-hemisu/colors/hemisu.vim	/^let g:colors_name = "hemisu"$/;"	v
+g:ctrlp_user_command	vim/vim.symlink/init/ctrlp.vim	/^let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']$/;"	v
 g:ctrlp_working_path_mode	vim/vim.symlink/init/ctrlp.vim	/^let g:ctrlp_working_path_mode = 'c'$/;"	v
+g:ctrlp_working_path_mode	vim/vim.symlink/init/ctrlp.vim	/^let g:ctrlp_working_path_mode = 'ra'$/;"	v
 g:def	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-toggle-menu.vim	/^let g:def = 2$/;"	v
 g:did_ft	vim/vim.symlink/bundle/snipmate/plugin/snipMate.vim	/^let g:did_ft = {}$/;"	v
 g:did_ruby_ftplugin_functions	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^let g:did_ruby_ftplugin_functions = 1$/;"	v
@@ -2739,6 +2840,7 @@ g:loaded_syntastic_yaml_jsyaml_checker	vim/vim.symlink/bundle/syntastic/syntax_c
 g:loaded_syntastic_z80_z80syntaxchecker_checker	vim/vim.symlink/bundle/syntastic/syntax_checkers/z80/z80syntaxchecker.vim	/^let g:loaded_syntastic_z80_z80syntaxchecker_checker=1$/;"	v
 g:loaded_syntastic_zpt_zptlint_checker	vim/vim.symlink/bundle/syntastic/syntax_checkers/zpt/zptlint.vim	/^let g:loaded_syntastic_zpt_zptlint_checker=1$/;"	v
 g:loaded_syntastic_zsh_zsh_checker	vim/vim.symlink/bundle/syntastic/syntax_checkers/zsh/zsh.vim	/^let g:loaded_syntastic_zsh_zsh_checker=1$/;"	v
+g:loaded_table_mode	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^let g:loaded_table_mode = 1$/;"	v
 g:loaded_tagbar	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^let g:loaded_tagbar = 1$/;"	v
 g:loaded_ticktetevo	vim/vim.symlink/bundle/ticketevo.vim/plugin/ticketevo.vim	/^let g:loaded_ticktetevo = '0.1'$/;"	v
 g:loaded_togglebg	vim/vim.symlink/bundle/vim-colors-solarized/autoload/togglebg.vim	/^let g:loaded_togglebg = 1$/;"	v
@@ -2915,6 +3017,22 @@ g:syntastic_style_warning_symbol	vim/vim.symlink/bundle/syntastic/plugin/syntast
 g:syntastic_tex_chktex_showmsgs	vim/vim.symlink/bundle/syntastic/syntax_checkers/tex/chktex.vim	/^    let g:syntastic_tex_chktex_showmsgs = 1$/;"	v
 g:syntastic_warning_symbol	vim/vim.symlink/bundle/syntastic/plugin/syntastic/signs.vim	/^    let g:syntastic_warning_symbol = '>>'$/;"	v
 g:syntastic_xhtml_tidy_ignore_errors	vim/vim.symlink/bundle/syntastic/syntax_checkers/xhtml/tidy.vim	/^    let g:syntastic_xhtml_tidy_ignore_errors = []$/;"	v
+g:table_mode_add_formula_map	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_add_formula_map = 'fa'$/;"	v
+g:table_mode_always_active	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_always_active = 0$/;"	v
+g:table_mode_cell_text_object	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_cell_text_object = 'tc'$/;"	v
+g:table_mode_corner	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_corner = '+'$/;"	v
+g:table_mode_corner_corner	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_corner_corner = '|'$/;"	v
+g:table_mode_delete_column_map	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_delete_column_map = 'dc'$/;"	v
+g:table_mode_delete_row_map	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_delete_row_map = 'dd'$/;"	v
+g:table_mode_delimiter	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_delimiter = ','$/;"	v
+g:table_mode_eval_expr_map	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_eval_expr_map = 'fe'$/;"	v
+g:table_mode_fillchar	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_fillchar = '-'$/;"	v
+g:table_mode_map_prefix	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_map_prefix = '<Leader>t'$/;"	v
+g:table_mode_realign_map	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_realign_map = 'r'$/;"	v
+g:table_mode_separator	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_separator = '|'$/;"	v
+g:table_mode_tableize_map	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_tableize_map = 't'$/;"	v
+g:table_mode_tableize_op_map	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_tableize_op_map = '<Leader>T'$/;"	v
+g:table_mode_toggle_map	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^let g:table_mode_toggle_map = 'm'$/;"	v
 g:tabular_default_format	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^  let g:tabular_default_format = "l1"$/;"	v
 g:tabular_loaded	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^let g:tabular_loaded = 1$/;"	v
 g:tagbar_iconchars	vim/vim.symlink/bundle/tagbar/plugin/tagbar.vim	/^        let g:tagbar_iconchars = ['+', '-']$/;"	v
@@ -2978,6 +3096,8 @@ gf	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^    nnoremap <silent> <bu
 gf	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^function! s:gf(count,map,edit) abort$/;"	f
 gf	vim/vim.symlink/sessions/last.vim	/^nmap <buffer> gf <Plug>RailsFind$/;"	m
 gfuzz	sh/git_aliases.sh	/^  gfuzz(){$/;"	f
+ggdG	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^        normal! ggdG$/;"	m
+ggdG	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^      normal! ggdG$/;"	m
 gitgutter	vim/vim.symlink/bundle/vim-gitgutter/plugin/gitgutter.vim	/^augroup gitgutter$/;"	a
 github_url	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:github_url(repo,url,rev,commit,path,type,line1,line2) abort$/;"	f
 glbpath	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:glbpath(...)$/;"	f
@@ -3002,6 +3122,7 @@ grey_number	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow-Night-Bright.v
 grey_number	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow-Night-Eighties.vim	/^	fun <SID>grey_number(x)$/;"	f
 grey_number	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow-Night.vim	/^	fun <SID>grey_number(x)$/;"	f
 grey_number	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow.vim	/^	fun <SID>grey_number(x)$/;"	f
+gsub	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:gsub(str,pat,rep) abort "{{{2$/;"	f
 gsub	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:gsub(str,pat,rep) abort$/;"	f
 gsub	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:gsub(str,pat,rep)$/;"	f
 gundo#GundoHide	vim/vim.symlink/bundle/gundo/autoload/gundo.vim	/^function! gundo#GundoHide()"{{{$/;"	f
@@ -3036,6 +3157,8 @@ hs_highlight_boolean	vim/vim.symlink/bundle/vim-colors-solarized/colors/solarize
 hs_highlight_delimiters	vim/vim.symlink/bundle/vim-colors-solarized/colors/solarized.vim	/^let hs_highlight_delimiters=1$/;"	v
 htmlDis	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:htmlDis()$/;"	f
 htmlEn	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:htmlEn()$/;"	f
+iasd,asd;asd,asdasd,asd;asd,asd	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^      normal i$/;"	m
+i|test11|test12||test21|test22|	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^      normal i$/;"	m
 iI	vim/vim.symlink/bundle/vim-indent-object/plugin/indent-object.vim	/^onoremap <silent>iI :<C-u>cal <Sid>HandleTextObjectMapping(1, 1, 0, [line("."), line("."), col("."), col(".")])<CR>$/;"	m
 iI	vim/vim.symlink/bundle/vim-indent-object/plugin/indent-object.vim	/^vnoremap <silent>iI :<C-u>cal <Sid>HandleTextObjectMapping(1, 1, 1, [line("'<"), line("'>"), col("'<"), col("'>")])<CR><Esc>gv$/;"	m
 iM	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^    onoremap <silent> <buffer> iM :<C-U>call <SID>wrap_i('[[','][')<CR>$/;"	m
@@ -3107,6 +3230,8 @@ is_windows	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.
 iscmdwin	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:iscmdwin()$/;"	f
 ispathitem	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:ispathitem()$/;"	f
 itertools	vim/vim.symlink/bundle/gundo/autoload/gundo.py	/^import itertools$/;"	i
+i|test11|test12||test21|test22|	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^        normal i|test11|test12|$/;"	m
+i|test11|test12||test21|test22|	vim/vim.symlink/bundle/table-mode/t/tablemode.vim	/^      normal i|test11|test12|$/;"	m
 javascriptEdit	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:javascriptEdit(cmd,...)$/;"	f
 javascriptIncludeTag	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:javascriptIncludeTag()$/;"	f
 javascriptList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:javascriptList(A,L,P)$/;"	f
@@ -4584,6 +4709,7 @@ s:save_cpo	vim/vim.symlink/bundle/syntastic/syntax_checkers/cpp/gcc.vim	/^let s:
 s:save_cpo	vim/vim.symlink/bundle/syntastic/syntax_checkers/d/dmd.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	vim/vim.symlink/bundle/syntastic/syntax_checkers/objc/gcc.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	vim/vim.symlink/bundle/syntastic/syntax_checkers/objcpp/gcc.vim	/^let s:save_cpo = &cpo$/;"	v
+s:save_cpo	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	vim/vim.symlink/bundle/tabular/after/plugin/TabularMaps.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todo.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	vim/vim.symlink/bundle/vim-haml/ftplugin/haml.vim	/^let s:save_cpo = &cpo$/;"	v
@@ -4855,6 +4981,7 @@ stylesheetEdit	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s
 stylesheetList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:stylesheetList(A,L,P)$/;"	f
 stylesheetTag	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:stylesheetTag()$/;"	f
 stylesheetType	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:stylesheetType()$/;"	f
+sub	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:sub(str,pat,rep) abort "{{{2$/;"	f
 sub	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:sub(str,pat,rep) abort$/;"	f
 sub	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:sub(str,pat,rep)$/;"	f
 subesc	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:subesc(pattern)$/;"	f
@@ -4908,6 +5035,38 @@ syntax	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/tag.vim	/^fu! s:syntax()$
 syntax	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/undo.vim	/^fu! s:syntax()$/;"	f
 sys	vim/vim.symlink/bundle/gundo/autoload/gundo.py	/^import sys$/;"	i
 system	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vim	/^function! s:system(str, ...)$/;"	f
+table_mode_separator_map	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^  let table_mode_separator_map = g:table_mode_separator$/;"	v
+tablemode#AddFormula	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#AddFormula() "{{{2$/;"	f
+tablemode#AddHeaderBorder	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#AddHeaderBorder(line) "{{{2$/;"	f
+tablemode#Average	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#Average(range, ...) abort "{{{2$/;"	f
+tablemode#CellTextObject	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#CellTextObject() "{{{2$/;"	f
+tablemode#ColumnCount	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#ColumnCount(line) "{{{2$/;"	f
+tablemode#ColumnNr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#ColumnNr(pos) "{{{2$/;"	f
+tablemode#DeleteColumn	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#DeleteColumn() "{{{2$/;"	f
+tablemode#DeleteRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#DeleteRow() "{{{2$/;"	f
+tablemode#EvaluateExpr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#EvaluateExpr(expr, line) abort "{{{2$/;"	f
+tablemode#EvaluateFormulaLine	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#EvaluateFormulaLine() abort "{{{2$/;"	f
+tablemode#GetCellRange	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#GetCellRange(range, ...) abort "{{{2$/;"	f
+tablemode#GetCells	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#GetCells(...) abort "{{{2$/;"	f
+tablemode#GetFirstRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#GetFirstRow(line) "{{{2$/;"	f
+tablemode#GetLastRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#GetLastRow(line) "{{{2$/;"	f
+tablemode#IsATableHeader	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#IsATableHeader(line) "{{{2$/;"	f
+tablemode#IsATableRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#IsATableRow(line) "{{{2$/;"	f
+tablemode#LineNr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#LineNr(row) "{{{2$/;"	f
+tablemode#RowCount	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#RowCount(line) "{{{2$/;"	f
+tablemode#RowNr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#RowNr(line) "{{{2$/;"	f
+tablemode#SetCell	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#SetCell(val, ...) "{{{2$/;"	f
+tablemode#Sum	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#Sum(range, ...) abort "{{{2$/;"	f
+tablemode#TableModeDisable	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#TableModeDisable() "{{{2$/;"	f
+tablemode#TableModeEnable	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#TableModeEnable() "{{{2$/;"	f
+tablemode#TableModeToggle	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#TableModeToggle() "{{{2$/;"	f
+tablemode#TableMotion	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#TableMotion(direction) "{{{2$/;"	f
+tablemode#TableRealign	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#TableRealign(line) "{{{2$/;"	f
+tablemode#TableizeByDelimiter	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#TableizeByDelimiter() "{{{2$/;"	f
+tablemode#TableizeInsertMode	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#TableizeInsertMode() "{{{2$/;"	f
+tablemode#TableizeRange	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#TableizeRange(...) range "{{{2$/;"	f
+tablemode#scope	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#scope() "{{{2$/;"	f
+tablemode#sid	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! tablemode#sid() "{{{2$/;"	f
 tabular#DoGTabularize	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! tabular#DoGTabularize()$/;"	f
 tabular#ElementFormatPattern	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! tabular#ElementFormatPattern()$/;"	f
 tabular#PipeRange	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! tabular#PipeRange(includepat, ...) range$/;"	f
@@ -4936,6 +5095,7 @@ taskList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:taskL
 test	vim/vim.symlink/bundle/vim-elixir/spec/indent/anonymous_functions_spec.rb	/^        def test do$/;"	f
 test_unicorn	bash/nginx_fun.sh	/^function test_unicorn(){$/;"	f
 textdialog	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:textdialog(str)$/;"	f
+throw	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:throw(string) abort "{{{2$/;"	f
 throw	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:throw(msg)$/;"	f
 throw	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:throw(string) abort$/;"	f
 time	vim/vim.symlink/bundle/gundo/autoload/gundo.py	/^import time$/;"	i

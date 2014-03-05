@@ -9,8 +9,18 @@
   alias wifipwd="networksetup -getairportnetwork 'en1'"
 #General Stuff
   alias ..="cd .."
+  lf(){
+    if [ $1 ]
+    then
+      echo "$1$(ls $1 | tail -n1)"
+    else
+      ls | tail -n1
+    fi
+  }
   alias ls="ls -G"
   alias q='cd ~/quicklinks;clear; ls'
+  alias v='vim'
+  alias e='emacs'
   alias l="ls -G"
   alias mkdir="mkdir -p"
   alias ll="ls -Ghla"
@@ -23,10 +33,10 @@
 #Personal Stuff
   alias rgraph='cd Meta/stats/R'
   alias biodocs='cd ~/Documents/Notes/Biostat'
-  alias docs='cd ~/Documents'  
+  alias d='cd ~/Documents'  
   alias code='cd ~/Code'
   alias rsource='cd ~/Code/libs/rails'
-  alias todo='vi ~/Dropbox/Todotxt/todo.txt'
+  alias todo='emacs ~/Dropbox/Todotxt/todo.org'
   alias togo='vi ~/Dropbox/togo.txt'
   alias irish='vi ~/Dropbox/irish.txt'
   alias gifts='vi ~/Dropbox/Public/gift_ideas.txt'
@@ -39,7 +49,7 @@
   alias tegem='cd ~/workspace/ticketevolution-ruby'
   alias teex='cd ~/workspace/pos-chrome-extension/Robotester/tests/'
   alias tedocs='cd ~/Documents/TicketEvolution'
-  alias e='cd ~/workspace/exchange'
+  alias ex='cd ~/workspace/exchange'
   alias p='cd ~/workspace/pos.rb'
   alias c='cd ~/workspace/carbon'
 #Rails Shortcuts

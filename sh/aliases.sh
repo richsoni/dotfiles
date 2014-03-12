@@ -36,7 +36,7 @@
   alias d='cd ~/Documents'  
   alias code='cd ~/Code'
   alias rsource='cd ~/Code/libs/rails'
-  alias todo='emacs ~/Dropbox/Todotxt/todo.org'
+  alias todo='emacs ~/Dropbox/org/todo.org'
   alias togo='vi ~/Dropbox/togo.txt'
   alias irish='vi ~/Dropbox/irish.txt'
   alias gifts='vi ~/Dropbox/Public/gift_ideas.txt'

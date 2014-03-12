@@ -69,6 +69,9 @@
 <Leader><F2>	vim/vim.symlink/plugin/hexHighlight.vim	/^map <Leader><F2> :call HexHighlight()<Return>$/;"	m
 <Plug>AlwaysEnd	vim/vim.symlink/bundle/vim-endwise/plugin/endwise.vim	/^  imap    <script> <Plug>AlwaysEnd        <SID>AlwaysEnd$/;"	m
 <Plug>Coerce	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^nnoremap <silent> <Plug>Coerce :<C-U>call <SID>coerce(nr2char(getchar()))<CR>$/;"	m
+<Plug>Commentary	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^nnoremap <silent> <Plug>Commentary     :<C-U>set opfunc=<SID>go<CR>g@$/;"	m
+<Plug>CommentaryLine	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^nnoremap <silent> <Plug>CommentaryLine :<C-U>set opfunc=<SID>go<Bar>exe 'norm! 'v:count1.'g@_'<CR>$/;"	m
+<Plug>CommentaryUndo	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^nnoremap <silent> <Plug>CommentaryUndo :<C-U>call <SID>undo()<CR>$/;"	m
 <Plug>Csurround	vim/vim.symlink/bundle/vim-surround/plugin/surround.vim	/^nnoremap <silent> <Plug>Csurround  :<C-U>call <SID>changesurround()<CR>$/;"	m
 <Plug>DiscretionaryEnd	vim/vim.symlink/bundle/vim-endwise/plugin/endwise.vim	/^  imap    <script> <Plug>DiscretionaryEnd <SID>DiscretionaryEnd$/;"	m
 <Plug>Dsurround	vim/vim.symlink/bundle/vim-surround/plugin/surround.vim	/^nnoremap <silent> <Plug>Dsurround  :<C-U>call <SID>dosurround(<SID>inputtarget())<CR>$/;"	m
@@ -211,6 +214,8 @@
 <leader>tt	vim/vim.symlink/init/keybindings.vim	/^  nnoremap <leader>tt :vsp ~\/Dropbox\/Todotxt\/todo.txt<cr>$/;"	m
 <leader>y	vim/vim.symlink/init/keybindings.vim	/^noremap <leader>y "+y$/;"	m
 <leader>z	vim/vim.symlink/init/keybindings.vim	/^    nnoremap <leader>z :ZoomWin<cr>$/;"	m
+<plug>SplitjoinJoin	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^nnoremap <silent> <plug>SplitjoinJoin  :<c-u>call <SID>Join()<cr>$/;"	m
+<plug>SplitjoinSplit	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^nnoremap <silent> <plug>SplitjoinSplit :<c-u>call <SID>Split()<cr>$/;"	m
 <s-tab>	vim/vim.symlink/bundle/snipmate/after/plugin/snipMate.vim	/^ino <silent> <s-tab> <c-r>=BackwardsSnippet()<cr>$/;"	m
 <tab>	vim/vim.symlink/bundle/snipmate/after/plugin/snipMate.vim	/^ino <silent> <tab> <c-r>=TriggerSnippet()<cr>$/;"	m
 AMAP	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/macros/menu-map.vim	/^command! -nargs=+           AMAP$/;"	c
@@ -246,7 +251,9 @@ AgAdd	vim/vim.symlink/bundle/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -com
 AgFile	vim/vim.symlink/bundle/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file AgFile call ag#Ag('grep<bang> -g', <q-args>)$/;"	c
 AgFromSearch	vim/vim.symlink/bundle/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file AgFromSearch call ag#AgFromSearch('grep<bang>', <q-args>)$/;"	c
 AgHelp	vim/vim.symlink/bundle/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=help AgHelp call ag#AgHelp('grep<bang>',<q-args>)$/;"	c
+Align	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! s:Align(from, to, type)$/;"	f
 Align	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Align(lines) "{{{3$/;"	f
+AllLinesStartWithWhen	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! s:AllLinesStartWithWhen(lines)$/;"	f
 AllTests	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-Fargs2String.vim	/^function! AllTests()$/;"	f
 AllmlInit	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! AllmlInit()$/;"	f
 Alternate	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:Alternate(cmd,line1,line2,count,...)$/;"	f
@@ -262,6 +269,7 @@ BTW	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/command.vi
 BTW	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/command.vim	/^function! s:BTW(command, ...)$/;"	f
 BackupDir	vim/vim.symlink/bundle/vim-ruby/bin/vim-ruby-install.rb	/^  class BackupDir$/;"	c	class:VimRubyInstaller
 BackwardsSnippet	vim/vim.symlink/bundle/snipmate/plugin/snipMate.vim	/^fun! BackwardsSnippet()$/;"	f
+Bar	vim/vim.symlink/bundle/splitjoin/examples/test.rb	/^class Bar$/;"	c
 BaseTag.New	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:BaseTag.New(name) abort dict$/;"	f
 BaseTag._getPrefix	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:BaseTag._getPrefix() abort dict$/;"	f
 BaseTag._init	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:BaseTag._init(name) abort dict$/;"	f
@@ -277,6 +285,7 @@ BaseTag.isPseudoTag	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function
 BaseTag.openFold	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:BaseTag.openFold() abort dict$/;"	f
 BaseTag.openParents	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:BaseTag.openParents() abort dict$/;"	f
 BaseTag.setFolded	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:BaseTag.setFolded(folded) abort dict$/;"	f
+Baz	vim/vim.symlink/bundle/splitjoin/examples/test.rb	/^class Baz$/;"	c
 Blame	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:Blame(bang,line1,line2,count,args) abort$/;"	f
 BlameCommit	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:BlameCommit(cmd) abort$/;"	f
 BlameJump	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:BlameJump(suffix) abort$/;"	f
@@ -515,6 +524,8 @@ FinishCommit	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function!
 FocusDispatch	vim/vim.symlink/bundle/vim-dispatch/plugin/dispatch.vim	/^command! -bang -nargs=* -complete=custom,dispatch#command_complete FocusDispatch$/;"	c
 Foo	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-command.vim	/^function! s:Foo(i)$/;"	f
 Foo	vim/vim.symlink/bundle/gundo/tests/bundled/ut/tests/lh/UT.vim	/^function! s:Foo()$/;"	f
+Foo	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^class Foo: pass$/;"	c
+Foo	vim/vim.symlink/bundle/splitjoin/examples/test.vim	/^command! Foo if one |$/;"	c
 ForceUpdate	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:ForceUpdate()$/;"	f
 ForwardToZshChecker	vim/vim.symlink/bundle/syntastic/syntax_checkers/sh/sh.vim	/^function! s:ForwardToZshChecker()$/;"	f
 GF	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:GF(mode) abort$/;"	f
@@ -527,6 +538,7 @@ GetBufferRubySingletonMethods	vim/vim.symlink/bundle/vim-ruby/autoload/rubycompl
 GetCell	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetCell(...) "{{{2$/;"	f
 GetCellRange	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetCellRange(range, ...) abort$/;"	f
 GetCells	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetCells(line, ...) abort$/;"	f
+GetChildren	vim/vim.symlink/bundle/splitjoin/autoload/sj/yaml.vim	/^function! s:GetChildren(line_no)$/;"	f
 GetCoffeeIndent	vim/vim.symlink/bundle/vim-coffee-script/indent/coffee.vim	/^function! GetCoffeeIndent(curlinenum)$/;"	f
 GetColumn	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetColumn(col, ...) abort "{{{2$/;"	f
 GetColumnRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetColumnRow(row, ...) abort "{{{2$/;"	f
@@ -540,6 +552,7 @@ GetElixirIndent	vim/vim.symlink/bundle/vim-elixir/indent/elixir.vim	/^function! 
 GetErubyIndent	vim/vim.symlink/bundle/vim-ruby/indent/eruby.vim	/^function! GetErubyIndent(...)$/;"	f
 GetFirstRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetFirstRow(line) "{{{2$/;"	f
 GetHamlIndent	vim/vim.symlink/bundle/vim-haml/indent/haml.vim	/^function! GetHamlIndent()$/;"	f
+GetIndentWhitespace	vim/vim.symlink/bundle/splitjoin/autoload/sj/yaml.vim	/^function! s:GetIndentWhitespace(line_no)$/;"	f
 GetJadeIndent	vim/vim.symlink/bundle/jade/indent/jade.vim	/^function! GetJadeIndent()$/;"	f
 GetLastRow	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:GetLastRow(line) "{{{2$/;"	f
 GetLikeCTRL_W	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/plugin/words_tools.vim	/^function! GetLikeCTRL_W()$/;"	f
@@ -682,8 +695,10 @@ IgnoreFile	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^function! s:I
 IgnoreTests	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	/^function! s:IgnoreTests(...) dict$/;"	f
 IgnoreTests	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/lh/UT.vim	/^function! s:IgnoreTests(...) dict$/;"	f
 IgnoreTests	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/UT.vim	/^function! s:IgnoreTests(...) dict$/;"	f
+IncreaseIndentWhitespace	vim/vim.symlink/bundle/splitjoin/autoload/sj/yaml.vim	/^function! s:IncreaseIndentWhitespace(from, to, whitespace)$/;"	f
 IndentSort	vim/vim.symlink/bundle/todo.txt-vim/plugin/IndentSort.vim	/^command! -nargs=0 -range -bar IndentSort :<line1>,<line2>call <SID>IndentSort()$/;"	c
 IndentSort	vim/vim.symlink/bundle/todo.txt-vim/plugin/IndentSort.vim	/^function! s:IndentSort() range$/;"	f
+IndentedLinesBelow	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! s:IndentedLinesBelow(line)$/;"	f
 Init	vim/vim.symlink/bundle/syntastic/autoload/syntastic/c.vim	/^function! s:Init()$/;"	f
 Init	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:Init(silent) abort$/;"	f
 Init	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:Init()$/;"	f
@@ -710,6 +725,12 @@ IsTableModeActive	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^fun
 IsValidFile	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:IsValidFile(fname, ftype) abort$/;"	f
 Join	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/function.vim	/^function! s:Join(args)$/;"	f
 Join	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/function.vim	/^function! s:Join(args)$/;"	f
+Join	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^function! s:Join()$/;"	f
+JoinHashWithCurlyBraces	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! s:JoinHashWithCurlyBraces()$/;"	f
+JoinHashWithRoundBraces	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! s:JoinHashWithRoundBraces()$/;"	f
+JoinHashWithoutBraces	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! s:JoinHashWithoutBraces()$/;"	f
+JoinLines	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! s:JoinLines(text)$/;"	f
+JoinList	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! s:JoinList(regex, opening_char)$/;"	f
 JshintNew	vim/vim.symlink/bundle/syntastic/syntax_checkers/javascript/jshint.vim	/^function s:JshintNew()$/;"	f
 JumpInit	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:JumpInit() abort$/;"	f
 JumpToTag	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:JumpToTag(stay_in_tagbar) abort$/;"	f
@@ -745,6 +766,7 @@ LineNr	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Li
 LoadClasspathFromConfigFile	vim/vim.symlink/bundle/syntastic/syntax_checkers/java/javac.vim	/^function! s:LoadClasspathFromConfigFile()$/;"	f
 LoadUserTypeDefs	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:LoadUserTypeDefs(...) abort$/;"	f
 LocalModelines	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:LocalModelines(lnum)$/;"	f
+LocateDefinition	vim/vim.symlink/bundle/splitjoin/autoload/sj/css.vim	/^function! s:LocateDefinition()$/;"	f
 Log	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:Log(cmd,...)$/;"	f
 Log	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:Log(bang,arg)$/;"	f
 LogDebugMessage	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:LogDebugMessage(msg) abort$/;"	f
@@ -759,6 +781,7 @@ MapKeys	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:MapKeys(
 MapNextFamily	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^function! s:MapNextFamily(map,cmd)$/;"	f
 MapNorms	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:MapNorms()$/;"	f
 MapSpecs	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:MapSpecs()$/;"	f
+Mapping	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^function! s:Mapping(mapping, command)$/;"	f
 Mappings	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/buffer/dialog.vim	/^function! s:Mappings(abuffer)$/;"	f
 Mappings	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/buffer/dialog.vim	/^function! s:Mappings(abuffer)$/;"	f
 MarkDue	vim/vim.symlink/bundle/todo.txt-vim/ftplugin/todotxt.vim	/^command! -nargs=0 MarkDue :call <SID>MarkDue()$/;"	c
@@ -982,6 +1005,8 @@ SetDefTxt	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:SetDefTxt(
 SetFoldLevel	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:SetFoldLevel(level, force) abort$/;"	f
 SetFoldLevelRecursive	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:SetFoldLevelRecursive(fileinfo, tags, level) abort$/;"	f
 SetGlobalOptDefault	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^function! s:SetGlobalOptDefault(opt, val) "{{{1$/;"	f
+SetIndent	vim/vim.symlink/bundle/splitjoin/autoload/sj/haml.vim	/^function! s:SetIndent(from, to, indent)$/;"	f
+SetIndentWhitespace	vim/vim.symlink/bundle/splitjoin/autoload/sj/yaml.vim	/^function! s:SetIndentWhitespace(line_no, whitespace)$/;"	f
 SetLines	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! s:SetLines(start, len, strings)$/;"	f
 SetMakePrg	vim/vim.symlink/bundle/vim-coffee-script/compiler/coffee.vim	/^function! s:SetMakePrg()$/;"	f
 SetOptDefault	vim/vim.symlink/bundle/vim-rails/plugin/rails.vim	/^function! s:SetOptDefault(opt,val)$/;"	f
@@ -1001,6 +1026,7 @@ ShowPrototype	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:Sh
 ShrinkIfExpanded	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:ShrinkIfExpanded() abort$/;"	f
 SkipExpr	vim/vim.symlink/bundle/vim-coffee-script/indent/coffee.vim	/^function! s:SkipExpr(startlinenum)$/;"	f
 SkipFile	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^function! s:SkipFile()$/;"	f
+SkipSyntax	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! s:SkipSyntax(...)$/;"	f
 SlimrbVersion	vim/vim.symlink/bundle/syntastic/syntax_checkers/slim/slimrb.vim	/^function! s:SlimrbVersion()$/;"	f
 SmartSearch	vim/vim.symlink/bundle/vim-coffee-script/indent/coffee.vim	/^function! s:SmartSearch(linenum, regex)$/;"	f
 SolarizedHiTrail	vim/vim.symlink/bundle/vim-colors-solarized/colors/solarized.vim	/^augroup SolarizedHiTrail$/;"	a
@@ -1011,12 +1037,17 @@ SolarizedOptions	vim/vim.symlink/bundle/vim-colors-solarized/colors/solarized.vi
 SortTags	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:SortTags(tags, comparemethod) abort$/;"	f
 SpecInputs	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:SpecInputs(str)$/;"	f
 SpeedDatingFormat	vim/vim.symlink/bundle/vim-speeddating/plugin/speeddating.vim	/^command! -bar -bang -count=0 -nargs=? SpeedDatingFormat :call s:add_format(<q-args>,<count>,<bang>0)$/;"	c
+Split	vim/vim.symlink/bundle/splitjoin/autoload/sj/perl.vim	/^function! s:Split(pattern, replacement_pattern)$/;"	f
+Split	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^function! s:Split()$/;"	f
 Split	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Split(string, delim)$/;"	f
 SplitCDeclarations	vim/vim.symlink/bundle/tabular/after/plugin/TabularMaps.vim	/^function! SplitCDeclarations(lines)$/;"	f
 SplitCommands	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^function! s:SplitCommands(string)$/;"	f
 SplitDelim	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! s:SplitDelim(string, delim)$/;"	f
 SplitDelimTest	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^function! s:SplitDelimTest(string, delim, expected)$/;"	f
+SplitList	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! s:SplitList(regex, opening_char, closing_char)$/;"	f
 SplitPattern	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:SplitPattern(str)$/;"	f
+SplitjoinJoin	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^command! SplitjoinJoin  call s:Join()$/;"	c
+SplitjoinSplit	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^command! SplitjoinSplit call s:Split()$/;"	c
 StageDiff	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:StageDiff(diff) abort$/;"	f
 StageDiffEdit	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:StageDiffEdit() abort$/;"	f
 StageNext	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:StageNext(count)$/;"	f
@@ -1046,6 +1077,7 @@ Successors_fully_defined	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh
 Successors_lazy	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/graph/tsort.vim	/^function! s:Successors_lazy(node) dict$/;"	f
 Successors_lazy	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/graph/tsort.vim	/^function! s:Successors_lazy(node) dict$/;"	f
 Sum	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Sum(list) "{{{2$/;"	f
+Support	vim/vim.symlink/bundle/splitjoin/spec/support/vim.rb	/^module Support$/;"	m
 Support	vim/vim.symlink/bundle/vim-elixir/spec/spec_helper.rb	/^module Support$/;"	m
 Support	vim/vim.symlink/bundle/vim-ruby/spec/spec_helper.rb	/^module Support$/;"	m
 SynShow	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/syntax.vim	/^command! SynShow echo 'hi<'.lh#syntax#name_at_mark('.',1).'> trans<'$/;"	c
@@ -1404,6 +1436,7 @@ TableModeToggle	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^  comm
 TableMotion	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^function! s:TableMotion() "{{{1$/;"	f
 Tableize	vim/vim.symlink/bundle/table-mode/plugin/table-mode.vim	/^command! -nargs=? -range Tableize <line1>,<line2>call tablemode#TableizeRange(<q-args>)$/;"	c
 Tableizeline	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:Tableizeline(line, ...) "{{{2$/;"	f
+Tabularize	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! s:Tabularize(from, to, type)$/;"	f
 Tabularize	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^   \\ Tabularize <line1>,<line2>call Tabularize(<q-args>)$/;"	c
 Tabularize	vim/vim.symlink/bundle/tabular/plugin/Tabular.vim	/^function! Tabularize(command, ...) range$/;"	f
 Tagbar	vim/vim.symlink/bundle/tagbar/plugin/tagbar.vim	/^command! -nargs=0 Tagbar              call tagbar#ToggleWindow()$/;"	c
@@ -1596,6 +1629,7 @@ Verbose	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/option.vim	/^fun
 Verbose	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/path.vim	/^function! s:Verbose(expr)$/;"	f
 Verbose	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/position.vim	/^function! s:Verbose(expr)$/;"	f
 Verbose	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/syntax.vim	/^function! s:Verbose(expr)$/;"	f
+Vim	vim/vim.symlink/bundle/splitjoin/spec/support/vim.rb	/^  module Vim$/;"	m	class:Support
 VimRubyInstaller	vim/vim.symlink/bundle/vim-ruby/bin/vim-ruby-install.rb	/^class VimRubyInstaller$/;"	c
 VimuxClearRunnerHistory	vim/vim.symlink/bundle/vimux/plugin/vimux.vim	/^command VimuxClearRunnerHistory :call VimuxClearRunnerHistory()$/;"	c
 VimuxClearRunnerHistory	vim/vim.symlink/bundle/vimux/plugin/vimux.vim	/^function! VimuxClearRunnerHistory()$/;"	f
@@ -1737,6 +1771,9 @@ ZoomWindow	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:ZoomW
 \OO	vim/vim.symlink/sessions/last.vim	/^noremap \\OO :source ~\/.vim\/sessions\/$/;"	m
 \RR	vim/vim.symlink/sessions/last.vim	/^nnoremap \\RR :VimuxPromptCommand$/;"	m
 \SS	vim/vim.symlink/sessions/last.vim	/^noremap \\SS :mksession! ~\/.vim\/sessions\/$/;"	m
+\\	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^  nmap \\\\  <Plug>Commentary$/;"	m
+\\\	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^  nmap \\\\\\ <Plug>CommentaryLine$/;"	m
+\\u	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^  nmap \\\\u <Plug>CommentaryUndo$/;"	m
 \a	vim/vim.symlink/sessions/last.vim	/^nnoremap \\a :Ag! -QS $/;"	m
 \a	vim/vim.symlink/sessions/last.vim	/^vnoremap <silent> \\a y:Ag! "$/;"	m
 \b	vim/vim.symlink/sessions/last.vim	/^nnoremap \\b :call CloseUnloadedBuffers()$/;"	m
@@ -2031,6 +2068,7 @@ ask_user	vim/vim.symlink/bundle/vim-ruby/bin/vim-ruby-install.rb	/^  def Env.ask
 assert_correct_indenting	vim/vim.symlink/bundle/vim-elixir/spec/spec_helper.rb	/^  def assert_correct_indenting(string)$/;"	f	class:Support
 assert_correct_indenting	vim/vim.symlink/bundle/vim-ruby/spec/spec_helper.rb	/^  def assert_correct_indenting(string)$/;"	f	class:Support
 assert_correct_syntax	vim/vim.symlink/bundle/vim-elixir/spec/spec_helper.rb	/^  def assert_correct_syntax(syntax, cursor, string)$/;"	f	class:Support
+assert_file_contents	vim/vim.symlink/bundle/splitjoin/spec/support/vim.rb	/^    def assert_file_contents(string)$/;"	f	class:Support.Vim
 assert_incorrect_syntax	vim/vim.symlink/bundle/vim-elixir/spec/spec_helper.rb	/^  def assert_incorrect_syntax(type, cursor, string)$/;"	f	class:Support
 async_load	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/cache.vim	/^function! s:async_load(argv, cache_dir, filename) "{{{$/;"	f
 at	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:at(str)$/;"	f
@@ -2108,6 +2146,46 @@ b:match_words	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^  let b:match_
 b:ruby_no_expensive	vim/vim.symlink/bundle/vim-haml/syntax/haml.vim	/^let b:ruby_no_expensive = 1$/;"	v
 b:ruby_no_expensive	vim/vim.symlink/bundle/vim-ruby/syntax/ruby.vim	/^  let b:ruby_no_expensive = 1$/;"	v
 b:ruby_version	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^    let b:ruby_version = get(readfile(s:version_file, '', 1), '')$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/coffee/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/css/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/eruby/splitjoin.vim	/^let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/go/splitjoin.vim	/^let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/haml/splitjoin.vim	/^let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/html/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/htmldjango/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/javascript/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/less/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/lua/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/perl/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/php/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/python/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/ruby/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/scss/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/sh/splitjoin.vim	/^let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/vim/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/xml/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/yaml/splitjoin.vim	/^  let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_join_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/zsh/splitjoin.vim	/^let b:splitjoin_join_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/coffee/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/css/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/eruby/splitjoin.vim	/^let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/go/splitjoin.vim	/^let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/haml/splitjoin.vim	/^let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/html/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/htmldjango/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/javascript/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/less/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/lua/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/perl/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/php/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/python/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/ruby/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/scss/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/sh/splitjoin.vim	/^let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/vim/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/xml/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/yaml/splitjoin.vim	/^  let b:splitjoin_split_callbacks = [$/;"	v
+b:splitjoin_split_callbacks	vim/vim.symlink/bundle/splitjoin/ftplugin/zsh/splitjoin.vim	/^let b:splitjoin_split_callbacks = [$/;"	v
 b:surround_33	vim/vim.symlink/init/surround.vim	/^let b:surround_33 = "<!-- \\r -->"$/;"	v
 b:undo_ftplugin	vim/vim.symlink/bundle/jade/ftplugin/jade.vim	/^let b:undo_ftplugin = "setl cms< com< "$/;"	v
 b:undo_ftplugin	vim/vim.symlink/bundle/vim-haml/ftplugin/haml.vim	/^let b:undo_ftplugin = "setl cms< com< "$/;"	v
@@ -2120,7 +2198,9 @@ b:undo_ftplugin	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^  let b:undo
 b:undo_ftplugin	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^let b:undo_ftplugin = "setl fo< inc< inex< sua< def< com< cms< path< tags< kp<"$/;"	v
 backup	vim/vim.symlink/bundle/vim-ruby/bin/vim-ruby-install.rb	/^    def backup(basedir, path)$/;"	f	class:VimRubyInstaller.BackupDir
 badgood	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:badgood(args)$/;"	f
+bar	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^from foo import bar, baz$/;"	i
 bar	vim/vim.symlink/bundle/vim-ruby/spec/indent/continuations_spec.rb	/^      def bar($/;"	f
+baz	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^from foo import bar, baz$/;"	i
 beep	vim/vim.symlink/bundle/vim-surround/plugin/surround.vim	/^function! s:beep()$/;"	f
 break	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/List.vim	/^function! s:break(f, xs)$/;"	f
 bspattern	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:bspattern(pattern)$/;"	f
@@ -2175,6 +2255,7 @@ caching_dictionary	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/s
 caching_from_dict	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/vim_complete/helper.vim	/^function! s:caching_from_dict(dict_name, kind) "{{{$/;"	f
 caching_from_syn	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/syntax_complete.vim	/^function! s:caching_from_syn(filetype) "{{{$/;"	f
 caching_prototype_from_dict	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/vim_complete/helper.vim	/^function! s:caching_prototype_from_dict(dict_name) "{{{$/;"	f
+callback	vim/vim.symlink/bundle/splitjoin/examples/test.js	/^var callback = function (something, other) { something_else; };$/;"	r
 camelcase	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:camelcase(word)$/;"	f
 cgetfile	vim/vim.symlink/bundle/vim-dispatch/autoload/dispatch.vim	/^function! s:cgetfile(request, all, copen) abort$/;"	f
 ch_fg_col	bash/prompt.sh	/^ch_fg_col(){$/;"	f
@@ -2512,6 +2593,9 @@ esccmd	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:esccmd(
 esctagscmd	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/buffertag.vim	/^fu! s:esctagscmd(bin, args, ...)$/;"	f
 escvar	vim/vim.symlink/bundle/vim-rails/plugin/rails.vim	/^function! s:escvar(r)$/;"	f
 example	vim/vim.symlink/bundle/vim-elixir/spec/indent/lists_spec.rb	/^      def example do$/;"	f
+example 	vim/vim.symlink/bundle/splitjoin/examples/test.lua	/^function example ()$/;"	f
+example_one	vim/vim.symlink/bundle/splitjoin/examples/test.vim	/^let example_one = {$/;"	v
+example_two	vim/vim.symlink/bundle/splitjoin/examples/test.vim	/^let example_two = [$/;"	v
 excl	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/mrufiles.vim	/^fu! s:excl(fn)$/;"	f
 exe	vim/vim.symlink/bundle/syntastic/syntax_checkers/rst/rst2pseudoxml.vim	/^function s:exe()$/;"	f
 exe	vim/vim.symlink/bundle/syntastic/syntax_checkers/ruby/jruby.vim	/^function s:exe()$/;"	f
@@ -2576,6 +2660,7 @@ foldl	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/List.vim
 foldl1	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/List.vim	/^function! s:foldl1(f, xs)$/;"	f
 foldr	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/List.vim	/^function! s:foldr(f, init, xs)$/;"	f
 foldr1	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/List.vim	/^function! s:foldr1(f, xs)$/;"	f
+foo	vim/vim.symlink/bundle/splitjoin/examples/test.js	/^var foo = [ 'baz', 'bar', 'froboz', 'gnusto' ];$/;"	r
 foo	vim/vim.symlink/bundle/vim-ruby/spec/indent/blocks_spec.rb	/^      def foo$/;"	f
 foo	vim/vim.symlink/bundle/vim-ruby/spec/indent/blocks_spec.rb	/^      def foo(job)$/;"	f
 format	bin.symlink/quiz	/^    def self.format(line)$/;"	F	class:Line
@@ -2680,6 +2765,7 @@ g:loaded_ZoomWinPlugin	vim/vim.symlink/bundle/zoomwin/plugin/ZoomWinPlugin.vim	/
 g:loaded_abolish	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^let g:loaded_abolish = 1$/;"	v
 g:loaded_capmap	vim/vim.symlink/bundle/vim-capmap/plugin/capmap.vim	/^let g:loaded_capmap = 1$/;"	v
 g:loaded_capmap	vim/vim.symlink/bundle/vim-yanxious/plugin/yanxious.vim	/^let g:loaded_capmap = 1$/;"	v
+g:loaded_commentary	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^let g:loaded_commentary = 1$/;"	v
 g:loaded_ctrlp	vim/vim.symlink/bundle/ctrlp.vim/plugin/ctrlp.vim	/^let g:loaded_ctrlp = 1$/;"	v
 g:loaded_ctrlp_bookmarkdir	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/bookmarkdir.vim	/^let g:loaded_ctrlp_bookmarkdir = 1$/;"	v
 g:loaded_ctrlp_buftag	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/buffertag.vim	/^let g:loaded_ctrlp_buftag = 1$/;"	v
@@ -2711,6 +2797,7 @@ g:loaded_ragtag	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^let g:load
 g:loaded_rails	vim/vim.symlink/bundle/vim-rails/plugin/rails.vim	/^let g:loaded_rails = 1$/;"	v
 g:loaded_repeat	vim/vim.symlink/bundle/vim-repeat/autoload/repeat.vim	/^let g:loaded_repeat = 1$/;"	v
 g:loaded_speeddating	vim/vim.symlink/bundle/vim-speeddating/plugin/speeddating.vim	/^let g:loaded_speeddating = 1$/;"	v
+g:loaded_splitjoin	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^let g:loaded_splitjoin = '0.7.0' " version number$/;"	v
 g:loaded_surround	vim/vim.symlink/bundle/vim-surround/plugin/surround.vim	/^let g:loaded_surround = 1$/;"	v
 g:loaded_syntastic_ada_gcc_checker	vim/vim.symlink/bundle/syntastic/syntax_checkers/ada/gcc.vim	/^let g:loaded_syntastic_ada_gcc_checker = 1$/;"	v
 g:loaded_syntastic_applescript_osacompile_checker	vim/vim.symlink/bundle/syntastic/syntax_checkers/applescript/osacompile.vim	/^let g:loaded_syntastic_applescript_osacompile_checker=1$/;"	v
@@ -2917,6 +3004,15 @@ g:speeddating_zone	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.v
 g:speeddating_zone_dst	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^      let g:speeddating_zone_dst = g:speeddating_zone$/;"	v
 g:speeddating_zone_dst	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^      let g:speeddating_zone_dst = get({-7:'PDT',-6:'MDT',-5:'CDT',-4:'EDT',1:'WEST',2:'CEST',3:'EEST'},s:offset_dst\/60,"XDT")$/;"	v
 g:speeddating_zone_dst	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^  let g:speeddating_zone_dst = strftime("%Z",(180+30*365)*86400)$/;"	v
+g:splitjoin_align	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_align = 0$/;"	v
+g:splitjoin_coffee_suffix_if_clause	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_coffee_suffix_if_clause = 1$/;"	v
+g:splitjoin_join_mapping	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_join_mapping = 'gJ'$/;"	v
+g:splitjoin_normalize_whitespace	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_normalize_whitespace = 1$/;"	v
+g:splitjoin_perl_brace_on_same_line	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_perl_brace_on_same_line = 1$/;"	v
+g:splitjoin_ruby_curly_braces	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_ruby_curly_braces = 1$/;"	v
+g:splitjoin_ruby_heredoc_type	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_ruby_heredoc_type = '<<-' " can be one of '<<-', '<<'$/;"	v
+g:splitjoin_ruby_trailing_comma	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_ruby_trailing_comma = 1$/;"	v
+g:splitjoin_split_mapping	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^  let g:splitjoin_split_mapping = 'gS'$/;"	v
 g:syntastic_ada_compiler	vim/vim.symlink/bundle/syntastic/syntax_checkers/ada/gcc.vim	/^    let g:syntastic_ada_compiler = 'gcc'$/;"	v
 g:syntastic_ada_compiler_options	vim/vim.symlink/bundle/syntastic/syntax_checkers/ada/gcc.vim	/^    let g:syntastic_ada_compiler_options = ''$/;"	v
 g:syntastic_ada_config_file	vim/vim.symlink/bundle/syntastic/syntax_checkers/ada/gcc.vim	/^    let g:syntastic_ada_config_file = '.syntastic_ada_config'$/;"	v
@@ -3042,6 +3138,9 @@ g<C-]>	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^    nnoremap <silent>
 g]	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^    nnoremap <silent> <buffer> g]          :<C-U>exe       "tselect <C-R>=RubyCursorIdentifier()<CR>"<CR>$/;"	m
 g]	vim/vim.symlink/sessions/last.vim	/^nnoremap <buffer> <silent> g] :exe       "tselect =RubyCursorIdentifier()$/;"	m
 gbd	sh/git_aliases.sh	/^  gbd(){$/;"	f
+gc	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^  nmap gc  <Plug>Commentary$/;"	m
+gcc	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^  nmap gcc <Plug>CommentaryLine$/;"	m
+gcu	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^  nmap gcu <Plug>CommentaryUndo$/;"	m
 generate	vim/vim.symlink/bundle/gundo/autoload/gundo.py	/^def generate(dag, edgefn, current):$/;"	f
 getSNR	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/tests/lh/test-toggle-menu.vim	/^function! s:getSNR()$/;"	f
 get_augrouplist	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/vim_complete/helper.vim	/^function! s:get_augrouplist() "{{{$/;"	f
@@ -3104,6 +3203,7 @@ glbpath	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:glbpath(...)
 glob	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vim	/^  function! s:glob(expr)$/;"	f
 globdirs	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/dir.vim	/^fu! s:globdirs(dirs, depth)$/;"	f
 globpath	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vim	/^function! s:globpath(path, expr)$/;"	f
+go	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^function! s:go(type,...) abort$/;"	f
 gpolice	sh/git_aliases.sh	/^  gpolice(){$/;"	f
 gregorian	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^function! s:gregorian(jd)$/;"	f
 grep_command	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:grep_command(args,bang,flags,word)$/;"	f
@@ -3237,8 +3337,10 @@ javascriptIncludeTag	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^funct
 javascriptList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:javascriptList(A,L,P)$/;"	f
 javascriptType	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:javascriptType()$/;"	f
 jd	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^function! s:jd(year,mon,day)$/;"	f
+join	vim/vim.symlink/bundle/splitjoin/spec/support/vim.rb	/^    def join$/;"	f	class:Support.Vim
 keyword_escape	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/helper.vim	/^function! s:keyword_escape(complete_str) "{{{$/;"	f
 kill_unicorn	bash/nginx_fun.sh	/^function kill_unicorn(){$/;"	f
+knights	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^knights = {'gallahad': 'the pure', 'robin': 'the brave'}$/;"	v
 known_files.get	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:known_files.get(fname) abort dict$/;"	f
 known_files.getCurrent	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:known_files.getCurrent(forcecurrent) abort dict$/;"	f
 known_files.has	vim/vim.symlink/bundle/tagbar/autoload/tagbar.vim	/^function! s:known_files.has(fname) abort dict$/;"	f
@@ -3258,6 +3360,7 @@ layoutList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:lay
 leavepre	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:leavepre()$/;"	f
 length	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:length(str)$/;"	f
 letterincrement	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^function! s:letterincrement(string,offset,increment)$/;"	f
+lf	sh/aliases.sh	/^  lf(){$/;"	f
 lh#UT#callback_decode	vim/vim.symlink/bundle/gundo/tests/bundled/lh-vim-lib/autoload/lh/UT.vim	/^function! lh#UT#callback_decode(expression)$/;"	f
 lh#UT#callback_decode	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/lh/UT.vim	/^function! lh#UT#callback_decode(expression)$/;"	f
 lh#UT#callback_decode	vim/vim.symlink/bundle/gundo/tests/vim_test/autoload/lh/UT.vim	/^function! lh#UT#callback_decode(expression)$/;"	f
@@ -3556,6 +3659,7 @@ load_from_tags	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/async
 loaded_gundo	vim/vim.symlink/bundle/gundo/plugin/gundo.vim	/^let loaded_gundo = 1"}}}$/;"	v
 loaded_gundo	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/gundo.vim	/^let loaded_gundo = 1"}}}$/;"	v
 loaded_snips	vim/vim.symlink/bundle/snipmate/plugin/snipMate.vim	/^let loaded_snips = 1$/;"	v
+local something 	vim/vim.symlink/bundle/splitjoin/examples/test.lua	/^local something = other(function (one, two)$/;"	f
 localeEdit	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:localeEdit(cmd,...)$/;"	f
 localeList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:localeList(A,L,P)$/;"	f
 localtime	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^function! s:localtime(...)$/;"	f
@@ -3908,6 +4012,9 @@ object.clone	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s
 observerEdit	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:observerEdit(cmd,...)$/;"	f
 observerList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:observerList(A,L,P)$/;"	f
 offset	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:offset(lines, height)$/;"	f
+one	vim/vim.symlink/bundle/splitjoin/examples/test.js	/^var one = { one: "two", three: "four" };$/;"	r
+one	vim/vim.symlink/bundle/splitjoin/examples/test.js	/^var three = { one: [two, three], four: "five, six", 'seven': \/8, 9\/ };$/;"	r
+one	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^        three$/;"	i
 one	vim/vim.symlink/bundle/vim-ruby/spec/indent/basic_spec.rb	/^      def one$/;"	f
 open_quickfix	vim/vim.symlink/bundle/vim-dispatch/autoload/dispatch.vim	/^function! s:open_quickfix(request, copen) abort$/;"	f
 openfile	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:openfile(cmd, fid, tail, chkmod, ...)$/;"	f
@@ -3975,6 +4082,7 @@ push	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/List.vim	
 push_chdir	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:push_chdir(...)$/;"	f
 query_path	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^function! s:query_path(root)$/;"	f
 quiz!	bin.symlink/quiz	/^    def quiz!$/;"	f	class:Line
+qux	vim/vim.symlink/bundle/splitjoin/examples/test.rb	/^  def qux$/;"	f	class:Baz
 ragtag	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^  augroup ragtag$/;"	a
 rails#app	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! rails#app(...)$/;"	f
 rails#buffer	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! rails#buffer(...)$/;"	f
@@ -4441,6 +4549,7 @@ s:foreground	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow-Night.vim	/^l
 s:foreground	vim/vim.symlink/bundle/tomorrow-theme/colors/Tomorrow.vim	/^let s:foreground = "4d4d4c"$/;"	v
 s:formatelempat	vim/vim.symlink/bundle/tabular/autoload/tabular.vim	/^let s:formatelempat = '\\%([lrc]\\d\\+\\)'$/;"	v
 s:fpats	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^let s:fpats = {$/;"	v
+s:function_pattern	vim/vim.symlink/bundle/splitjoin/autoload/sj/lua.vim	/^let s:function_pattern = '\\(\\<function\\>.\\{-}(.\\{-})\\)\\(.*\\)\\<end\\>'$/;"	v
 s:function_return_types	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/vim_complete/helper.vim	/^let s:function_return_types = {}$/;"	v
 s:glbs	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^let s:glbs = { 'magic': 1, 'to': 1, 'tm': 0, 'sb': 1, 'hls': 0, 'im': 0,$/;"	v
 s:global_candidates_list	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/vim_complete/helper.vim	/^  let s:global_candidates_list = { 'dictionary_variables' : {} }$/;"	v
@@ -4510,6 +4619,7 @@ s:k_version	vim/vim.symlink/bundle/gundo/tests/vim_test/ftplugin/vim/vim_UT.vim	
 s:k_version	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/UT.vim	/^let s:k_version = 003$/;"	v
 s:k_version	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/let.vim	/^let s:k_version = 221$/;"	v
 s:k_version	vim/vim.symlink/bundle/gundo/tests/vim_test/plugin/lhvl.vim	/^let s:k_version = 221$/;"	v
+s:keepcpo	vim/vim.symlink/bundle/splitjoin/plugin/splitjoin.vim	/^let s:keepcpo          = &cpo$/;"	v
 s:keepcpo	vim/vim.symlink/bundle/zoomwin/autoload/ZoomWin.vim	/^let s:keepcpo        = &cpo$/;"	v
 s:keepcpo	vim/vim.symlink/bundle/zoomwin/plugin/ZoomWinPlugin.vim	/^let s:keepcpo              = &cpo$/;"	v
 s:key	vim/vim.symlink/bundle/gundo/tests/bundled/ut/ftplugin/vim/vim_UT.vim	/^let s:key = lh#option#get('UTMake_key', '<F7>')$/;"	v
@@ -4882,9 +4992,13 @@ set_default_custom	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/i
 set_dictionary_helper	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/vim_complete/helper.vim	/^function! s:set_dictionary_helper(variable, keys, value) "{{{$/;"	f
 set_dictionary_helper	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vim	/^function! s:set_dictionary_helper(variable, keys, pattern)$/;"	f
 set_file	vim/vim.symlink/bundle/vim-gitgutter/plugin/gitgutter.vim	/^function! s:set_file(file)$/;"	f
+set_file_contents	vim/vim.symlink/bundle/splitjoin/spec/support/vim.rb	/^    def set_file_contents(string)$/;"	f	class:Support.Vim
 setentries	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp/bookmarkdir.vim	/^fu! s:setentries()$/;"	f
 setopt	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:setopt(opt,val)$/;"	f
 settype	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:settype(type)$/;"	f
+setup_coffee_filetype	vim/vim.symlink/bundle/splitjoin/spec/plugin/coffee_spec.rb	/^  def setup_coffee_filetype$/;"	f
+setup_go_filetype	vim/vim.symlink/bundle/splitjoin/spec/plugin/go_spec.rb	/^  def setup_go_filetype$/;"	f
+setup_haml_filetype	vim/vim.symlink/bundle/splitjoin/spec/plugin/haml_spec.rb	/^  def setup_haml_filetype$/;"	f
 setup_paste	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^function! s:setup_paste() abort$/;"	f
 setupblank	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:setupblank()$/;"	f
 setvirtcol	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^function! s:setvirtcol(line,col)$/;"	f
@@ -4901,6 +5015,127 @@ should#be#number	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/should/b
 should#be#string	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/should/be.vim	/^function! should#be#string(var)$/;"	f
 should#be#verbose	vim/vim.symlink/bundle/gundo/tests/bundled/ut/autoload/should/be.vim	/^function! should#be#verbose(level)$/;"	f
 show_signs	vim/vim.symlink/bundle/vim-gitgutter/plugin/gitgutter.vim	/^function! s:show_signs(file_name, modified_lines)$/;"	f
+sj#Align	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#Align(from, to, type)$/;"	f
+sj#BlankString	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#BlankString(s)$/;"	f
+sj#CompressWhitespaceOnLine	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#CompressWhitespaceOnLine()$/;"	f
+sj#DropCursor	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#DropCursor()$/;"	f
+sj#ExtractRx	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#ExtractRx(expr, pat, sub)$/;"	f
+sj#GetByPosition	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#GetByPosition(start, end)$/;"	f
+sj#GetCols	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#GetCols(start, end)$/;"	f
+sj#GetLines	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#GetLines(start, end)$/;"	f
+sj#GetMotion	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#GetMotion(motion)$/;"	f
+sj#LocateBracesOnLine	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#LocateBracesOnLine(open, close, ...)$/;"	f
+sj#Ltrim	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#Ltrim(s)$/;"	f
+sj#ParseJsonObjectBody	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#ParseJsonObjectBody(from, to)$/;"	f
+sj#PeekCursor	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#PeekCursor()$/;"	f
+sj#PopCursor	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#PopCursor()$/;"	f
+sj#PushCursor	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#PushCursor()$/;"	f
+sj#ReplaceByPosition	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#ReplaceByPosition(start, end, text)$/;"	f
+sj#ReplaceCols	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#ReplaceCols(start, end, text)$/;"	f
+sj#ReplaceLines	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#ReplaceLines(start, end, text)$/;"	f
+sj#ReplaceMotion	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#ReplaceMotion(motion, text)$/;"	f
+sj#Rtrim	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#Rtrim(s)$/;"	f
+sj#SearchSkip	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#SearchSkip(pattern, skip, ...)$/;"	f
+sj#SearchUnderCursor	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#SearchUnderCursor(pattern, ...)$/;"	f
+sj#SearchposUnderCursor	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#SearchposUnderCursor(pattern, ...)$/;"	f
+sj#SetIndent	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#SetIndent(...)$/;"	f
+sj#Trim	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#Trim(s)$/;"	f
+sj#TrimList	vim/vim.symlink/bundle/splitjoin/autoload/sj.vim	/^function! sj#TrimList(list)$/;"	f
+sj#argparser#common#AtFunctionEnd	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/common.vim	/^function! sj#argparser#common#AtFunctionEnd() dict$/;"	f
+sj#argparser#common#Construct	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/common.vim	/^function! sj#argparser#common#Construct(start_column, end_column, line)$/;"	f
+sj#argparser#common#Finished	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/common.vim	/^function! sj#argparser#common#Finished() dict$/;"	f
+sj#argparser#common#JumpPair	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/common.vim	/^function! sj#argparser#common#JumpPair(start_chars, end_chars) dict$/;"	f
+sj#argparser#common#Next	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/common.vim	/^function! sj#argparser#common#Next() dict$/;"	f
+sj#argparser#common#Process	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/common.vim	/^function! sj#argparser#common#Process() dict$/;"	f
+sj#argparser#common#PushArg	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/common.vim	/^function! sj#argparser#common#PushArg() dict$/;"	f
+sj#argparser#common#PushChar	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/common.vim	/^function! sj#argparser#common#PushChar() dict$/;"	f
+sj#argparser#js#Construct	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/js.vim	/^function! sj#argparser#js#Construct(start_index, end_index, line)$/;"	f
+sj#argparser#js#Process	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/js.vim	/^function! sj#argparser#js#Process() dict$/;"	f
+sj#argparser#ruby#AtFunctionEnd	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/ruby.vim	/^function! sj#argparser#ruby#AtFunctionEnd() dict$/;"	f
+sj#argparser#ruby#Construct	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/ruby.vim	/^function! sj#argparser#ruby#Construct(start_index, end_index, line)$/;"	f
+sj#argparser#ruby#ExpandOptionHash	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/ruby.vim	/^function! sj#argparser#ruby#ExpandOptionHash() dict$/;"	f
+sj#argparser#ruby#LocateFunction	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/ruby.vim	/^function! sj#argparser#ruby#LocateFunction()$/;"	f
+sj#argparser#ruby#LocateHash	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/ruby.vim	/^function! sj#argparser#ruby#LocateHash()$/;"	f
+sj#argparser#ruby#ParseArguments	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/ruby.vim	/^function! sj#argparser#ruby#ParseArguments(start_index, end_index, line)$/;"	f
+sj#argparser#ruby#Process	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/ruby.vim	/^function! sj#argparser#ruby#Process() dict$/;"	f
+sj#argparser#ruby#PushArg	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/ruby.vim	/^function! sj#argparser#ruby#PushArg() dict$/;"	f
+sj#argparser#sh#Construct	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/sh.vim	/^function! sj#argparser#sh#Construct(start_index, end_index, line)$/;"	f
+sj#argparser#sh#Process	vim/vim.symlink/bundle/splitjoin/autoload/sj/argparser/sh.vim	/^function! sj#argparser#sh#Process() dict$/;"	f
+sj#coffee#JoinFunction	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#JoinFunction()$/;"	f
+sj#coffee#JoinIfClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#JoinIfClause()$/;"	f
+sj#coffee#JoinObjectLiteral	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#JoinObjectLiteral()$/;"	f
+sj#coffee#JoinString	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#JoinString()$/;"	f
+sj#coffee#SplitFunction	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#SplitFunction()$/;"	f
+sj#coffee#SplitIfClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#SplitIfClause()$/;"	f
+sj#coffee#SplitObjectLiteral	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#SplitObjectLiteral()$/;"	f
+sj#coffee#SplitString	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#SplitString()$/;"	f
+sj#coffee#SplitTernaryClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/coffee.vim	/^function! sj#coffee#SplitTernaryClause()$/;"	f
+sj#css#JoinDefinition	vim/vim.symlink/bundle/splitjoin/autoload/sj/css.vim	/^function! sj#css#JoinDefinition()$/;"	f
+sj#css#JoinMultilineSelector	vim/vim.symlink/bundle/splitjoin/autoload/sj/css.vim	/^function! sj#css#JoinMultilineSelector()$/;"	f
+sj#css#SplitDefinition	vim/vim.symlink/bundle/splitjoin/autoload/sj/css.vim	/^function! sj#css#SplitDefinition()$/;"	f
+sj#css#SplitMultilineSelector	vim/vim.symlink/bundle/splitjoin/autoload/sj/css.vim	/^function! sj#css#SplitMultilineSelector()$/;"	f
+sj#eruby#JoinIfClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/eruby.vim	/^function! sj#eruby#JoinIfClause()$/;"	f
+sj#eruby#SplitIfClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/eruby.vim	/^function! sj#eruby#SplitIfClause()$/;"	f
+sj#go#JoinStruct	vim/vim.symlink/bundle/splitjoin/autoload/sj/go.vim	/^function! sj#go#JoinStruct()$/;"	f
+sj#go#SplitStruct	vim/vim.symlink/bundle/splitjoin/autoload/sj/go.vim	/^function! sj#go#SplitStruct()$/;"	f
+sj#haml#JoinInterpolation	vim/vim.symlink/bundle/splitjoin/autoload/sj/haml.vim	/^function! sj#haml#JoinInterpolation()$/;"	f
+sj#haml#SplitInterpolation	vim/vim.symlink/bundle/splitjoin/autoload/sj/haml.vim	/^function! sj#haml#SplitInterpolation()$/;"	f
+sj#html#JoinTags	vim/vim.symlink/bundle/splitjoin/autoload/sj/html.vim	/^function! sj#html#JoinTags()$/;"	f
+sj#html#SplitTags	vim/vim.symlink/bundle/splitjoin/autoload/sj/html.vim	/^function! sj#html#SplitTags()$/;"	f
+sj#js#JoinArray	vim/vim.symlink/bundle/splitjoin/autoload/sj/js.vim	/^function! sj#js#JoinArray()$/;"	f
+sj#js#JoinObjectLiteral	vim/vim.symlink/bundle/splitjoin/autoload/sj/js.vim	/^function! sj#js#JoinObjectLiteral()$/;"	f
+sj#js#SplitArray	vim/vim.symlink/bundle/splitjoin/autoload/sj/js.vim	/^function! sj#js#SplitArray()$/;"	f
+sj#js#SplitFunction	vim/vim.symlink/bundle/splitjoin/autoload/sj/js.vim	/^function! sj#js#SplitFunction()$/;"	f
+sj#js#SplitObjectLiteral	vim/vim.symlink/bundle/splitjoin/autoload/sj/js.vim	/^function! sj#js#SplitObjectLiteral()$/;"	f
+sj#lua#JoinFunction	vim/vim.symlink/bundle/splitjoin/autoload/sj/lua.vim	/^function! sj#lua#JoinFunction()$/;"	f
+sj#lua#JoinTable	vim/vim.symlink/bundle/splitjoin/autoload/sj/lua.vim	/^function! sj#lua#JoinTable()$/;"	f
+sj#lua#SplitFunction	vim/vim.symlink/bundle/splitjoin/autoload/sj/lua.vim	/^function! sj#lua#SplitFunction()$/;"	f
+sj#lua#SplitFunctionString	vim/vim.symlink/bundle/splitjoin/autoload/sj/lua.vim	/^function! sj#lua#SplitFunctionString(str)$/;"	f
+sj#lua#SplitTable	vim/vim.symlink/bundle/splitjoin/autoload/sj/lua.vim	/^function! sj#lua#SplitTable()$/;"	f
+sj#perl#JoinHash	vim/vim.symlink/bundle/splitjoin/autoload/sj/perl.vim	/^function! sj#perl#JoinHash()$/;"	f
+sj#perl#JoinIfClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/perl.vim	/^function! sj#perl#JoinIfClause()$/;"	f
+sj#perl#SplitAndClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/perl.vim	/^function! sj#perl#SplitAndClause()$/;"	f
+sj#perl#SplitHash	vim/vim.symlink/bundle/splitjoin/autoload/sj/perl.vim	/^function! sj#perl#SplitHash()$/;"	f
+sj#perl#SplitIfClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/perl.vim	/^function! sj#perl#SplitIfClause()$/;"	f
+sj#perl#SplitOrClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/perl.vim	/^function! sj#perl#SplitOrClause()$/;"	f
+sj#php#JoinArray	vim/vim.symlink/bundle/splitjoin/autoload/sj/php.vim	/^function! sj#php#JoinArray()$/;"	f
+sj#php#JoinHtmlTags	vim/vim.symlink/bundle/splitjoin/autoload/sj/php.vim	/^function! sj#php#JoinHtmlTags()$/;"	f
+sj#php#SplitArray	vim/vim.symlink/bundle/splitjoin/autoload/sj/php.vim	/^function! sj#php#SplitArray()$/;"	f
+sj#python#JoinArray	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#JoinArray()$/;"	f
+sj#python#JoinDict	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#JoinDict()$/;"	f
+sj#python#JoinImport	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#JoinImport()$/;"	f
+sj#python#JoinStatement	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#JoinStatement()$/;"	f
+sj#python#JoinTuple	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#JoinTuple()$/;"	f
+sj#python#SplitArray	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#SplitArray()$/;"	f
+sj#python#SplitDict	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#SplitDict()$/;"	f
+sj#python#SplitImport	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#SplitImport()$/;"	f
+sj#python#SplitStatement	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#SplitStatement()$/;"	f
+sj#python#SplitTuple	vim/vim.symlink/bundle/splitjoin/autoload/sj/python.vim	/^function! sj#python#SplitTuple()$/;"	f
+sj#ruby#JoinBlock	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinBlock()$/;"	f
+sj#ruby#JoinCachingConstruct	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinCachingConstruct()$/;"	f
+sj#ruby#JoinCase	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinCase()$/;"	f
+sj#ruby#JoinContinuedMethodCall	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinContinuedMethodCall()$/;"	f
+sj#ruby#JoinHash	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinHash()$/;"	f
+sj#ruby#JoinHeredoc	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinHeredoc()$/;"	f
+sj#ruby#JoinIfClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinIfClause()$/;"	f
+sj#ruby#JoinTernaryClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinTernaryClause()$/;"	f
+sj#ruby#JoinWhenThen	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#JoinWhenThen()$/;"	f
+sj#ruby#SplitBlock	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#SplitBlock()$/;"	f
+sj#ruby#SplitCachingConstruct	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#SplitCachingConstruct()$/;"	f
+sj#ruby#SplitCase	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#SplitCase()$/;"	f
+sj#ruby#SplitIfClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#SplitIfClause()$/;"	f
+sj#ruby#SplitOptions	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#SplitOptions()$/;"	f
+sj#ruby#SplitString	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#SplitString()$/;"	f
+sj#ruby#SplitTernaryClause	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#SplitTernaryClause()$/;"	f
+sj#ruby#SplitWhenThen	vim/vim.symlink/bundle/splitjoin/autoload/sj/ruby.vim	/^function! sj#ruby#SplitWhenThen()$/;"	f
+sj#sh#JoinWithSemicolon	vim/vim.symlink/bundle/splitjoin/autoload/sj/sh.vim	/^function! sj#sh#JoinWithSemicolon()$/;"	f
+sj#sh#SplitBySemicolon	vim/vim.symlink/bundle/splitjoin/autoload/sj/sh.vim	/^function! sj#sh#SplitBySemicolon()$/;"	f
+sj#vim#Join	vim/vim.symlink/bundle/splitjoin/autoload/sj/vim.vim	/^function! sj#vim#Join()$/;"	f
+sj#vim#Split	vim/vim.symlink/bundle/splitjoin/autoload/sj/vim.vim	/^function! sj#vim#Split()$/;"	f
+sj#yaml#JoinArray	vim/vim.symlink/bundle/splitjoin/autoload/sj/yaml.vim	/^function! sj#yaml#JoinArray()$/;"	f
+sj#yaml#JoinMap	vim/vim.symlink/bundle/splitjoin/autoload/sj/yaml.vim	/^function! sj#yaml#JoinMap()$/;"	f
+sj#yaml#SplitArray	vim/vim.symlink/bundle/splitjoin/autoload/sj/yaml.vim	/^function! sj#yaml#SplitArray()$/;"	f
+sj#yaml#SplitMap	vim/vim.symlink/bundle/splitjoin/autoload/sj/yaml.vim	/^function! sj#yaml#SplitMap()$/;"	f
 smart_execute_command	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vim	/^function! s:smart_execute_command(action, word)$/;"	f
 snake_case_to_camel_case	vim/vim.symlink/bundle/vim-gitgutter/plugin/gitgutter.vim	/^function! s:snake_case_to_camel_case(text)$/;"	f
 snakecase	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:snakecase(word)$/;"	f
@@ -4950,6 +5185,9 @@ source.initialize	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/so
 source.initialize	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/syntax_complete.vim	/^function! s:source.initialize() "{{{$/;"	f
 source.initialize	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/tags_complete.vim	/^function! s:source.initialize() "{{{$/;"	f
 source.initialize	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/vim_complete.vim	/^function! s:source.initialize() "{{{$/;"	f
+spam	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^spam = (1, (2, 3), 4)$/;"	v
+spam	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^spam = [1, [2, 3], 4]$/;"	v
+spam	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^spam = {'spam': [1, 2, 3], 'spam, spam': { 'one': 'two' }, "spam, spam, spam...": ('spam', 'eggs')}$/;"	v
 span	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/List.vim	/^function! s:span(f, xs)$/;"	f
 specEdit	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:specEdit(cmd,...)$/;"	f
 specList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:specList(A,L,P)$/;"	f
@@ -4958,6 +5196,7 @@ speeddating#increment	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddatin
 speeddating#incrementvisual	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^function! speeddating#incrementvisual(count)$/;"	f
 speeddating#loadformats	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^function! speeddating#loadformats()$/;"	f
 speeddating#timestamp	vim/vim.symlink/bundle/vim-speeddating/autoload/speeddating.vim	/^function! speeddating#timestamp(utc,count)$/;"	f
+split	vim/vim.symlink/bundle/splitjoin/spec/support/vim.rb	/^    def split$/;"	f	class:Support.Vim
 split3	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/String.vim	/^function! s:split3(expr, pattern)$/;"	f
 split_args	vim/vim.symlink/bundle/neocomplcache/autoload/neocomplcache/sources/vim_complete/helper.vim	/^function! s:split_args(cur_text, complete_str) "{{{$/;"	f
 split_leftright	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/String.vim	/^function! s:split_leftright(expr, pattern)$/;"	f
@@ -4993,6 +5232,7 @@ substitute_last	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Dat
 substitute_path_separator	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vim	/^function! s:substitute_path_separator(path)$/;"	f
 subtype	vim/vim.symlink/bundle/vim-ragtag/plugin/ragtag.vim	/^function! s:subtype()$/;"	f
 subvert_dispatcher	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:subvert_dispatcher(bang,line1,line2,count,args)$/;"	f
+surroundings	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^function! s:surroundings() abort$/;"	f
 synname	vim/vim.symlink/bundle/vim-endwise/plugin/endwise.vim	/^function! s:synname()$/;"	f
 synname	vim/vim.symlink/bundle/vim-ruby/ftplugin/ruby.vim	/^function! s:synname()$/;"	f
 syntastic	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^    augroup syntastic$/;"	a
@@ -5095,6 +5335,8 @@ taskList	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:taskL
 test	vim/vim.symlink/bundle/vim-elixir/spec/indent/anonymous_functions_spec.rb	/^        def test do$/;"	f
 test_unicorn	bash/nginx_fun.sh	/^function test_unicorn(){$/;"	f
 textdialog	vim/vim.symlink/bundle/ctrlp.vim/autoload/ctrlp.vim	/^fu! s:textdialog(str)$/;"	f
+three	vim/vim.symlink/bundle/splitjoin/examples/test.js	/^var three = { one: [two, three], four: "five, six", 'seven': \/8, 9\/ };$/;"	r
+three	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^        three$/;"	i
 throw	vim/vim.symlink/bundle/table-mode/autoload/tablemode.vim	/^function! s:throw(string) abort "{{{2$/;"	f
 throw	vim/vim.symlink/bundle/vim-abolish/plugin/abolish.vim	/^function! s:throw(msg)$/;"	f
 throw	vim/vim.symlink/bundle/vim-fugitive/plugin/fugitive.vim	/^function! s:throw(string) abort$/;"	f
@@ -5111,9 +5353,12 @@ truncate	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vi
 truncate_skipping	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vim	/^function! s:truncate_skipping(str, max, footer_width, separator)$/;"	f
 truncate_smart	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Prelude.vim	/^function! s:truncate_smart(str, max, footer_width, separator)$/;"	f
 try	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:try(cmd) abort$/;"	f
+two	vim/vim.symlink/bundle/splitjoin/examples/test.js	/^var two = {$/;"	r
+two	vim/vim.symlink/bundle/splitjoin/examples/test.py	/^        three$/;"	i
 u	vim/vim.symlink/bundle/vim-repeat/autoload/repeat.vim	/^nnoremap <silent> u     :<C-U>call repeat#wrap('u',v:count)<CR>$/;"	m
 uname	vim/vim.symlink/bundle/syntastic/plugin/syntastic.vim	/^function! s:uname()$/;"	f
 underline_prompt	bash/prompt.sh	/^underline_prompt(){$/;"	f
+undo	vim/vim.symlink/bundle/commentary/plugin/commentary.vim	/^function! s:undo() abort$/;"	f
 unimpaired_paste	vim/vim.symlink/bundle/vim-unimpaired/plugin/unimpaired.vim	/^augroup unimpaired_paste$/;"	a
 uniq	vim/vim.symlink/bundle/neocomplcache/autoload/vital/_13055f8/Data/List.vim	/^function! s:uniq(list, ...)$/;"	f
 uniq	vim/vim.symlink/bundle/vim-rails/autoload/rails.vim	/^function! s:uniq(list)$/;"	f

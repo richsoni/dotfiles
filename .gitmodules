@@ -112,3 +112,12 @@
 [submodule "vim/vim.symlink/bundle/table-mode"]
 	path = vim/vim.symlink/bundle/table-mode
 	url = https://github.com/dhruvasagar/vim-table-mode.git
+[submodule "vim/vim.symlink/bundle/commentary"]
+	path = vim/vim.symlink/bundle/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/vim.symlink/bundle/splitjoin"]
+	path = vim/vim.symlink/bundle/splitjoin
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
+[submodule "vim/vim.symlink/bundle/ag"]
+	path = vim/vim.symlink/bundle/ag
+	url = https://github.com/rking/ag.vim.git

@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/rich/Documents/personal/roadmap/2014/4hww'
-let g:netrw_dirhist_2='/Users/rich/Documents/personal/roadmap/2014/programming'
-let g:netrw_dirhist_3='/Users/dev/workspace/carbon'
-let g:netrw_dirhist_4='/Users/rich/.emacs.d'
-let g:netrw_dirhist_5='/Users/rich/.emacs.d/auto-save-list'
-let g:netrw_dirhist_6='/Users/dev/workspace/pos.rb/app/controllers/api_direct'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/dev/workspace/carbon/app/assets'

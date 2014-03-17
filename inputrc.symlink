@@ -1,4 +1,14 @@
+$if Bash
+  # Do history expansion ! when space is pressed
+  Space: magic-space
+  # Insert-Option Macro (enhanced to handle multi-word commands)
+    "\eo": "\C-p\C-a\ef "
+
+$endif
 set completion-ignore-case on
+TAB menu-complete
+"\e[Z": menu-complete-backward
+"\C-f": complete
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 # for vi mode

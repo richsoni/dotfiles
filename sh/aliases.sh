@@ -57,6 +57,7 @@
   alias r='rails'
   alias rrg='rake routes | grep'
   alias becsdc='bundle exec cap staging deploy:current'
+  alias becsl='bundle exec cap staging log'
 #vlc
   alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -cvlc'
   alias vlci='/Applications/VLC.app/Contents/MacOS/VLC -I rc'

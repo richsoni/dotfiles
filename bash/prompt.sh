@@ -5,7 +5,7 @@ echo -en "\033[0;$1m"
 underline_prompt(){
   #grab unformatted text from external programs
     time=`date '+%H:%M'`
-    pwd_relative=`pwd`
+    pwd_relative=`pwd -P`
     ruby_version=`ruby -v`
     hostname=`uname -n`
     git_branch=`git branch 2> /dev/null | grep "*"`

@@ -121,3 +121,6 @@
 [submodule "vim/vim.symlink/bundle/ag"]
 	path = vim/vim.symlink/bundle/ag
 	url = https://github.com/rking/ag.vim.git
+[submodule "vim/vim.symlink/bundle/sensible"]
+	path = vim/vim.symlink/bundle/sensible
+	url = git://github.com/tpope/vim-sensible.git

@@ -1,3 +1,4 @@
+export CDPATH='.:/Users/rich'
 #customization for each shell to lead in itself
   export DFPATH=~/dotfiles/
   for config_file in $DFPATH/bash/*.sh; do source $config_file; done

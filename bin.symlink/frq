@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require('shellwords')
+
+file = ARGF.read
+file = file.downcase
+file = file.gsub(/<a>[^<]*/, '').gsub(/<[^>]*>/,'')
+file = "echo #{file.shellescape}"
+freq = "tr ' ' '\n' | sort | uniq -ci | sort "
+ig_o = "egrep -v '^\s*[0-9]*\s*$'"
+ch_o = "grep -e '^\s*[0-9]*\s*[a-z]*$'"
+puts `#{file} | #{freq} | #{ig_o} | #{ch_o}`

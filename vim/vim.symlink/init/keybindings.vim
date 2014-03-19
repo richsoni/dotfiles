@@ -1,5 +1,7 @@
 noremap K <NOP> #run command is not useless
+command! WordFrequency ! frq %
 command! W w
+command! Bundles ! ls ~/.vim/bundle
 command! Tabe tabe
 "General
   vnoremap * y/<c-r>"<cr>

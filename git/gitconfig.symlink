@@ -32,7 +32,7 @@
   br = branch
   cb = "!git branch | grep -e '^*' | cut -d' ' -f2"
   sb = show branch
-  sprint = "!git fetch; git branch --list -a | grep '^\\s*remotes' | grep 'sprint' | cut -d / -f 3,4 | sort | tail -1 | xargs git checkout "
+  sprint = "!git fetch; git branch --list -a | grep '^\\s*remotes' | grep 'sprint' | cut -d / -f 3,4 | sort -t'/' -k2 | tail -1 | xargs git checkout "
   done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; f"
   ch = checkout
   cl = checkout @{-1}

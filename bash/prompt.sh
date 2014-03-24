@@ -85,5 +85,5 @@ _repeat() {
   done
 }
 PROMPT_COMMAND="underline_prompt"
-PS1="❯ "
-PS2="❯❯ "
+PS1="$ "
+PS2="# "

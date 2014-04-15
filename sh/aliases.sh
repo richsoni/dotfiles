@@ -1,4 +1,5 @@
 #MAC OS X STUFF
+  alias thes='dict -d moby-thes'
   alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
   alias gr='Rscript ~/dotfiles/graph.r'
   alias wifion="networksetup -setairportpower 'en1' on"
@@ -20,7 +21,6 @@
   alias ls="ls -G"
   alias q='cd ~/quicklinks;clear; ls'
   alias v='vim'
-  alias e='emacs'
   alias l="ls -G"
   alias mkdir="mkdir -p"
   alias ll="ls -Ghla"
@@ -49,7 +49,7 @@
   alias tegem='cd ~/workspace/ticketevolution-ruby'
   alias teex='cd ~/workspace/pos-chrome-extension/Robotester/tests/'
   alias tedocs='cd ~/Documents/TicketEvolution'
-  alias ex='cd ~/workspace/exchange'
+  alias e='cd ~/workspace/exchange'
   alias p='cd ~/workspace/pos.rb'
   alias c='cd ~/workspace/carbon'
 #Rails Shortcuts

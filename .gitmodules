@@ -45,7 +45,7 @@
 	url = git://github.com/vim-scripts/ZoomWin.git
 [submodule "vim/vim.symlink/bundle/vimux"]
 	path = vim/vim.symlink/bundle/vimux
-	url = git://github.com/benmills/vimux.git
+	url = https://github.com/benmills/vimux.git
 [submodule "vim/vim.symlink/bundle/vim-endwise"]
 	path = vim/vim.symlink/bundle/vim-endwise
 	url = git://github.com/tpope/vim-endwise.git

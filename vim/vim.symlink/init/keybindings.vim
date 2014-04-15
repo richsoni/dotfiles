@@ -1,8 +1,13 @@
+nnoremap <Leader>t :! dict -d moby-thes 
 noremap K <NOP> #run command is not useless
 command! WordFrequency ! frq %
 command! W w
 command! Bundles ! ls ~/.vim/bundle
 command! Tabe tabe
+nnoremap <leader>vp :VimuxPromptCommand<CR>
+let VimuxUseNearestPane = 1
+nnoremap <Leader>vl :VimuxRunLastCommand<CR>
+
 "General
   vnoremap * y/<c-r>"<cr>
   nnoremap <leader>] : !bundle show --paths \| xargs ctags -Rf.git/tags; ctags -R -a *<cr>
@@ -30,6 +35,7 @@ function EnableAutoWrite()
     autocmd InsertLeave,TextChanged,BufLeave,FocusLost * silent! wall  " Save anytime we leave a buffer
   augroup end
 endfunction
+
 
 function DisableAutoWrite()
   echo 'autowrite disabled'

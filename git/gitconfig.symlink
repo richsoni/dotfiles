@@ -1,4 +1,5 @@
 ;shortcuts inside of git command
+; delete remote tag :refs/tags/tag
 [alias]
   type = "!git config -l | grep alias | cut -c 7-"
 
@@ -8,6 +9,7 @@
   a=add
   pr = pull --rebase
   poh = push origin HEAD
+  po  = push origin
   rhh = reset --hard HEAD
 
   rb=rebase
@@ -17,6 +19,9 @@
   rbc=rebase --continue
   rbs=rebase --skip
 
+  t=tag
+  pt= push --tags
+
   g = grep
   s = status --short
   st = status
@@ -24,6 +29,7 @@
 ;  bad_s = "!git bad | grep -o '[^ ]*$'"
 
   d = diff
+  ds = diff --stat
   dc = diff --cached
   dno = diff --name-only
   dnof = "!git dno | head -n1"
@@ -31,7 +37,7 @@
 
   br = branch
   cb = "!git branch | grep -e '^*' | cut -d' ' -f2"
-  sb = show branch
+  sb = show-branch
   sprint = "!git fetch; git branch --list -a | grep '^\\s*remotes' | grep 'sprint' | cut -d / -f 3,4 | sort -t'/' -k2 | tail -1 | xargs git checkout "
   done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; f"
   ch = checkout

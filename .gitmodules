@@ -58,9 +58,6 @@
 [submodule "vim/vim.symlink/bundle/vim-grep"]
 	path = vim/vim.symlink/bundle/vim-grep
 	url = git://github.com/richsoni/vim-grep.git
-[submodule "vim/vim.symlink/bundle/todo.txt-vim"]
-	path = vim/vim.symlink/bundle/todo.txt-vim
-	url = git://github.com/richsoni/todo.txt-vim.git
 [submodule "vim/vim.symlink/bundle/vim-ruby"]
 	path = vim/vim.symlink/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
@@ -124,3 +121,6 @@
 [submodule "vim/vim.symlink/bundle/sensible"]
 	path = vim/vim.symlink/bundle/sensible
 	url = git://github.com/tpope/vim-sensible.git
+[submodule "vim/vim.symlink/bundle/todotxt2"]
+	path = vim/vim.symlink/bundle/todotxt2
+	url = https://github.com/davidoc/todo.txt-vim

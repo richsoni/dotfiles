@@ -124,3 +124,6 @@
 [submodule "vim/vim.symlink/bundle/todotxt2"]
 	path = vim/vim.symlink/bundle/todotxt2
 	url = https://github.com/davidoc/todo.txt-vim
+[submodule "vim/vim.symlink/bundle/dash"]
+	path = vim/vim.symlink/bundle/dash
+	url = https://github.com/rizzatti/dash.vim.git

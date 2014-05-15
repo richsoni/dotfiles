@@ -6,4 +6,4 @@ if [[ $IS_THUNDERBOLT = "true" ||  $IS_MONUTED = "true" ]]
 else
   STATUS='Sitting'
 fi
-echo `date "+%Y-%m-%d %H:%M $STATUS"` >> ~/standing.txt
+echo `date "+%Y-%m-%d-%H:%M $STATUS"` >> ~/standing.txt

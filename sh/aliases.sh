@@ -52,6 +52,11 @@
   alias e='cd ~/workspace/exchange'
   alias p='cd ~/workspace/pos.rb'
   alias c='cd ~/workspace/carbon'
+  alias dasboot='ds kill && ds start'
+  hpr(){
+    CURRENT_BRANCH=`git branch | grep -e '^*' | cut -d' ' -f2`
+    hub pull-request -b ticketevolution:master -h ticketevolution:$CURRENT_BRANCH
+  }
 #Rails Shortcuts
   alias tmux_rails='~/dotfiles/tmux_sessions/railsmux'
   alias r='rails'

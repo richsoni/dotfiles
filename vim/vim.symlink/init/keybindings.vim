@@ -2,6 +2,7 @@ nnoremap <Leader>t :! dict -d moby-thes
 noremap K <NOP> #run command is not useless
 command! WordFrequency ! frq %
 command! W w
+command! Vne vne
 command! Bundles ! ls ~/.vim/bundle
 command! Tabe tabe
 nnoremap <leader>vp :VimuxPromptCommand<CR>

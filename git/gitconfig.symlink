@@ -22,7 +22,7 @@
   t=tag
   pt= push --tags
 
-  g = grep
+  g = grep --ignore-case
   s = status --short
   st = status
   bad = "!git status --short | grep --color=always ' M|UU|AA|DU'"

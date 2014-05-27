@@ -31,6 +31,7 @@
 #Join the dots
   alias cdf='cd ~/dotfiles/'
 #Personal Stuff
+  alias gs='echo "noop"'
   alias rgraph='cd Meta/stats/R'
   alias biodocs='cd ~/Documents/Notes/Biostat'
   alias d='cd ~/Documents'  

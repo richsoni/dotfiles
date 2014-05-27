@@ -1,4 +1,45 @@
-call pathogen#infect()
-call pathogen#helptags()
 runtime! init/**.vim
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-sensible'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'davidoc/todo.txt-vim'
+Plugin 'tpope/vim-abolish'
+Plugin 'richsoni/vim-capmap'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-dispatch'
+Plugin 'richsoni/vim-emacs-and-cheese'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-speeddating'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'benmills/vimux'
+Plugin 'ticketevolution/ticketevo.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'airblade/vim-gitgutter'
+
+
+call vundle#end()
+filetype plugin indent on
+set background=dark
+colorscheme Tomorrow-Night-Eighties

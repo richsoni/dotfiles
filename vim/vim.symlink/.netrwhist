@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/rich/Code/Projects/Sites/Others/EveryThingEver/everything_ever/rails/.git'
-let g:netrw_dirhist_2='/Users/rich/Code/Projects/Sites/Others/EveryThingEver/everything_ever/rails/.git/refs'
-let g:netrw_dirhist_3='/Users/rich/Code/Projects/Sites/Others/EveryThingEver/everything_ever/rails/.git/refs/remotes'
-let g:netrw_dirhist_4='/Users/rich/Code/Projects/Sites/Others/EveryThingEver/everything_ever/rails/.git/refs/remotes/origin'
-let g:netrw_dirhist_5='/Users/rich/Code/Projects/Sites/Others/EveryThingEver/everything_ever/rails/.git/refs/remotes'
-let g:netrw_dirhist_6='/Users/rich/Code/Projects/Sites/Others/EveryThingEver/everything_ever/rails/.git/refs'
-let g:netrw_dirhist_7='/Users/rich/Code/Projects/Sites/Others/EveryThingEver/everything_ever/rails/.git'
-let g:netrw_dirhist_8='/Users/dev/workspace/ticketevolution-ruby/lib/ticket_evolution'
-let g:netrw_dirhist_9='/Users/rich/Code/Projects/Sites/Personal/wip/resumate/backend/node_modules/express/bin/test/routes'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/rich/Code/Projects/Sites/Personal/wip/resumate/backend/src/controllers'
+let g:netrw_dirhist_2='/Users/rich/Code/Projects/Sites/Personal/wip/resumate/backend/src/models'
+let g:netrw_dirhist_3='/Users/dev/workspace/carbon/test/integration'
+let g:netrw_dirhist_4='/Users/dev/dotfiles/vim/vim.symlink'

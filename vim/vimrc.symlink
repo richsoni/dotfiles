@@ -6,18 +6,21 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'Julian/vim-textobj-variable-segment'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'davidoc/todo.txt-vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
-Plugin 'kana/vim-textobj-user'
+Plugin 'jussi-kalliokoski/harmony.vim'
 Plugin 'kana/vim-textobj-indent'
+Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
+Plugin 'lucapette/vim-textobj-underscore'
+Plugin 'moll/vim-node'
 Plugin 'rhysd/vim-textobj-ruby'
 Plugin 'richsoni/vim-capmap'
 Plugin 'richsoni/vim-emacs-and-cheese'
@@ -39,8 +42,6 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'Julian/vim-textobj-variable-segment'
-Plugin 'lucapette/vim-textobj-underscore'
 
 call vundle#end()
 filetype plugin indent on

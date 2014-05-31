@@ -1,4 +1,5 @@
 set clipboard=autoselect
+
 set path+=**
 "UX Stuff
   set hls

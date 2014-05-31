@@ -7,6 +7,10 @@
 # rename window numbers
    setw -g pane-base-index 1
    set-option -g base-index 1
+# use pwd for new window
+  bind '"' split-window -c "#{pane_current_path}"
+  bind % split-window -h -c "#{pane_current_path}"
+  bind c new-window -c "#{pane_current_path}"
 # vim bindings
   #pane movement
     bind h select-pane -L

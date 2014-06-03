@@ -8,6 +8,8 @@ nnoremap <leader>vp :VimuxPromptCommand<CR>
 let VimuxUseNearestPane = 1
 nnoremap <Leader>vl :VimuxRunLastCommand<CR>
 
+"Javascript Only
+nnoremap cc{ f{akS
 "General
   vnoremap * y/<c-r>"<cr>
   nnoremap <leader>] : !bundle show --paths \| xargs ctags -Rf.git/tags; ctags -R -a *<cr>

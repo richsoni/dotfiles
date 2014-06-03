@@ -11,11 +11,3 @@ augroup mycoffee
     au FileType coffee :let @h = '/that\.:nohlsearchc5l@'
     au FileType coffee :let @b = 'f(ma%x`ar /{ma%x`ax'
 augroup end
-
-augroup myruby
-  au!
-  "Abbrevs
-    au FileType ruby :iabbrev <buffer> bpp binding.pry
-    au FileType erb :iabbrev <buffer> bpp binding.pry
-augroup end
-

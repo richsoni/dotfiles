@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/rich/Code/Projects/Sites/Personal/wip/resumate/backend/src/controllers'
 let g:netrw_dirhist_2='/Users/rich/Code/Projects/Sites/Personal/wip/resumate/backend/src/models'
 let g:netrw_dirhist_3='/Users/dev/workspace/carbon/test/integration'
 let g:netrw_dirhist_4='/Users/dev/dotfiles/vim/vim.symlink'
 let g:netrw_dirhist_5='/Users/dev/dotfiles/vim/vim.symlink/bundle/tir_black'
+let g:netrw_dirhist_6='/Users/dev/dotfiles/vim'
+let g:netrw_dirhist_7='/Users/dev/dotfiles/vim/vim.symlink'
+let g:netrw_dirhist_8='/Users/dev/dotfiles/vim/vim.symlink/sessions'
+let g:netrw_dirhist_9='/Users/dev/dotfiles/vim/vim.symlink'

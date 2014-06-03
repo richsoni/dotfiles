@@ -28,6 +28,14 @@ highlight DiffAdd term=reverse cterm=bold ctermbg=lightgreen ctermfg=16
 highlight DiffChange term=reverse cterm=bold ctermbg=lightblue ctermfg=16
 highlight DiffText term=reverse cterm=bold ctermbg=lightgray ctermfg=16
 highlight DiffDelete term=reverse cterm=bold ctermbg=lightred ctermfg=16
+highlight Search term=reverse cterm=bold ctermbg=lightgreen ctermfg=16
+highlight StatusLine   term=reverse ctermbg=lightblue ctermfg=16 guibg=#000000
+highlight StatusLineNC term=reverse ctermbg=16 guibg=#000000
+highlight VertSplit    term=reverse ctermbg=16 guibg=#000000
+highlight SignColumn   term=reverse ctermbg=16 guibg=#000000
+highlight TabLineFill  term=reverse ctermfg=16 guibg=#000000
+highlight TabLine      term=reverse ctermbg=16 guibg=#000000
+highlight TabLineSel term=reverse ctermbg=lightgreen ctermfg=16 guibg=#000000
 
 highlight PmenuSel ctermfg=16 ctermbg=156
 

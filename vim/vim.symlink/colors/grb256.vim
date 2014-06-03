@@ -1,4 +1,4 @@
-
+"so $VIMRUNTIME/syntax/hitest.vim
 " Based on
 runtime colors/ir_black.vim
 
@@ -9,7 +9,7 @@ hi pythonSpaceError ctermbg=red guibg=red
 hi Comment ctermfg=darkgray
 
 hi StatusLine ctermbg=darkgrey ctermfg=white
-hi StatusLineNC ctermbg=black ctermfg=lightgrey
+hi StatusLineNC ctermbg=234 ctermfg=lightblue
 hi VertSplit ctermbg=black ctermfg=lightgrey
 hi LineNr ctermfg=darkgray
 hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=234
@@ -30,13 +30,13 @@ highlight DiffText term=reverse cterm=bold ctermbg=lightgray ctermfg=16
 highlight DiffDelete term=reverse cterm=bold ctermbg=lightred ctermfg=16
 
 highlight Search term=reverse cterm=bold ctermbg=lightgreen ctermfg=16
-highlight StatusLineNC term=reverse ctermbg=16 guibg=#000000
 highlight VertSplit    term=reverse ctermbg=16 guibg=#000000
 highlight SignColumn   term=reverse ctermbg=16 guibg=#000000
 highlight TabLineFill  term=reverse ctermfg=16 guibg=#000000
 highlight TabLine      term=reverse ctermbg=16 guibg=#000000
 highlight TabLineSel term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
-highlight StatusLine term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
+highlight StatusLine   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
+highlight StatusLineNC term=reverse ctermbg=16 guibg=#000000 cterm=underline ctermfg=lightblue
 
 highlight PmenuSel ctermfg=16 ctermbg=156
 

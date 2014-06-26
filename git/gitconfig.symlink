@@ -9,6 +9,7 @@
   a=add
   pr = pull --rebase
   poh = push origin HEAD
+  phh = push heroku HEAD
   po  = push origin
   rhh = reset --hard HEAD
 

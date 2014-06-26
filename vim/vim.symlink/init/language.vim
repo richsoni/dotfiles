@@ -14,3 +14,5 @@ au BufRead,BufNewFile *.ejs set filetype=html
 
 au BufRead,BufNewFile *.hamljs set filetype=haml
 au BufRead,BufNewFile *.hamlc set filetype=haml
+
+au BufRead,BufNewFile *.cjsx set filetype=coffee

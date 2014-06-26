@@ -34,9 +34,13 @@ highlight VertSplit    term=reverse ctermbg=16 guibg=#000000
 highlight SignColumn   term=reverse ctermbg=16 guibg=#000000
 highlight TabLineFill  term=reverse ctermfg=16 guibg=#000000
 highlight TabLine      term=reverse ctermbg=16 guibg=#000000
-highlight TabLineSel term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
+highlight TabLineSel term=reverse ctermbg=lightblue ctermfg=16 guibg=#000000
 highlight StatusLine   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
+highlight MatchParen   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
 highlight StatusLineNC term=reverse ctermbg=16 guibg=#000000 cterm=underline ctermfg=lightblue
+highlight CursorLine cterm=underline term=underline
+highlight Special ctermfg=130
+highlight Variable ctermfg=14
 
 highlight PmenuSel ctermfg=16 ctermbg=156
 

@@ -1,6 +1,19 @@
+noremap chc :s/:\(\w*\)\%[ ]=>\%[ ]/\1: /g<CR>:noh<CR>
+noremap chr :s/\(\w*\): /:\1 => /g<CR>:noh<CR>
+nnoremap cha Bf.s["ea"]
+nnoremap chd Bf[r.lxf]xx
+nnoremap chq lF:r"ea"h
+nnoremap chk bhr:elxh
+nnoremap <C-W><C-C> <NOP>
+nnoremap <C-W>c     <NOP>
+
+nnoremap cbg Bf.aget("ea")
+nnoremap cbd Bf.ldwxxf)xhxh
+
 nnoremap <Leader>t :! dict -d moby-thes 
 command! WordFrequency ! frq %
 command! W w
+command! Test set efm=%E\ \ \ \ at\ %f:%l:%c,%E\ \ \ \ at\ %m\(%f:%l:%c\) | set makeprg=make | Make test_vim
 command! Vne vne
 command! Bundles ! ls ~/.vim/bundle
 command! Tabe tabe
@@ -29,7 +42,7 @@ nnoremap [oa :call EnableAutoWrite()<cr>
 nnoremap ]oa :call DisableAutoWrite()<cr>
 nnoremap coa :call ToggleAutoWrite()<cr>
 
-function EnableAutoWrite()
+function! EnableAutoWrite()
   echo 'autowrite enabled'
   let g:autosave_on = 1
   augroup autosave
@@ -39,7 +52,7 @@ function EnableAutoWrite()
 endfunction
 
 
-function DisableAutoWrite()
+function! DisableAutoWrite()
   echo 'autowrite disabled'
   let g:autosave_on = 0
   augroup autosave
@@ -48,10 +61,15 @@ function DisableAutoWrite()
   augroup end
 endfunction
 
-function ToggleAutoWrite()
+function! ToggleAutoWrite()
   if g:autosave_on == 1
     call DisableAutoWrite()
   else
     call EnableAutoWrite()
   endif
 endfunction
+
+inoremap <C-A>		<Home>
+inoremap <C-F>		<Right>
+inoremap <C-B>		<Left>
+cnoremap <C-D>		<Del>

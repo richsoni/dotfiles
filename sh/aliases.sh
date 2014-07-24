@@ -10,6 +10,7 @@
   alias wifipwd="networksetup -getairportnetwork 'en1'"
 #General Stuff
   alias ..="cd .."
+  alias pom='touch ~/pom'
   lf(){
     if [ $1 ]
     then

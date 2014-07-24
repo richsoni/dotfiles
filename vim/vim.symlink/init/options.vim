@@ -1,3 +1,4 @@
+autocmd QuickFixCmdPost *grep* cwindow
 set clipboard=autoselect
 
 set path+=**

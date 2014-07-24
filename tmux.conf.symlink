@@ -53,7 +53,7 @@
 # #status line 
     set -g status-left '#[fg=yellow](#S)'
     set -g status-right-length 120
-    set -g status-right "[#(batt capacity --tmux)]  #(date \"+%H:%M\")"
+    set -g status-right "#(pomElapsed) [#(batt capacity --tmux)]  #(date \"+%H:%M\")"
     set -g status-justify 'centre'
     set -g status-position 'bottom'
 #  #panes

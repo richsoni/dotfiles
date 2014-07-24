@@ -1,3 +1,4 @@
+noremap <Leader>P :silent! touch ~/pom<cr>
 noremap chc :s/:\(\w*\)\%[ ]=>\%[ ]/\1: /g<CR>:noh<CR>
 noremap chr :s/\(\w*\): /:\1 => /g<CR>:noh<CR>
 nnoremap cha Bf.s["ea"]
@@ -30,10 +31,10 @@ nnoremap cc{ f{akS
   "Tabular
     vnoremap  <leader>=  :Tabularize /
   "Ag
-    nnoremap <leader>a :Ag! -QS<space>
-    nnoremap <leader>A :AgFromSearch -QS<cr>
-    vnoremap <silent> <leader>a y:Ag!<space><c-r>"<cr>
-    vnoremap <silent> <leader>A y:AgFile<space><c-r>"<cr>
+    nnoremap <leader>a :Ggrep! -i<space>
+    nnoremap <leader>A :AgFromSearch -i<cr>
+    vnoremap <silent> <leader>a y:Ggrep! -i<space><c-r>"<cr>
+    vnoremap <silent> <leader>A y:Ggrep -i<space><c-r>"<cr>
 
 
 "autowrite plugin

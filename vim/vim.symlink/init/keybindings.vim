@@ -1,14 +1,18 @@
 noremap <Leader>P :silent! touch ~/pom<cr>
-noremap chc :s/:\(\w*\)\%[ ]=>\%[ ]/\1: /g<CR>:noh<CR>
-noremap chr :s/\(\w*\): /:\1 => /g<CR>:noh<CR>
+noremap chc :s/:\(\w*\)\%[ ]=>\%[ ]/\1: /g<CR>:noh<CR> noremap chr :s/\(\w*\): /:\1 => /g<CR>:noh<CR>
 nnoremap cha Bf.s["ea"]
 nnoremap chd Bf[r.lxf]xx
 nnoremap chq lF:r"ea"h
 nnoremap chk bhr:elxh
 nnoremap <C-W><C-C> <NOP>
 nnoremap <C-W>c     <NOP>
+omap Y "+y
+vmap Y "+y
+nmap YY "+yy
+nmap Y "+y
 
 nnoremap cbg Bf.aget("ea")
+
 nnoremap cbd Bf.ldwxxf)xhxh
 
 nnoremap <Leader>t :! dict -d moby-thes 

@@ -10,3 +10,6 @@ TAB menu-complete
 "\C-T": complete
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
+
+#custom shiz
+"\ew":"**\C-b"

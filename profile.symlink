@@ -1,15 +1,19 @@
 source ~/.bashrc
 #PATH STUFF
+  export NODE_PATH='/usr/local/lib/node_modules'
+  #Folder
+  export PATH=./bin:$PATH
+  export PATH=./node_modules/.bin:$PATH
+  #User
   export PATH=$PATH:/usr/local/bin
   export PATH=$PATH:$HOME/.bin
-  export PATH=$PATH:/usr/local/sbin
-  export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
   export PATH=$PATH:$HOME/bin
-  export PATH="/usr/local/heroku/bin:$PATH"
-  export PATH=$PATH:/usr/local/share
+  export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+  #System
   export PATH=$PATH:$NODE_PATH
-  export PATH=./node_modules/.bin:$PATH
-  export PATH=./bin:$PATH
+  export PATH=$PATH:/usr/local/heroku/bin
+  export PATH=$PATH:/usr/local/sbin
+  export PATH=$PATH:/usr/local/share
 # Less Colors for Man Pages
   export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
   export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
@@ -26,7 +30,6 @@ source ~/.bashrc
   export HISTCONTROL=ignoredups
 #setup rvm
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-  export NODE_PATH='/usr/local/lib/node_modules'
 #lynx
   export WWW_HOME='http://duckduckgo.com'
 cat ~/dotfiles/ascii/heis

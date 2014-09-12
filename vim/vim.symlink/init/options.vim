@@ -25,6 +25,7 @@ set path+=**
     set so=999
     set splitright
     set splitbelow
+    set diffopt=vertical
     set mouse=a "use mouse in terminal mode
   " Toggle Numbers
     set relativenumber

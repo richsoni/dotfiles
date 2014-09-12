@@ -11,4 +11,5 @@ augroup my_ruby_abbr
   au!
     au FileType ruby :iabbrev <buffer> iff ifkA
 augroup end
-
+iabbrev mercc module.exports = React.createClass  render: () ->I    <div>I      howdy earthlingsI    </div>k0wh
+iabbrev rcc React.createClass  render: () ->I    <div>I      howdy earthlingsI    </div>k0wh

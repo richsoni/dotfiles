@@ -10,4 +10,19 @@ augroup mycoffee
     au FileType coffee :let @c = ':%s/\/\//#/g'
     au FileType coffee :let @h = '/that\.:nohlsearchc5l@'
     au FileType coffee :let @b = 'f(ma%x`ar /{ma%x`ax'
+    au BufEnter * :call BrowserifyMake()
 augroup end
+
+augroup myjs
+augroup end
+
+function! BrowserifyMake()
+  let gitDir= system("git rev-parse --show-toplevel")[:-2]
+  let buildScript= system("git ls-tree --full-tree -r --name-only HEAD | grep -e '.*bin/build$'")[:-2]
+  if buildScript != ''
+    let &makeprg=gitDir.'/'.buildScript
+    let &errorformat='Error:\ %m\ from\ \"%f\"' . ','
+    let &errorformat .= '%*[\ ]%m (%f:%l:%c)' . ','
+    let &errorformat .= '%*[\ ]at\ %f:%l:%c' . ','
+  endif
+endfunction

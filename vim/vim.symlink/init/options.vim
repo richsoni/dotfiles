@@ -1,6 +1,7 @@
 autocmd QuickFixCmdPost *grep* cwindow
 set clipboard=autoselect
 
+set autowrite
 set path+=**
 "UX Stuff
   set hls

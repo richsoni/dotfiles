@@ -40,6 +40,7 @@
   alias code='cd ~/Code'
   alias rsource='cd ~/Code/libs/rails'
   alias todo='vim ~/Dropbox/Todo.txt'
+  alias gtd='vim ~/Dropbox/gtd/index'
   alias togo='vi ~/Dropbox/togo.txt'
   alias irish='vi ~/Dropbox/irish.txt'
   alias gifts='vi ~/Dropbox/Public/gift_ideas.txt'
@@ -72,3 +73,8 @@
 
   function chat { if [[ $( ps aux | grep -v grep | grep "tail -f .*fnotify" ) ]]; then echo Growl running; else echo > ~/.irssi/fnotify; tail -f ~/.irssi/fnotify |  while read; do growlnotify --sticky --image ~/.irssi/irssi-icon.png -m "$REPLY"; echo $REPLY | cut -f1-10 -d" "; done & fi; bitlbee -F -u rich; irssi; }
   alias cofflint='find . -name "*.coffee" -exec coffeelint -q -f ~/workspace/pos.rb/.git/hooks/config/coffeelint.json {} \;'
+
+  np(){
+    ARGS="$@"
+    sh -c "cd `npm root`/../; npm $ARGS"
+  }

@@ -21,8 +21,11 @@ function! BrowserifyMake()
   let buildScript= system("git ls-tree --full-tree -r --name-only HEAD | grep -e '.*bin/build$'")[:-2]
   if buildScript != ''
     let &makeprg=gitDir.'/'.buildScript
+    "Standand Line (Error: ...)
     let &errorformat='Error:\ %m\ from\ \"%f\"' . ','
+    " Stack Traces
     let &errorformat .= '%*[\ ]%m (%f:%l:%c)' . ','
     let &errorformat .= '%*[\ ]at\ %f:%l:%c' . ','
+    let &errorformat .= '%E%f:%l,%C%m,%C,%Z%m'
   endif
 endfunction

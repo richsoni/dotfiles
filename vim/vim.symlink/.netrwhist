@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/dev/workspace/nick_carbonproto/carbon/assets/docs/carbon droplet.app'
-let g:netrw_dirhist_2='/Users/rich/Code/Projects/richsoni.github.com/sass/material'
-let g:netrw_dirhist_3='/Users/rich/Code/Projects/richsoni.github.com/sass'
-let g:netrw_dirhist_4='/Users/dev/dotfiles/vim/vim.symlink/bundle/vim-fugitive'
-let g:netrw_dirhist_5='/Users/dev/dotfiles/vim/vim.symlink/bundle/vim-fugitive/plugin'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/dev/workspace/carbon/nodify/src/apps'
+let g:netrw_dirhist_2='/Users/dev/workspace/carbon/nodify/src'
+let g:netrw_dirhist_3='/Users/dev/workspace/carbon/nodify/src/sharedComponents'
+let g:netrw_dirhist_4='/Users/dev/dotfiles/vim/vim.symlink/bundle/switch.vim/doc'
+let g:netrw_dirhist_5='/Users/dev/dotfiles/vim/vim.symlink/init'
+let g:netrw_dirhist_6='/Users/rich/Dropbox/gtd'
+let g:netrw_dirhist_7='/Users/rich/Code/Projects/richsoni.github.com/sass/specifics'
+let g:netrw_dirhist_8='/Users/dev/workspace/exchange/db/migrate'

@@ -24,22 +24,6 @@
   "change hash to dot
     nnoremap chd Bf[r.lxf]xx
 
-"Copy Paste (Should be a plugin)
-  nnoremap cp :set paste<cr>"+p:set nopaste<cr>
-  nnoremap cP :set paste<cr>"+P:set nopaste<cr>
-  nnoremap cy :set operatorfunc=<SID>ClipboardCopy<cr>g@
-  vnoremap cy :<c-u>call <SID>ClipboardCopy(visualmode())<cr>
-  nnoremap cyy V"+y
-  function! s:ClipboardCopy(type)
-    if a:type ==# 'v'
-      normal! `<v`>"+y
-    elseif a:type ==# 'char'
-      normal! `[v`]"+y
-    else
-      return
-    endif
-  endfunction
-
 "writing things
   nnoremap <Leader>t :! dict -d moby-thes 
   command! WordFrequency ! frq %

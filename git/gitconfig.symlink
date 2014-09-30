@@ -94,3 +94,10 @@
 [url "git@github.com:"]
     pushInsteadOf = git://github.com/
     pushInsteadOf = https://github.com/
+[include]
+  path=/Users/rich/dotfiles/git/rhyme;
+
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less

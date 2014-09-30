@@ -15,6 +15,7 @@ call vundle#begin()
   Plugin 'benmills/vimux'
   Plugin 'kien/ctrlp.vim'
   Plugin 'tpope/vim-rsi'
+  Plugin 'richsoni/vim-ecliptic'
   Plugin 'AndrewRadev/switch.vim'
   Plugin 'ticketevolution/ticketevo.vim'
   Plugin 'richsoni/vim-capmap'
@@ -64,4 +65,3 @@ call vundle#end()
 filetype plugin indent on
 set background=dark
 colorscheme grb256
-

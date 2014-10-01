@@ -53,6 +53,7 @@ underline_prompt(){
     ch_fg_col "241"
     echo ""
   fi
+  jobs
 }
 _repeat_space() {
   #@ USAGE: _repeat number

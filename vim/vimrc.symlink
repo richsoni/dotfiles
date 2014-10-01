@@ -13,7 +13,7 @@ call vundle#begin()
   Plugin 'gmarik/Vundle.vim'
   Plugin 'airblade/vim-gitgutter'
   Plugin 'benmills/vimux'
-  Plugin 'kien/ctrlp.vim'
+  " Plugin 'kien/ctrlp.vim'
   Plugin 'tpope/vim-rsi'
   Plugin 'richsoni/vim-ecliptic'
   Plugin 'AndrewRadev/switch.vim'

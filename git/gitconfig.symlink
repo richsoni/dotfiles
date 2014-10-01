@@ -25,6 +25,7 @@
 
   g   = grep --ignore-case
   gno = grep --name-only --ignore-case
+  jg= jump grep
   s = status --short
   st = status
   bad = "!git status --short | grep --color=always ' M|UU|AA|DU'"
@@ -95,7 +96,7 @@
     pushInsteadOf = git://github.com/
     pushInsteadOf = https://github.com/
 [include]
-  path=/Users/rich/dotfiles/git/rhyme;
+  path=~/dotfiles/git/rhyme;
 
 [pager]
   log = diff-highlight | less

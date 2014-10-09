@@ -1,4 +1,3 @@
-runtime! init/**.vim
 
 set nocompatible
 filetype off
@@ -51,7 +50,7 @@ call vundle#begin()
   Plugin 'moll/vim-node'
   Plugin 'tpope/vim-haml'
   Plugin 'tpope/vim-markdown'
-  Plugin 'tpope/vim-rails'
+  " Plugin 'tpope/vim-rails'
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'mtscout6/vim-cjsx.git'
 "colors
@@ -65,3 +64,4 @@ call vundle#end()
 filetype plugin indent on
 set background=dark
 colorscheme grb256
+runtime! init/**.vim

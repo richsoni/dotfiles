@@ -10,10 +10,16 @@ augroup mycoffee
     au FileType coffee :let @c = ':%s/\/\//#/g'
     au FileType coffee :let @h = '/that\.:nohlsearchc5l@'
     au FileType coffee :let @b = 'f(ma%x`ar /{ma%x`ax'
+  "gf support
+    au FileType coffee :set suffixesadd=.coffee,.js,.json
     au BufEnter * :call BrowserifyMake()
 augroup end
 
 augroup myjs
+augroup end
+
+augroup myruby
+  au FileType ruby :set suffixesadd=.rb
 augroup end
 
 function! BrowserifyMake()

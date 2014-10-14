@@ -65,3 +65,4 @@ filetype plugin indent on
 set background=dark
 colorscheme grb256
 runtime! init/**.vim
+autocmd BufEnter * if &filetype == "" | setlocal ft=todotxt | endif

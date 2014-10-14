@@ -1,3 +1,7 @@
+augroup mychecklist
+  au!
+    au FileType todotxt  :nmap <space> :s/\[\s*\]/\[x\]/e<cr>
+augroup end
 augroup mycoffee
   au!
   "Abbrevs

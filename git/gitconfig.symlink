@@ -6,6 +6,7 @@
   c = commit
   scc = "!SKIP_CHECKS=all git commit"
   au= add -u .
+  ca= "!git add .; git add -u .; git commit"
   a=add
   pr = pull --rebase
   poh = push origin HEAD

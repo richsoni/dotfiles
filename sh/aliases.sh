@@ -1,5 +1,6 @@
 #MAC OS X STUFF
   alias thes='dict -d moby-thes'
+  alias ielm="emacs --batch --eval '(while t (print (eval (read))))'"
   alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
   alias gr='Rscript ~/dotfiles/graph.r'
   alias wifion="networksetup -setairportpower 'en1' on"

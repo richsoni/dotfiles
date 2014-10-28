@@ -39,8 +39,10 @@ highlight StatusLine   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
 highlight MatchParen   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
 highlight StatusLineNC term=reverse ctermbg=16 guibg=#000000 cterm=underline ctermfg=lightblue
 highlight CursorLine cterm=underline term=underline
+
 highlight Special ctermfg=130
 highlight Variable ctermfg=14
+hi Identifier term=standout ctermfg=9 guifg=#8f8f8f
 
 highlight PmenuSel ctermfg=16 ctermbg=156
 

@@ -4,7 +4,6 @@ filetype off
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 " let g:do_filetype = 0
 " au BufWinEnter,BufAdd * if expand('<afile>') == "" | let g:do_filetype = 1 | endif
-" au BufEnter * if g:do_filetype | set ft=todotxt | let g:do_filetype = 0 | endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -15,6 +14,7 @@ call vundle#begin()
   Plugin 'kien/ctrlp.vim'
   Plugin 'tpope/vim-rsi'
   Plugin 'richsoni/vim-ecliptic'
+  Plugin 'richsoni/vim-2dotxt'
   Plugin 'AndrewRadev/switch.vim'
   Plugin 'ticketevolution/ticketevo.vim'
   Plugin 'richsoni/vim-capmap'
@@ -44,9 +44,8 @@ call vundle#begin()
   Plugin 'lucapette/vim-textobj-underscore'
   Plugin 'rhysd/vim-textobj-ruby'
 "languages
-  Plugin 'davidoc/todo.txt-vim'
   Plugin 'jussi-kalliokoski/harmony.vim'
-  Plugin 'kchmck/vim-coffee-script'
+  Plugin 'tpope/vim-coffee-script'
   Plugin 'moll/vim-node'
   Plugin 'tpope/vim-haml'
   Plugin 'tpope/vim-markdown'
@@ -65,4 +64,6 @@ filetype plugin indent on
 set background=dark
 colorscheme grb256
 runtime! init/**.vim
-autocmd BufEnter * if &filetype == "" | setlocal ft=todotxt | endif
+autocmd BufEnter,BufNewFile,BufRead * if &filetype == "" | setlocal ft=2dotxt | endif
+autocmd BufEnter,BufNewFile,BufRead * if &filetype == "" | setf 2dotxt | endif
+autocmd BufEnter,BufNewFile,BufRead * syntax on

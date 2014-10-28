@@ -8,6 +8,8 @@
   nnoremap <C-W><C-C> <NOP>
   nnoremap <C-W>c     <NOP>
 
+"source %
+  nnoremap g% source % <CR>
 "write after find
   nnoremap gA gna
 "General
@@ -69,7 +71,6 @@
       autocmd InsertLeave,TextChanged,BufLeave,FocusLost * silent! wall  " Save anytime we leave a buffer
     augroup end
   endfunction
-
 
   function! DisableAutoWrite()
     echo 'autowrite disabled'

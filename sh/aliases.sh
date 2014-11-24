@@ -20,6 +20,7 @@
       ls | tail -n1
     fi
   }
+  alias ci='clisp -i'
   alias ls="ls -G"
   alias q='cd ~/quicklinks;clear; ls'
   alias v='vim'
@@ -78,4 +79,8 @@
   np(){
     ARGS="$@"
     sh -c "cd `npm root`/../; npm $ARGS"
+  }
+
+  ffind() {
+    find . -name "*$1*"
   }

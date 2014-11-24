@@ -4,9 +4,11 @@
   command! Tabe tabe
   command! H h
 
+
 "NOPS
   nnoremap <C-W><C-C> <NOP>
   nnoremap <C-W>c     <NOP>
+  nmap <C-C> <ESC>
 
 "source %
   nnoremap g% source % <CR>

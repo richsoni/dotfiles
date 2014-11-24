@@ -40,9 +40,14 @@ highlight MatchParen   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
 highlight StatusLineNC term=reverse ctermbg=16 guibg=#000000 cterm=underline ctermfg=lightblue
 highlight CursorLine cterm=underline term=underline
 
-highlight Special ctermfg=130
 highlight Variable ctermfg=14
+hi Special term=underline cterm=bold ctermfg=81 guifg=#6699CC
+hi String cterm=bold ctermfg=10 guifg=#A8FF60
 hi Identifier term=standout ctermfg=9 guifg=#8f8f8f
+hi Keyword cterm=bold ctermfg=13 guifg=#FF73FD
+hi Identifier ctermfg=13 guifg=#FF73FD
+hi Number ctermfg=12 guifg=#96CBFE
 
 highlight PmenuSel ctermfg=16 ctermbg=156
+
 

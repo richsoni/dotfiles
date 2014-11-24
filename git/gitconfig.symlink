@@ -24,7 +24,7 @@
   t=tag
   pt= push --tags
 
-  g    = grep
+  g    = grep --ignore-case
   gno  = grep --name-only
   jg= jump grep
   jgi= jump grep
@@ -42,6 +42,7 @@
 
   br = branch
   cb = "!git branch | grep -e '^*' | cut -d' ' -f2"
+  reset-upstream="! git branch --set-upstream-to=origin/`git cb` `git cb`"
   sb = show-branch
   sprint = "!git fetch; git branch --list -a | grep '^\\s*remotes' | grep 'sprint' | cut -d / -f 3,4 | sort -t'/' -k2 | tail -1 | xargs git checkout "
   done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; f"

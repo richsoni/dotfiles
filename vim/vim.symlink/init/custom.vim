@@ -16,6 +16,7 @@ augroup mycoffee
     au FileType coffee :let @b = 'f(ma%x`ar /{ma%x`ax'
   "gf support
     au FileType coffee :set suffixesadd=.coffee,.js,.json
+    au FileType coffee :nmap <buffer> \gf <Plug>RailsFind
     au BufEnter * :call BrowserifyMake()
 augroup end
 

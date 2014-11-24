@@ -7,7 +7,7 @@ $endif
 set completion-ignore-case on
 TAB menu-complete
 "\e[Z": menu-complete-backward
-"\C-T": complete
+# "\C-T": complete
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 

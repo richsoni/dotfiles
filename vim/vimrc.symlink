@@ -5,6 +5,7 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 " let g:do_filetype = 0
 " au BufWinEnter,BufAdd * if expand('<afile>') == "" | let g:do_filetype = 1 | endif
 set rtp+=~/.vim/bundle/Vundle.vim
+runtime! init/**.vim
 call vundle#begin()
 
 "global
@@ -49,7 +50,7 @@ call vundle#begin()
   Plugin 'moll/vim-node'
   Plugin 'tpope/vim-haml'
   Plugin 'tpope/vim-markdown'
-  " Plugin 'tpope/vim-rails'
+  Plugin 'tpope/vim-rails'
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'mtscout6/vim-cjsx.git'
 "colors
@@ -63,7 +64,6 @@ call vundle#end()
 filetype plugin indent on
 set background=dark
 colorscheme grb256
-runtime! init/**.vim
-autocmd BufEnter,BufNewFile,BufRead * if &filetype == "" | setlocal ft=2dotxt | endif
-autocmd BufEnter,BufNewFile,BufRead * if &filetype == "" | setf 2dotxt | endif
-autocmd BufEnter,BufNewFile,BufRead * syntax on
+" autocmd BufEnter,BufNewFile,BufRead * if &filetype == "" | setlocal ft=2dotxt | endif
+" autocmd BufEnter,BufNewFile,BufRead * if &filetype == "" | setf 2dotxt | endif
+" autocmd BufEnter,BufNewFile,BufRead * syntax on

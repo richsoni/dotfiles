@@ -47,3 +47,4 @@ source ~/.bashrc
   export WWW_HOME='http://duckduckgo.com'
 cat ~/dotfiles/ascii/heis
 PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH:$PATH"
+nag

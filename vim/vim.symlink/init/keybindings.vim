@@ -10,23 +10,14 @@
   nnoremap <C-W>c     <NOP>
   nmap <C-C> <ESC>
 
+"insert
+ imap <C-J> O
 "source %
   nnoremap g% source % <CR>
 "write after find
   nnoremap gA gna
 "General
   vnoremap * y/<c-r>"<cr>
-
-"convert to switch
-  "backbone
-  "hello.world => hello.get('world')
-    nnoremap cbg Bf.aget("ea")
-  "hello.get('world') => hello.world
-    nnoremap cbd Bf.ldwxxf)xhxh
-  "change hash to array
-    nnoremap cha Bf.s["ea"]
-  "change hash to dot
-    nnoremap chd Bf[r.lxf]xx
 
 "writing things
   nnoremap <Leader>t :! dict -d moby-thes 

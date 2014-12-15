@@ -12,13 +12,15 @@
 
 "insert
  imap <C-J> O
-"source %
-  nnoremap g% source % <CR>
 "write after find
   nnoremap gA gna
 "General
   vnoremap * y/<c-r>"<cr>
-
+" Upcase Word
+  function! UpcaseWord()
+    normal! mpb~`p
+  endfunction
+  noremap <c-u> :call UpcaseWord()<cr>
 "writing things
   nnoremap <Leader>t :! dict -d moby-thes 
   command! WordFrequency ! frq %
@@ -28,6 +30,8 @@
 
 "Rails Only
   nnoremap <leader>] : !bundle show --paths \| xargs ctags -Rf.git/tags; ctags -R -a *<cr>
+
+  inoremap <backspace> UseCtrlH
 
 "plugins
 

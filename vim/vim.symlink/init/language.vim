@@ -20,6 +20,7 @@ au BufRead,BufNewFile *.hamljs set filetype=haml
 au BufRead,BufNewFile *.hamlc set filetype=haml
 
 au BufRead,BufNewFile *.cjsx set filetype=coffee
+au BufRead,BufNewFile *.cson set filetype=coffee
 
 au BufRead,BufNewFile * :call SetLisp()
 

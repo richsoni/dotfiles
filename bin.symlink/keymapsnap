@@ -1,0 +1,79 @@
+#! /usr/bin/env ruby
+
+require 'pry'
+
+def raw_to_keycode(code)
+  case code
+    when "\u0001" then "^A"
+    when "\u0002" then "^B"
+    when "\u0003" then "^C"
+    when "\u0004" then "^D"
+    when "\u0005" then "^E"
+    when "\u0006" then "^F"
+    when "\u0007" then "^G"
+    when "\u0008" then "^H"
+    when "\u0009" then "^I"
+    when "\n"     then "^J"
+    when "\v"     then "^K"
+    when "\f"     then "^L"
+    when "\r"     then "^M"
+    when "\u000E" then "^N"
+    when "\u000F" then "^O"
+    when "\u0010" then "^P"
+    when "\u0011" then "^Q"
+    when "\u0012" then "^R"
+    when "\u0013" then "^S"
+    when "\u0014" then "^T"
+    when "\u0015" then "^U"
+    when "\u0016" then "^V"
+    when "\u0017" then "^W"
+    when "\u0018" then "^X"
+    when "\u0019" then "^Y"
+    when "\u001A" then "^Z"
+    when "\e"     then "Meta-"
+    else
+      code
+  end
+end
+
+def get_char
+  state = `stty -g`
+  `stty raw -echo -icanon `
+  raw_to_keycode(STDIN.getc)
+ensure
+  `stty #{state}`
+end
+
+def get_keystroke
+  char = get_char
+  if char == "Meta-"
+    char = "M-#{get_char}"
+  end
+  char
+end
+
+def get_base_command
+  keystroke = get_keystroke
+  print keystroke
+  case keystroke
+    when "a" then "No Translation"
+    when "b" then "M-B"
+    when "c" then "tk"
+    when "d" then "tk"
+    when "e" then "M-F M-B"
+    else
+      "NOOP"
+  end
+end
+
+def vi2emacs
+  command =  get_base_command
+  print " => #{command}\n"
+end
+
+if ARGV[0] == '--vi2emacs'
+  vi2emacs
+else
+  puts "usage:"
+  puts "  --vi2emacs"
+end

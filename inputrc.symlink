@@ -5,9 +5,9 @@ $if Bash
     "\eo": "\C-p\C-a\ef "
 $endif
 set completion-ignore-case on
-TAB menu-complete
+TAB complete
 "\e[Z": menu-complete-backward
-# "\C-T": complete
+"\C-T": menu-complete
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 

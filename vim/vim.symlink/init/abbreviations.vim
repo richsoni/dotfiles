@@ -6,7 +6,7 @@ iabbrev cld console.log("~~~~~~")console.log("~~~~~")Oconsole.log()F(a
 iabbrev rqq require("")2F"a
 iabbrev fnn function(){}F(a
 iabbrev iff if (){}F(a
-iabbrev journalyml -------------------date: :r !datekJolocation:type:----------------3kA
+iabbrev journalyml -------------------date: :r !datekJolocation:type:title:----------------3kA
 augroup my_ruby_abbr
   au!
     au FileType ruby :iabbrev <buffer> iff ifkA

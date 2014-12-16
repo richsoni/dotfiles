@@ -15,6 +15,11 @@ call vundle#begin()
   Plugin 'kien/ctrlp.vim'
   Plugin 'tpope/vim-rsi'
   Plugin 'richsoni/vim-ecliptic'
+  " snipmate requires these
+  Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'tomtom/tlib_vim'
+  Plugin 'garbas/vim-snipmate'
+
   " Plugin 'townk/vim-autoclose'
   Plugin 'richsoni/vim-2dotxt'
   Plugin 'AndrewRadev/switch.vim'

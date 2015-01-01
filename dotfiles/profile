@@ -1,4 +1,3 @@
-source ~/.bashrc
 #PATH STUFF
   export NODE_PATH='/usr/local/lib/node_modules'
   #Folder
@@ -35,16 +34,19 @@ source ~/.bashrc
   export LESS_TERMCAP_ZV=$(tput rsubm)
   export LESS_TERMCAP_ZO=$(tput ssupm)
   export LESS_TERMCAP_ZW=$(tput rsupm)
+  export LC_CTYPE=en_US.UTF-8
+  export LC_ALL=en_US.UTF-8
 # define preferred tools
   export EDITOR=vim
   export PAGER=less
 #global options
   export HISTIGNORE='ls:rl:source:pwd:clear:history'
   export HISTCONTROL=ignoredups
+  # export NAG_IGNORE=true
 #setup rvm
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #lynx
   export WWW_HOME='http://duckduckgo.com'
 cat ~/dotfiles/ascii/heis
 PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH:$PATH"
-nag
+# nag

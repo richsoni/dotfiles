@@ -1,4 +1,3 @@
-
 set nocompatible
 filetype off
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
@@ -14,6 +13,7 @@ call vundle#begin()
   Plugin 'benmills/vimux'
   Plugin 'kien/ctrlp.vim'
   Plugin 'tpope/vim-rsi'
+  Plugin 'tpope/vim-projectionist'
   Plugin 'richsoni/vim-ecliptic'
   " snipmate requires these
   Plugin 'MarcWeber/vim-addon-mw-utils'

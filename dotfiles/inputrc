@@ -5,11 +5,12 @@ $if Bash
     "\eo": "\C-p\C-a\ef "
 $endif
 set completion-ignore-case on
-TAB complete
+TAB menu-complete
 "\e[Z": menu-complete-backward
-"\C-T": menu-complete
+"\C-T": complete
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
+set completion-prefix-display-length 2
 
 #custom shiz
 "\ew":"**\C-b"

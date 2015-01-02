@@ -1,5 +1,5 @@
 #PATH STUFF
-  export CONFIG_PATH=~/dotfiles
+  export CONFIG_PATH=~/richsoni-config
   export NODE_PATH='/usr/local/lib/node_modules'
   #Folder
   export PATH=./bin:$PATH

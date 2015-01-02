@@ -33,7 +33,7 @@
   alias dsstart='( ds kill && ds start ) || dsstart'
 #META
 #Join the dots
-  alias cdf='cd ~/dotfiles/'
+  alias cdf='cd ~/richsoni-config/'
 #Personal Stuff
   alias gs='echo "noop"'
   alias rgraph='cd Meta/stats/R'
@@ -49,7 +49,7 @@
   alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
   alias remote_canary='canary --remote-debugging-port=9222'
 #Ticket Evo Stuff
-  alias temux='~/dotfiles/tmux_sessions/temux'
+  alias temux='~/richsoni-config/tmux_sessions/temux'
   alias retemux='tmux kill-session -t temux;sudo ls; ds restart;temux'
   alias tev='cd ~/workspace/ticketevo.vim'
   alias tegem='cd ~/workspace/ticketevolution-ruby'
@@ -64,7 +64,7 @@
     hub pull-request -b ticketevolution:master -h ticketevolution:$CURRENT_BRANCH
   }
 #Rails Shortcuts
-  alias tmux_rails='~/dotfiles/tmux_sessions/railsmux'
+  alias tmux_rails='~/richsoni-config/tmux_sessions/railsmux'
   alias r='rails'
   alias rrg='rake routes | grep'
   alias becsdc='bundle exec cap staging deploy:current'

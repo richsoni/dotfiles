@@ -2,7 +2,7 @@
   alias thes='dict -d moby-thes'
   alias ielm="emacs --batch --eval '(while t (print (eval (read))))'"
   alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
-  alias gr='Rscript ~/dotfiles/graph.r'
+  alias gr='Rscript ~/$CONFIG_PATH/graph.r'
   alias wifion="networksetup -setairportpower 'en1' on"
   alias wifioff="networksetup -setairportpower 'en1' off"
   alias wifils="airport -s"

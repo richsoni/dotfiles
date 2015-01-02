@@ -99,7 +99,7 @@
     pushInsteadOf = git://github.com/
     pushInsteadOf = https://github.com/
 [include]
-  path=~/dotfiles/git/rhyme;
+  path=~/$CONFIG_PATH/git/rhyme;
 
 [pager]
   log = diff-highlight | less

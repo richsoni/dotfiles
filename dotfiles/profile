@@ -1,4 +1,5 @@
 #PATH STUFF
+  export CONFIG_PATH=~/dotfiles
   export NODE_PATH='/usr/local/lib/node_modules'
   #Folder
   export PATH=./bin:$PATH
@@ -13,6 +14,8 @@
   export PATH=$PATH:/usr/local/heroku/bin
   export PATH=$PATH:/usr/local/sbin
   export PATH=$PATH:/usr/local/share
+  export PATH=$PATH:/Applications/Postgres93.app/Contents/MacOS/bin
+
 # Less Colors for Man Pages
   export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
   export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
@@ -47,6 +50,5 @@
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #lynx
   export WWW_HOME='http://duckduckgo.com'
-cat ~/dotfiles/ascii/heis
-PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH:$PATH"
-# nag
+cat $CONFIG_PATH/ascii/heis
+nag

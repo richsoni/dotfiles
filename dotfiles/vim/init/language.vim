@@ -24,7 +24,7 @@ au BufRead,BufNewFile *.cson set filetype=coffee
 
 au BufRead,BufNewFile * :call SetLisp()
 
-function SetLisp()
+function! SetLisp()
   if getline(1) =~# '^.*#! /usr/bin/env clisp.*$'
     set filetype=lisp
   endif

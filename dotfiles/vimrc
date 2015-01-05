@@ -20,6 +20,8 @@ call vundle#begin()
   Plugin 'tomtom/tlib_vim'
   Plugin 'garbas/vim-snipmate'
 
+  " Writing
+  Plugin 'git@github.com:reedes/vim-lexical.git'
   " Plugin 'townk/vim-autoclose'
   Plugin 'richsoni/vim-2dotxt'
   Plugin 'AndrewRadev/switch.vim'

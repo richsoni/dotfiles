@@ -11,8 +11,12 @@
   nmap <C-C> <ESC>
 
 "insert
- imap <C-J> O
-"write after find
+ inoremap <C-J> O
+ inoremap <CR> <C-]><C-G>u<CR>
+ inoremap <c-]> <c-x><c-]>
+ inoremap <c-F> <c-x><c-F>
+ inoremap <c-L> <c-x><c-L>
+"write after find        
   nnoremap gA gna
 "General
   vnoremap * y/<c-r>"<cr>

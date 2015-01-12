@@ -16,6 +16,7 @@
  inoremap <c-]> <c-x><c-]>
  inoremap <c-F> <c-x><c-F>
  inoremap <c-L> <c-x><c-L>
+ inoremap <c-@> <space>
 "write after find        
   nnoremap gA gna
 "General

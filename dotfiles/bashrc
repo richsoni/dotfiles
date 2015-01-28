@@ -3,8 +3,8 @@ case "$-" in
     *i*) source ~/.profile ;;
 esac
 #customization for each shell to lead in itself
-  for config_file in $CONFIG_PATH/bash/*.sh; do source $config_file; done
-  for config_file in $CONFIG_PATH/sh/*.sh; do source $config_file; done
+  for config_file in ~/richsoni-config/bash/*.sh; do source $config_file; done
+  for config_file in ~/richsoni-config/sh/*.sh; do source $config_file; done
   alias rl='source ~/.bashrc'
 
 #shell specific options

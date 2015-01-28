@@ -1,9 +1,13 @@
+let s:counter = 0
+function! MyCounter()
+  let s:counter = s:counter + 1
+  echo(s:counter)
+endfunction
 "Typo Commands
   command! W w
   command! Vne vne
   command! Tabe tabe
   command! H h
-
 
 "NOPS
   nnoremap <C-W><C-C> <NOP>

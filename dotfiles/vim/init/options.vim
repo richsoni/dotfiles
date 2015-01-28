@@ -24,7 +24,7 @@ set path+=**
   "auto center cursor
     set so=999
     set splitright
-    set splitbelow
+    set nosplitbelow
     set diffopt=vertical
     set mouse=a "use mouse in terminal mode
   " Toggle Numbers

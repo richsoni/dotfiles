@@ -4,6 +4,7 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 " let g:do_filetype = 0
 " au BufWinEnter,BufAdd * if expand('<afile>') == "" | let g:do_filetype = 1 | endif
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/Code/projects/vim/vim-mpc
 runtime! init/**.vim
 call vundle#begin()
 
@@ -13,7 +14,7 @@ call vundle#begin()
   Plugin 'benmills/vimux'
   Plugin 'kien/ctrlp.vim'
   Plugin 'tpope/vim-rsi'
-  Plugin 'tpope/vim-projectionist'
+  " Plugin 'tpope/vim-projectionist'
   Plugin 'richsoni/vim-ecliptic'
   " snipmate requires these
   Plugin 'MarcWeber/vim-addon-mw-utils'

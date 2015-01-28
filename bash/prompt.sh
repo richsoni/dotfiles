@@ -39,11 +39,21 @@ underline_prompt(){
       ch_fg_col "31"
     fi
     echo -en "(${git_branch})"
-    ch_fg_col "34" #dashes
+      if [ `uname | grep Linux` ]
+      then
+        ch_fg_col "31" #host
+      else
+        ch_fg_col "34" #host
+      fi
     if [ $AVAIL_WIDTH_FULL -gt 0 ]
     then
       _repeat - $AVAIL_WIDTH_FULL
-      ch_fg_col "33" #host
+      if [ `uname | grep Linux` ]
+      then
+        ch_fg_col "29" #host
+      else
+        ch_fg_col "33" #host
+      fi
       echo -en $host_info " \b"
       ch_fg_col "34" #git branch
       echo -en $time" \b"

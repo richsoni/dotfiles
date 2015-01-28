@@ -83,6 +83,6 @@ _repeat() {
     printf "%s" $1
   done
 }
-PROMPT_COMMAND="underline_prompt"
-PS1="$ "
-PS2="# "
+tty -s && export PROMPT_COMMAND="underline_prompt"
+export PS1="$ "
+export PS2="# "

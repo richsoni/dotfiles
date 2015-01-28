@@ -1,6 +1,7 @@
-source ~/.profile
 export CDPATH='.:/Users/rich'
-
+case "$-" in
+    *i*) source ~/.profile ;;
+esac
 #customization for each shell to lead in itself
   for config_file in $CONFIG_PATH/bash/*.sh; do source $config_file; done
   for config_file in $CONFIG_PATH/sh/*.sh; do source $config_file; done

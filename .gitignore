@@ -1,3 +1,6 @@
 dotfiles/vim/bundle/
 !dotfiles/vim/bundle/Vundle.vim/*
 .netrwhist
+dotfiles/weechat/sec.conf
+dotfiles/weechat/logs
+dotfiles/weechat/weechat.log

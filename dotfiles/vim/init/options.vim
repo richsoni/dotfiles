@@ -28,14 +28,14 @@ set path+=**
     set diffopt=vertical
     set mouse=a "use mouse in terminal mode
   " Toggle Numbers
-    set relativenumber
-    set number
-    aug linenumbers
-      au!
-      au InsertEnter * :set number
-      au InsertEnter * :set norelativenumber
-      au InsertLeave * :set relativenumber
-    augroup end
+    " set relativenumber
+    " set number
+    " aug linenumbers
+    "   au!
+    "   au InsertEnter * :set number
+    "   au InsertEnter * :set norelativenumber
+    "   au InsertLeave * :set relativenumber
+    " augroup end
 "Other
   set wildmode=list:full
   let g:ruby_path = system('rvm current')

@@ -2,7 +2,7 @@
   alias thes='dict -d moby-thes'
   alias ielm="emacs --batch --eval '(while t (print (eval (read))))'"
   alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
-  alias gr='Rscript ~/$CONFIG_PATH/graph.r'
+  alias gr='Rscript $CONFIG_PATH/graph.r'
   alias wifion="networksetup -setairportpower 'en1' on"
   alias wifioff="networksetup -setairportpower 'en1' off"
   alias wifils="airport -s"
@@ -70,6 +70,8 @@
   alias becsdc='bundle exec cap staging deploy:current'
   alias becsbdc='bundle exec cap sandbox deploy:current'
   alias becsl='bundle exec cap staging log'
+#irc
+  # alias bitl="bitlbee -c '~/.config/bitlbee/bitlbee.config'"
 #vlc
   alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -cvlc'
   alias vlci='/Applications/VLC.app/Contents/MacOS/VLC -I rc'

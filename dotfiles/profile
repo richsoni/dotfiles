@@ -51,7 +51,7 @@
 #lynx
   export WWW_HOME='http://duckduckgo.com'
 cat $CONFIG_PATH/ascii/heis
-if [ `which nag` ]
+if [[ `which nag` && -n "$TMUX" ]]
 then
   nag
 fi

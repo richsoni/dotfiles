@@ -71,7 +71,7 @@
   alias becsbdc='bundle exec cap sandbox deploy:current'
   alias becsl='bundle exec cap staging log'
 #irc
-  # alias bitl="bitlbee -c '~/.config/bitlbee/bitlbee.config'"
+  alias bitl="bitlbee -c$HOME/.config/bitlbee/bitlbee.conf"
 #vlc
   alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -cvlc'
   alias vlci='/Applications/VLC.app/Contents/MacOS/VLC -I rc'

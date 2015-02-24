@@ -1,0 +1,54 @@
+snippet rqq "require"
+require("$1")
+endsnippet
+
+snippet cll "console.log('')"
+console.log("$1")
+endsnippet
+
+snippet clv "console.log()"
+console.log($1)
+endsnippet
+
+snippet rcc "React Create Class"
+React.createClass
+  displayName: '$1'
+  propTypes: {}
+  getDefaultProps: () ->
+  render: () ->
+    <div>
+      $0
+    </div>
+endsnippet
+
+snippet me "module.exports"
+module.exports = $1
+endsnippet
+
+snippet props "add props to react class"
+  propTypes:
+    $1
+	getDefaultProps: () ->
+endsnippet
+
+snippet _componentExport "React Component Skeleton"
+module.exports = React.createClass
+  displayName: '$1'
+  propTypes: {}
+  getDefaultProps: () ->
+  render: () ->
+    <div>
+      $0
+    </div>
+endsnippet
+
+snippet _rootComponentExport "React Component Skeleton"
+module.exports = React.createClass
+  displayName: 'RootComponent'
+  propTypes: {}
+  getDefaultProps: () ->
+  render: () ->
+    <div>
+      $0
+    </div>
+endsnippet

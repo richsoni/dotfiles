@@ -19,7 +19,7 @@ call vundle#begin()
   " Writing
   Plugin 'git@github.com:reedes/vim-lexical.git'
   Plugin 'townk/vim-autoclose'
-  Plugin 'richsoni/vim-2dotxt'
+  " Plugin 'richsoni/vim-2dotxt'
   Plugin 'ticketevolution/ticketevo.vim'
   Plugin 'richsoni/vim-capmap'
   Plugin 'tpope/vim-dispatch'

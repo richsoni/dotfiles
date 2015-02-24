@@ -1,3 +1,4 @@
+nnoremap / ms/
 let s:counter = 0
 function! MyCounter()
   let s:counter = s:counter + 1
@@ -15,12 +16,12 @@ endfunction
   nmap <C-C> <ESC>
 
 "insert
- inoremap <C-J> O
- inoremap <CR> <C-]><C-G>u<CR>
- inoremap <c-]> <c-x><c-]>
- inoremap <c-F> <c-x><c-F>
- inoremap <c-L> <c-x><c-L>
- inoremap <c-@> <space>
+ " inoremap <C-J> O
+ " inoremap <CR> <C-]><C-G>u<CR>
+ " inoremap <c-]> <c-x><c-]>
+ " inoremap <c-F> <c-x><c-F>
+ " inoremap <c-L> <c-x><c-L>
+ " inoremap <c-@> <space>
 "write after find        
   nnoremap gA gna
 "General
@@ -39,8 +40,6 @@ endfunction
 
 "Rails Only
   nnoremap <leader>] : !bundle show --paths \| xargs ctags -Rf.git/tags; ctags -R -a *<cr>
-
-  inoremap <backspace> UseCtrlH
 
 "plugins
 

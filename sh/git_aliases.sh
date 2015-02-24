@@ -1,5 +1,6 @@
   alias g='git'
   __git_complete g _git
+
   gbd(){
     echo "Files To Remove:"
     for br in $( git branch | grep $1 )

@@ -18,10 +18,11 @@ endfunction
 "insert
  " inoremap <C-J> O
  " inoremap <CR> <C-]><C-G>u<CR>
- " inoremap <c-]> <c-x><c-]>
- " inoremap <c-F> <c-x><c-F>
- " inoremap <c-L> <c-x><c-L>
- " inoremap <c-@> <space>
+ inoremap <c-]> <c-x><c-]>
+ inoremap <c-F> <c-x><c-F>
+ inoremap <c-L> <c-x><c-L>
+ inoremap <c-s> <c-x>s
+ inoremap <c-@> <space>
 "write after find        
   nnoremap gA gna
 "General

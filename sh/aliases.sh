@@ -76,6 +76,8 @@
   alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -cvlc'
   alias vlci='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
   alias subl='open -a Sublime Text 2'
+  alias alteraan='telnet www.ateraan.com 4002'
+
 
   function chat { if [[ $( ps aux | grep -v grep | grep "tail -f .*fnotify" ) ]]; then echo Growl running; else echo > ~/.irssi/fnotify; tail -f ~/.irssi/fnotify |  while read; do growlnotify --sticky --image ~/.irssi/irssi-icon.png -m "$REPLY"; echo $REPLY | cut -f1-10 -d" "; done & fi; bitlbee -F -u rich; irssi; }
   alias cofflint='find . -name "*.coffee" -exec coffeelint -q -f ~/workspace/pos.rb/.git/hooks/config/coffeelint.json {} \;'

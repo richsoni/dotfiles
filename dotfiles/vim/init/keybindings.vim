@@ -1,3 +1,4 @@
+nnoremap <c-n> :call ConcertoBind('set number \| set relativenumber', 'set norelativenumber \| set nonu')<cr>
 nnoremap / ms/
 let s:counter = 0
 function! MyCounter()

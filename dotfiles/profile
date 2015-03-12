@@ -2,7 +2,6 @@
   export CONFIG_PATH=~/richsoni-config
   export NODE_PATH='/usr/local/lib/node_modules'
   #Folder
-  export PATH=./bin:$PATH
   export PATH=./node_modules/.bin:$PATH
   #User
   export PATH=$PATH:/usr/local/bin

@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 source ~/.profile
-export ZSH=/Users/rich/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -81,6 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/richsoni-config/bash/prompt.sh
 source ~/richsoni-config/sh/aliases.sh
+bindkey -e
 precmd() {
   underline_prompt
 }

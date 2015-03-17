@@ -69,6 +69,7 @@
   alias rrg='rake routes | grep'
   alias becsdc='bundle exec cap staging deploy:current'
   alias bers='bundle exec rails server'
+  alias berd='bundle exec rails console'
   alias bersc='CACHE_CLASSES=true bundle exec rails server'
   alias becsbdc='bundle exec cap sandbox deploy:current'
   alias becsl='bundle exec cap staging log'

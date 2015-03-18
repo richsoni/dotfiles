@@ -38,7 +38,7 @@ highlight TabLineSel term=reverse ctermbg=lightblue ctermfg=16 guibg=#000000
 highlight StatusLine   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
 highlight MatchParen   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
 highlight StatusLineNC term=reverse ctermbg=16 guibg=#000000 cterm=underline ctermfg=lightblue
-highlight CursorLine cterm=underline term=underline
+highlight CursorLine cterm=underline term=underline ctermbg=NONE guifg=none
 
 highlight Variable ctermfg=14
 hi Special term=underline cterm=bold ctermfg=81 guifg=#6699CC
@@ -49,5 +49,3 @@ hi Identifier ctermfg=13 guifg=#FF73FD
 hi Number ctermfg=12 guifg=#96CBFE
 
 highlight PmenuSel ctermfg=16 ctermbg=156
-
-

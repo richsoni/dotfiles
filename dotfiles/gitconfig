@@ -102,6 +102,6 @@
   path=~/$CONFIG_PATH/git/rhyme;
 
 [pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
+  log  = less
+  show = less
+  diff = less

@@ -44,7 +44,8 @@ call vundle#begin()
   Plugin 'tpope/vim-speeddating'
 "languages
   Plugin 'jussi-kalliokoski/harmony.vim'
-  Plugin 'tpope/vim-coffee-script'
+  Plugin 'kchmck/vim-coffee-script'
+  Plugin 'kchmck/mtscout6/vim-cjsx'
   Plugin 'moll/vim-node'
   Plugin 'tpope/vim-haml'
   Plugin 'tpope/vim-markdown'

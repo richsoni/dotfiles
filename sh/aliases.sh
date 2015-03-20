@@ -58,6 +58,7 @@
   alias e='cd ~/workspace/exchange'
   alias p='cd ~/workspace/pos.rb'
   alias c='cd ~/workspace/carbon'
+  alias ds='cd ~/workspace/developer_support'
   alias dasboot='ds kill && ds start'
   hpr(){
     CURRENT_BRANCH=`git branch | grep -e '^*' | cut -d' ' -f2`

@@ -4,3 +4,4 @@ dotfiles/vim/bundle/
 dotfiles/weechat/sec.conf
 dotfiles/weechat/logs
 dotfiles/weechat/weechat.log
+node_modules

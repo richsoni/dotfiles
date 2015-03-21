@@ -1,0 +1,19 @@
+{
+  "name": "richsoni-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/richsoni/richsoni-config"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richsoni/richsoni-config/issues"
+  },
+  "homepage": "https://github.com/richsoni/richsoni-config"
+}

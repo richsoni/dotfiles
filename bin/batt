@@ -1,0 +1,2 @@
+#! /usr/bin/env ruby
+puts `acpi -b`.split(" ").select {|a| a.match(/.*\%/)}[0].gsub(",","")

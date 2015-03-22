@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/richsoni/richsoni-config/issues"
   },
-  "homepage": "https://github.com/richsoni/richsoni-config"
+  "homepage": "https://github.com/richsoni/richsoni-config",
+  "dependencies": {
+    "jslint": "^0.9.0-pre005"
+  }
 }

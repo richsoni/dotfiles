@@ -84,7 +84,7 @@
   ;by default do git pull --rebase
   autosetuprebase = always
 [core]
-  excludesfile = /Users/rich/.gitignore_global
+  excludesfile = $HOME/.gitignore_global
   editor = "vim"
 [diff]
   tool = vimdiff

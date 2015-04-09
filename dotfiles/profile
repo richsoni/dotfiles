@@ -15,6 +15,7 @@
   export PATH=$PATH:/usr/local/sbin
   export PATH=$PATH:/usr/local/share
   export PATH=$PATH:/Applications/Postgres93.app/Contents/MacOS/bin
+  export PATH=$PATH:bin
 
 # Less Colors for Man Pages
   export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking

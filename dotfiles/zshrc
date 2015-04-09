@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 source ~/.profile
 export ZSH=$HOME/.oh-my-zsh
+unsetopt share_history
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,7 +51,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin:/Users/rich/.rvm/gems/ruby-1.9.3-p194@carbon/bin:/Users/rich/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/rich/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/rich/.rvm/bin:./node_modules/.bin:./bin:/Users/rich/.bin:/Users/rich/bin:/usr/local/lib/node_modules:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/share:/Applications/Postgres93.app/Contents/MacOS/bin:/Users/rich/.rvm/bin"
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin:/Users/rich/.rvm/gems/ruby-1.9.3-p194@carbon/bin:/Users/rich/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/rich/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/rich/.rvm/bin:./node_modules/.bin:./bin:/Users/rich/.bin:/Users/rich/bin:/usr/local/lib/node_modules:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/share:/Applications/Postgres93.app/Contents/MacOS/bin:/Users/rich/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

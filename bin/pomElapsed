@@ -1,2 +1,9 @@
-SECONDS_ELAPSED=$((  $(date +%s) - $(stat -f%c ~/pom) ))
-ruby -e "puts \"#{25 - $SECONDS_ELAPSED/60.to_i} min Remaining\""
+#! /usr/bin/env ruby
+FILE    = "/home/rich/pom"
+
+touched = File.mtime(FILE)
+elapsed_seconds = Time.now - touched
+
+elapsed_mins = (elapsed_seconds / 60).to_i
+
+puts "#{25 - elapsed_mins} remaining"

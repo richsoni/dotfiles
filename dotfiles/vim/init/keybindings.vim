@@ -1,3 +1,5 @@
+inoremap <C-X><C-s> <NOP>
+nnoremap <c-w>f :vertical wincmd f<CR>
 nnoremap <silent> gon :call ConcertoBind('set number \| set relativenumber', 'set norelativenumber \| set nonu')<cr>
 nnoremap <silent> gow :call ConcertoBind('set invwrap')<cr>
 nnoremap / ms/
@@ -23,7 +25,7 @@ endfunction
  inoremap <c-]> <c-x><c-]>
  inoremap <c-F> <c-x><c-F>
  inoremap <c-L> <c-x><c-L>
- inoremap <c-s> <c-x>s
+ " inoremap <c-s> <c-x>s
  inoremap <c-@> <space>
 "write after find        
   nnoremap gA gna

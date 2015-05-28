@@ -2,6 +2,20 @@ snippet **
 **$1**
 endsnippet
 
+snippet _blog_post
+---
+layout: post
+date: tk
+title: `!v substitute(expand('%:t:r')[11:],'-','')`
+categories: [tk]
+avatar:     tk
+hero:       tk
+tags:  [tk]
+blurb: tk
+revision: 1
+---
+endsnippet
+
 snippet _journal
 -------------------
 date: `!v system('date') `location: ${1:word}

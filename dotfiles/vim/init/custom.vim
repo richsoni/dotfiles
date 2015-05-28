@@ -10,7 +10,8 @@ augroup mycoffee
   au!
   "Conversion Macros
     au FileType coffee :set suffixesadd=.coffee,.js,.json
-    au FileType coffee :nmap <buffer> \gf <Plug>RailsFind
+    au FileType coffee :nmap <buffer> <leader>gf <Plug>RailsFind
+    au FileType coffee :nmap <buffer> <leader>gF <Plug>RailsSplitFind
     au BufEnter * :call BrowserifyMake()
 augroup end
 

@@ -23,7 +23,7 @@
   alias ci='clisp -i'
   alias ls="ls -G"
   alias q='cd ~/quicklinks;clear; ls'
-  alias v='vim'
+  alias v='nvim'
   alias m='make'
   alias l="ls -G"
   alias mkdir="mkdir -p"

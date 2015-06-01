@@ -21,6 +21,10 @@
   rbc=rebase --continue
   rbs=rebase --skip
 
+  rrrs=rerere status
+  rrrd=rerere diff
+  rrrr=rerere remaining
+
   t=tag
   pt= push --tags
 
@@ -105,3 +109,6 @@
   log  = less
   show = less
   diff = less
+
+[rerere]
+  enabled = true

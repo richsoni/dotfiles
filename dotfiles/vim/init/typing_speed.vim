@@ -1,4 +1,4 @@
-nmap <c-i> :call TypingSpeedInsertModeStart()<cr>
+" nmap <c-i> :call TypingSpeedInsertModeStart()<cr>
 function! TypingSpeedTextInserted()
   if match(v:char, '\s') == 0
     let s:typing_speed_word_count = s:typing_speed_word_count + 1

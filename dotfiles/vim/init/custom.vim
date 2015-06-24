@@ -36,6 +36,10 @@ function! BrowserifyMake()
   endif
 endfunction
 
+function! CompleteLineBelow()
+  normal! b*wd0kJ
+endfunction
+
 function! MarkdownLevel()
     if getline(v:lnum) =~ '^# .*$'
         return ">1"
@@ -61,6 +65,7 @@ endfunction
 augroup markdown
   au BufEnter *.md setlocal foldexpr=MarkdownLevel()
   au BufEnter *.md setlocal foldmethod=expr
+  imap <C-G><C-l> <C-C>:call CompleteLineBelow()<cr>
 augroup end
 augroup lexical
   autocmd!
@@ -69,3 +74,4 @@ augroup lexical
   autocmd FileType text call lexical#init({ 'spell': 0 })
 augroup END
 let g:lexical#thesaurus = ['~/richsoni-config/ascii/mthesaur.txt',]
+

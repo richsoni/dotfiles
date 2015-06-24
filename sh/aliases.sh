@@ -58,6 +58,7 @@
   alias e='cd ~/workspace/exchange'
   alias p='cd ~/workspace/pos.rb'
   alias c='cd ~/workspace/carbon'
+  alias cu='cd ~/workspace/carbon-upstream'
   alias ds='cd ~/workspace/developer_support'
   alias dasboot='ds kill && ds start'
   hpr(){

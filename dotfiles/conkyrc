@@ -54,7 +54,7 @@ ${top name 4}  ${alignr}${color}${top cpu 4} ${top mem 4}
 ${top name 5}  ${alignr}${color}${top cpu 5} ${top mem 5}
 
 ${font AvantGardeLTMedium:bold:size=10}${color2}HTTP Ports ${hr 2}${font}${color}
-${execp netstat -tpln | grep -v "-" | grep "127.0.0.1:" | awk '{split($4, a, ":"); printf("%-14s",a[2])}{split($7,a,"/"); print a[2] }'}
+${execp netstat -tpln | grep -v "-" | grep "127.0.0.1:" | awk '{split($4, a, ":"); printf("%-14s",a[2])}{split($7,a,"/"); printf("%-20s",a[2]); print a[1]}'}
 
 ${font AvantGardeLTMedium:bold:size=10}${color2}Now Playing${hr 2}${font}${color}
 ${execp mpc -f '%artist% - %title%' | head -n1}

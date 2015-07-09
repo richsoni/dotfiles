@@ -8,10 +8,10 @@ own_window_transparent yes
 own_window_argb_visual yes
 own_window_type normal
 own_window_class conky-semi
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_hints undecorated,above,skip_taskbar,skip_pager
 background no
 double_buffer yes
-minimum_size 600 1200
+minimum_size 600 1500
 draw_shades no
 draw_outline no
 draw_borders no
@@ -31,12 +31,19 @@ cpu_avg_samples 2
 override_utf8_locale no
 default_color FFF38F
 color2 98FFFF
+override_utf8_locale yes
 
 
 TEXT
 ${font AvantGardeLTMedium:bold:size=10}${color2}Processors ${hr 2}${font}${color}
 Core 1             ${alignr}${color}${cpu cpu1}%  ${cpubar cpu1}
 Core 2             ${alignr}${color}${cpu cpu2}%  ${cpubar cpu2}
+
+${font AvantGardeLTMedium:bold:size=10}${color2}Network${hr 2}${font}${color}
+Up: ${upspeed wlp3s0}${alignr}Down: ${downspeed wlp3s0}
+
+${font AvantGardeLTMedium:bold:size=10}${color2}Temp ${hr 2}${font}${color}
+${execp sensors | grep temp1 | awk '{printf($2" (max "$5")\n")}' | sed 's/\(,\|\+\|C\)//g'}
 
 ${font AvantGardeLTMedium:bold:size=10}${color2}Memory ${hr 2}${font}${color}
 Memory             ${color}${alignr}${memeasyfree} / ${memmax}
@@ -56,6 +63,14 @@ ${top name 5}  ${alignr}${color}${top cpu 5} ${top mem 5}
 ${font AvantGardeLTMedium:bold:size=10}${color2}HTTP Ports ${hr 2}${font}${color}
 ${execp netstat -tpln | grep -v "-" | grep "127.0.0.1:" | awk '{split($4, a, ":"); printf("%-14s",a[2])}{split($7,a,"/"); printf("%-20s",a[2]); print a[1]}'}
 
+
 ${font AvantGardeLTMedium:bold:size=10}${color2}Now Playing${hr 2}${font}${color}
 ${execp mpc -f '%artist% - %title%' | head -n1}
 ${execp mpc -f '%album% (%date%)' | head -n1}
+
+${font AvantGardeLTMedium:bold:size=10}${color2}Dates${hr 2}${font}${color}
+${execp sed -r -n '/#*CALENDAR*/,/##*/p' ~/Dropbox/gtd/index | grep -ve '^\#.*'}
+
+${font AvantGardeLTMedium:bold:size=10}${color2}Todo${hr 2}${font}${color}
+${execp sed -r -n '/#*TODO*/,/##*/p' ~/Dropbox/gtd/index | grep -ve '^\#.*'}
+

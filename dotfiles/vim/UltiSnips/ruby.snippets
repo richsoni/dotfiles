@@ -8,3 +8,13 @@ def bpp
 	binding.pry
 end
 endsnippet
+
+snippet sdtd
+StatsdConnection.time("$1") do
+  $2
+end
+endsnippet
+
+snippet sdtc
+StatsdConnection.time("$1") { $2 }
+endsnippet

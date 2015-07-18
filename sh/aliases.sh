@@ -56,6 +56,7 @@
   alias teex='cd ~/workspace/pos-chrome-extension/Robotester/tests/'
   alias tedocs='cd ~/Documents/TicketEvolution'
   alias e='cd ~/workspace/exchange'
+  alias eu='cd ~/workspace/exchange-upstream'
   alias p='cd ~/workspace/pos.rb'
   alias c='cd ~/workspace/carbon'
   alias cu='cd ~/workspace/carbon-upstream'

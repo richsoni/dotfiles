@@ -1,6 +1,5 @@
 #MAC OS X STUFF
   alias thes='dict -d moby-thes'
-  alias ielm="emacs --batch --eval '(while t (print (eval (read))))'"
   alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
   alias gr='Rscript $CONFIG_PATH/graph.r'
   alias wifion="networksetup -setairportpower 'en1' on"
@@ -20,7 +19,6 @@
       ls | tail -n1
     fi
   }
-  alias ci='clisp -i'
   alias ls="ls -G"
   alias q='cd ~/quicklinks;clear; ls'
   alias v='nvim'
@@ -30,68 +28,30 @@
   alias ll="ls -Ghla"
   alias lsd="ls -d */"
   alias rm='rm -i'
-  alias dsstart='( ds kill && ds start ) || dsstart'
 #META
-#Join the dots
   alias cdf='cd ~/richsoni-config/'
 #Personal Stuff
-  alias gs='echo "noop"'
   alias rgraph='cd Meta/stats/R'
-  alias biodocs='cd ~/Documents/Notes/Biostat'
-  alias d='cd ~/Documents'  
   alias code='cd ~/code'
-  alias rsource='cd ~/code/libs/rails'
-  alias todo='vim ~/Dropbox/Todo.txt'
   alias gtd='vim ~/Dropbox/gtd/index'
-  alias togo='vi ~/Dropbox/togo.txt'
-  alias irish='vi ~/Dropbox/irish.txt'
   alias gifts='vi ~/Dropbox/Public/gift_ideas.txt'
-  alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
-  alias remote_canary='canary --remote-debugging-port=9222'
 #Ticket Evo Stuff
-  alias temux='~/richsoni-config/tmux_sessions/temux'
-  alias retemux='tmux kill-session -t temux;sudo ls; ds restart;temux'
-  alias tev='cd ~/workspace/ticketevo.vim'
-  alias tegem='cd ~/workspace/ticketevolution-ruby'
-  alias teex='cd ~/workspace/pos-chrome-extension/Robotester/tests/'
-  alias tedocs='cd ~/Documents/TicketEvolution'
   alias e='cd ~/workspace/exchange'
   alias eu='cd ~/workspace/exchange-upstream'
   alias p='cd ~/workspace/pos.rb'
   alias c='cd ~/workspace/carbon'
   alias cu='cd ~/workspace/carbon-upstream'
-  alias ds='cd ~/workspace/developer_support'
   alias dasboot='ds kill && ds start'
   hpr(){
-    CURRENT_BRANCH=`git branch | grep -e '^*' | cut -d' ' -f2`
-    hub pull-request -b ticketevolution:master -h ticketevolution:$CURRENT_BRANCH
+    hub pull-request -h richsoni:$(git symbolic-ref --short HEAD) -b ticketevolution:master
   }
 #Rails Shortcuts
-  alias tmux_rails='~/richsoni-config/tmux_sessions/railsmux'
   alias r='rails'
-  alias rrg='rake routes | grep'
   alias becsdc='bundle exec cap staging deploy:current'
   alias bers='bundle exec rails server'
   alias berc='bundle exec rails console'
   alias bersc='CACHE_CLASSES=true bundle exec rails server'
   alias becsbdc='bundle exec cap sandbox deploy:current'
   alias becsl='bundle exec cap staging log'
-#irc
-  alias bitl="bitlbee -c$HOME/.config/bitlbee/bitlbee.conf"
-#vlc
-  alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -cvlc'
-  alias vlci='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
-  alias subl='open -a Sublime Text 2'
-  alias alteraan='telnet www.ateraan.com 4002'
-
-  function chat { if [[ $( ps aux | grep -v grep | grep "tail -f .*fnotify" ) ]]; then echo Growl running; else echo > ~/.irssi/fnotify; tail -f ~/.irssi/fnotify |  while read; do growlnotify --sticky --image ~/.irssi/irssi-icon.png -m "$REPLY"; echo $REPLY | cut -f1-10 -d" "; done & fi; bitlbee -F -u rich; irssi; }
-  alias cofflint='find . -name "*.coffee" -exec coffeelint -q -f ~/workspace/pos.rb/.git/hooks/config/coffeelint.json {} \;'
-
-  np(){
-    ARGS="$@"
-    sh -c "cd `npm root`/../; npm $ARGS"
-  }
-
-  ffind() {
-    find . -name "*$1*"
-  }
+#arch
+  alias s='sudo systemctl'

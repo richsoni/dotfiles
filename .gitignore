@@ -5,3 +5,10 @@ dotfiles/weechat/sec.conf
 dotfiles/weechat/logs
 dotfiles/weechat/weechat.log
 node_modules
+dotfiles/weechat/irc.conf
+dotfiles/weechat/plugins.conf
+dotfiles/weechat/script/plugins.xml.gz
+dotfiles/weechat/weechat.conf
+dotfiles/weechat/cron.txt
+dotfiles/weechat/python/autoload/cron.py
+dotfiles/weechat/python/cron.py

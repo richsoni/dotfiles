@@ -8,7 +8,7 @@
   alias shared_computers="dns-sd -B _afpovertcp._tcp ."
   wificd(){ networksetup -setairportnetwork 'en1' $1 $2; }
   alias wifipwd="networksetup -getairportnetwork 'en1'"
-#General Stuff
+  #General Stuff
   alias ..="cd .."
   alias pom='touch ~/pom'
   lf(){
@@ -28,15 +28,16 @@
   alias ll="ls -Ghla"
   alias lsd="ls -d */"
   alias rm='rm -i'
-#META
+  #META
   alias cdf='cd ~/richsoni-config/'
-#Personal Stuff
+  #Personal Stuff
   alias rgraph='cd Meta/stats/R'
   alias code='cd ~/code'
   alias gtd='vim ~/Dropbox/gtd/index'
   alias gifts='vi ~/Dropbox/Public/gift_ideas.txt'
-#Ticket Evo Stuff
+  #Ticket Evo Stuff
   alias e='cd ~/workspace/exchange'
+  alias et='cd ~/workspace/exchange3'
   alias eu='cd ~/workspace/exchange-upstream'
   alias p='cd ~/workspace/pos.rb'
   alias c='cd ~/workspace/carbon'

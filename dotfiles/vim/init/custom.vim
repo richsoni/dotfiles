@@ -1,3 +1,6 @@
+function! HashValStr()
+  normal! f,i'Bi'0
+endfunction
 augroup mychecklist
   au!
     au FileType todotxt  :nmap <space> :s/\[\s*\]/\[x\]/e<cr>

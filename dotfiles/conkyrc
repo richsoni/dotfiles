@@ -68,6 +68,9 @@ ${font AvantGardeLTMedium:bold:size=10}${color2}Now Playing${hr 2}${font}${color
 ${execp mpc -f '%artist% - %title%' | head -n1}
 ${execp mpc -f '%album% (%date%)' | head -n1}
 
+${execp dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 2 "artist"|egrep -v "artist"|egrep -v "array"|cut -b 27-}
+${execp dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'|egrep -A 1 "title"|egrep -v "title"|cut -b 44-|cut -d '"' -f 1|egrep -v ^$}
+
 ${font AvantGardeLTMedium:bold:size=10}${color2}Dates${hr 2}${font}${color}
 ${execp sed -r -n '/#*CALENDAR*/,/##*/p' ~/Dropbox/gtd/index | grep -ve '^\#.*'}
 

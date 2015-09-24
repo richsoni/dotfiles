@@ -2,6 +2,9 @@ cabbrev So so
 cabbrev Vne vne
 cabbrev W w
 cabbrev H h
+cabbrev Dasherize s/-\(\w\)/\U\1/g
+cabbrev HashVal call HashValStr()
+
 ab  
 iabbrev bpp binding.pry
 iabbrev cld console.log("~~~~~~")console.log("~~~~~")Oconsole.log()F(a

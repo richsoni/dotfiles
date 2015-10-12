@@ -6,7 +6,7 @@ let g:colors_name = "grb256"
 
 hi pythonSpaceError ctermbg=red guibg=red
 
-hi Comment ctermfg=darkgrey cterm=none
+hi Comment ctermfg=darkgrey cterm=NONE
 
 hi StatusLine ctermbg=darkgrey ctermfg=white
 hi StatusLineNC ctermbg=234 ctermfg=lightblue
@@ -31,16 +31,16 @@ highlight DiffText term=reverse cterm=bold ctermbg=lightgray ctermfg=16
 highlight DiffDelete term=reverse cterm=bold ctermbg=lightred ctermfg=16
 
 highlight Search term=reverse cterm=bold ctermbg=lightgreen ctermfg=16
-highlight VertSplit    term=none ctermbg=none guibg=#000000
+highlight VertSplit    term=NONE ctermbg=NONE guibg=#000000
 highlight SignColumn   term=reverse ctermbg=16 guibg=#000000
-highlight TabLineFill  term=none cterm=none ctermfg=none guibg=#000000
-highlight TabLine      cterm=none term=none ctermbg=none guibg=#000000
-highlight TabLineSel   cterm=none term=reverse ctermbg=lightblue ctermfg=16 guibg=#000000
+highlight TabLineFill  term=NONE cterm=NONE ctermfg=NONE guibg=#000000
+highlight TabLine      cterm=NONE term=NONE ctermbg=NONE guibg=#000000
+highlight TabLineSel   cterm=NONE term=reverse ctermbg=lightblue ctermfg=16 guibg=#000000
 highlight StatusLine   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
-highlight SignColumn   term=none ctermbg=none ctermfg=16 guibg=#000000
+highlight SignColumn   term=NONE ctermbg=NONE ctermfg=16 guibg=#000000
 highlight MatchParen   term=reverse ctermbg=darkblue ctermfg=16 guibg=#000000
-highlight StatusLineNC term=reverse ctermbg=none guibg=#000000 cterm=none
-highlight CursorLine cterm=underline term=underline ctermbg=NONE guifg=none
+highlight StatusLineNC term=reverse ctermbg=NONE guibg=#000000 cterm=NONE
+highlight CursorLine cterm=underline term=underline ctermbg=NONE guifg=NONE
 
 highlight Variable ctermfg=14
 hi Special term=underline cterm=bold ctermfg=81 guifg=#6699CC

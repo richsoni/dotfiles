@@ -1,0 +1,47 @@
+#! /usr/bin/env ruby
+airport = '/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport'
+output  = `#{airport} -s`
+
+# Sample Output
+#                             SSID BSSID             RSSI CHANNEL HT CC SECURITY (auth/unicast/group)
+#                     Honda Guests 0a:18:d6:04:4a:46 -69  11      Y  -- NONE
+#                Paul Miller Honda 04:18:d6:e2:86:4e -51  11      Y  -- WPA(PSK/AES/AES) WPA2(PSK/AES/AES) 
+#                Paul Miller Honda 04:18:d6:04:4a:46 -67  11      Y  -- WPA(PSK/AES/AES) WPA2(PSK/AES/AES) 
+#                     Honda Guests 0a:18:d6:e2:86:4e -49  11      Y  -- NONE
+#        HP-Print-51-LaserJet 1102 a4:17:31:70:39:51 -76  6       N  -- NONE
+#        HP-Print-BD-LaserJet 1102 84:4b:f5:66:ec:bd -84  6       N  -- NONE
+#        HP-Print-57-LaserJet 1102 9c:d2:1e:14:03:57 -73  6       N  -- NONE
+#   HP-Print-EE-Officejet Pro 8600 a4:5d:36:3a:97:ee -87  6       N  -- NONE
+#                Paul Miller Honda 04:18:d6:e2:84:48 -70  6       Y  -- WPA(PSK/AES/AES) WPA2(PSK/AES/AES) 
+#                     Honda Guests 0a:18:d6:e2:85:bf -85  6       Y  -- NONE
+#                     Honda Guests 0a:18:d6:04:4a:cd -40  6       Y  -- NONE
+#                Paul Miller Honda 04:18:d6:04:4a:cd -40  6       Y  -- WPA(PSK/AES/AES) WPA2(PSK/AES/AES) 
+#                      PMHonda2.4G 48:f8:b3:a5:de:7a -45  2       Y  -- NONE
+#                      PARTS-guest b4:75:0e:c0:c1:7a -84  1       Y  -- NONE
+#                            PARTS b4:75:0e:c0:c1:79 -83  1       Y  -- WPA(PSK/AES,TKIP/TKIP) WPA2(PSK/AES,TKIP/TKIP) 
+#                Paul Miller Honda c0:c1:c0:8a:f7:67 -80  1       Y  -- NONE
+#                      xfinitywifi 20:25:64:e5:19:ba -78  161,-1  Y  US NONE
+#                        PMHonda5G 48:f8:b3:a5:de:7b -50  149     Y  -- NONE
+#                Paul Miller Honda 0a:18:d6:e1:86:4e -86  36,+1   Y  -- WPA(PSK/AES/AES) WPA2(PSK/AES/AES) 
+#                     Honda Guests 0e:18:d6:03:4a:46 -85  36,+1   Y  -- NONE
+#                     Honda Guests 0e:18:d6:e1:86:4e -86  36,+1   Y  -- NONE
+#                     Honda Guests 0e:18:d6:03:4a:cd -60  36,+1   Y  -- NONE
+
+# 3 IBSS networks found:
+#                             SSID BSSID             RSSI CHANNEL HT CC SECURITY (auth/unicast/group)
+#                         HP8C0C89 02:2f:ef:f2:37:ee -71  10      N  US NONE
+#                         HP8C0C85 02:21:61:8d:a6:88 -59  10      N  US NONE
+#                          hpsetup 02:24:74:8e:e9:8d -57  6       N  -- NONE
+
+wifis = output
+  .split("\n")
+  .reject { |line| line.match /SSID BSSID/ }
+  .take_while {|line| !line.match /IBSS/}
+  .reject {|line| line == ""}
+  .map {|line| line.split(":")[0][0..-3].strip }
+  .uniq
+
+wifis.each_with_index {|wifi, i| puts "#{i}. #{wifi}"}
+puts "**Select Wifi**"
+input = gets.chomp
+puts `networksetup -setairportnetwork en0 "#{wifis[input.to_i]}"`

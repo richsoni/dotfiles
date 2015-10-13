@@ -21,7 +21,7 @@
   }
   alias ls="ls -G"
   alias q='cd ~/quicklinks;clear; ls'
-  alias v='nvim'
+  alias v='vim'
   alias m='make'
   alias l="ls -G"
   alias mkdir="mkdir -p"

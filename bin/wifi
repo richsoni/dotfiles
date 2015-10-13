@@ -44,4 +44,6 @@ wifis = output
 wifis.each_with_index {|wifi, i| puts "#{i}. #{wifi}"}
 puts "**Select Wifi**"
 input = gets.chomp
-puts `networksetup -setairportnetwork en0 "#{wifis[input.to_i]}"`
+puts "**Password**"
+password = gets.chomp
+puts `networksetup -setairportnetwork en0 "#{wifis[input.to_i]}" "#{password}"`

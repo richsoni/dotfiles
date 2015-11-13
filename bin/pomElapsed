@@ -1,5 +1,5 @@
 #! /usr/bin/env ruby
-FILE    = "/home/rich/pom"
+FILE    = "/Users/richsoni/pom"
 
 touched = File.mtime(FILE)
 elapsed_seconds = Time.now - touched

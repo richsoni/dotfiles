@@ -87,3 +87,5 @@ bindkey -e
 precmd() {
   underline_prompt
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

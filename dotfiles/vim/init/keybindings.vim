@@ -66,6 +66,16 @@ endfunction
     nnoremap <leader>vp :VimuxPromptCommand<CR>
     let VimuxUseNearestPane = 1
     nnoremap <Leader>vl :VimuxRunLastCommand<CR>
+    function! VimuxSlime()
+     call VimuxSendText(@v)
+     call VimuxSendKeys("Enter")
+    endfunction
+
+    vmap <LocalLeader>vs "vy :call VimuxSlime()<CR>
+    let VimuxUseNearest = 1
+
+ " Select current paragraph and send it to tmux
+ nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
 
 "autowrite plugin
   let g:autosave_on = 0 "toggles default behavior

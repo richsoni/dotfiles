@@ -33,8 +33,9 @@
   #Personal Stuff
   alias rgraph='cd Meta/stats/R'
   alias code='cd ~/code'
-  alias gtd='vim ~/Dropbox/gtd/index'
+  alias todo='vim ~/Dropbox/gtd/todo.txt'
   alias gifts='vi ~/Dropbox/Public/gift_ideas.txt'
+  alias gr='cd $(git rev-parse --show-toplevel)'
   #Ticket Evo Stuff
   alias e='cd ~/workspace/exchange'
   alias et='cd ~/workspace/exchange3'

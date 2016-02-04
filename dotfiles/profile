@@ -17,6 +17,7 @@
   export PATH=$PATH:/usr/local/share
   export PATH=$PATH:/Applications/Postgres93.app/Contents/MacOS/bin
   export PATH=$PATH:bin
+  export PATH=$PATH:'script'
 
 # Less Colors for Man Pages
   export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -52,7 +53,7 @@
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #lynx
   export WWW_HOME='http://duckduckgo.com'
-cat $CONFIG_PATH/ascii/voodoo
+cat $CONFIG_PATH/ascii/peace
 if [[ $(test -e nag) && -n "$TMUX" ]]
 then
   nag

@@ -1,3 +1,7 @@
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
 function! HashValStr()
   normal! f,i'Bi'0
 endfunction

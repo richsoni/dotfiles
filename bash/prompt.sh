@@ -84,5 +84,5 @@ _repeat() {
   done
 }
 tty -s && export PROMPT_COMMAND="underline_prompt"
-export PS1="$ "
+export PS1="%{$fg_bold[green]%}$ %{$reset_color%}"
 export PS2="# "

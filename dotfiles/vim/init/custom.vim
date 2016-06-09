@@ -1,3 +1,28 @@
+function! ToReactStyle()
+  "move to quote
+  normal! /stylef'
+  "replace ' with {{}} and put on its own line
+  s/\'/{{/e
+  normal! 2f{a
+  s/\'/}}/e
+  normal! f}ik
+  "replace :\b with : \b
+  s/:\(\w\)/: \1/ge
+  "replace ;
+  s/;/,/ge
+  "add trailing , if not there
+  s/\([^,]\)$/\1,/ge
+  " quote
+  s/:\s\([^,]*\),/: '\1',/ge
+  "replace dashes
+  s/-\(.\)\([^:]*\):/\u\1\2:/ge
+  "breakout
+  let @s='f,a'
+  normal! 1000@s
+  "remove blank line
+  normal! dd
+endfunction
+
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor

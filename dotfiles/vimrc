@@ -45,6 +45,7 @@
     Plugin 'tpope/vim-surround'
     Plugin 'tpope/vim-speeddating'
  " "languages
+    Plugin 'chrisbra/csv.vim'
     Plugin 'jussi-kalliokoski/harmony.vim'
     Plugin 'kchmck/vim-coffee-script'
     Plugin 'moll/vim-node'

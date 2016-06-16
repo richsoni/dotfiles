@@ -18,3 +18,11 @@ endsnippet
 snippet sdtc
 StatsdConnection.time("$1") { $2 }
 endsnippet
+
+snippet _spec
+require 'rails_helper'
+require 'pry'
+
+RSpec.describe $1 do
+end
+endsnippet

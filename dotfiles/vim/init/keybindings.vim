@@ -1,13 +1,9 @@
 inoremap <C-X><C-s> <NOP>
 nnoremap <c-w>f :vertical wincmd f<CR>
-nnoremap <silent> gon :call ConcertoBind('set number \| set relativenumber', 'set norelativenumber \| set nonu')<cr>
-nnoremap <silent> gow :call ConcertoBind('set invwrap')<cr>
 nnoremap / ms/
-let s:counter = 0
-function! MyCounter()
-  let s:counter = s:counter + 1
-  echo(s:counter)
-endfunction
+" nnoremap _ 
+let s:counter = -1
+
 "Typo Commands
   command! W w
   command! Vne vne

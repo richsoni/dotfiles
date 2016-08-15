@@ -49,11 +49,14 @@
   }
 #Rails Shortcuts
   alias r='rails'
+  alias be='bundle exec'
+  alias ber='bundle exec rake'
   alias becsdc='bundle exec cap staging deploy:current'
   alias bers='bundle exec rails server'
   alias berc='bundle exec rails console'
   alias bersc='CACHE_CLASSES=true bundle exec rails server'
   alias becsbdc='bundle exec cap sandbox deploy:current'
   alias becsl='bundle exec cap staging log'
+  alias rr='ranger'
 #arch
   alias s='sudo systemctl'

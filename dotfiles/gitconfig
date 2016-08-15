@@ -3,10 +3,10 @@
 [alias]
   type = "!git config -l | grep alias | cut -c 7-"
 
-  c = commit
+  c = commit --verbose
   scc = "!SKIP_CHECKS=all git commit"
   au= add -u .
-  ca= "!git add .; git add -u .; git commit"
+  ca= "!git add .; git add -u .; git c"
   a=add
   pr = pull --rebase
   poh = push origin HEAD
@@ -20,6 +20,7 @@
   rba=rebase --abort
   rbc=rebase --continue
   rbs=rebase --skip
+  rbih="! f() { git rebase -i HEAD~$1;}; f"
 
   rrrs=rerere status
   rrrd=rerere diff

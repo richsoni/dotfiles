@@ -31,22 +31,10 @@
   #META
   alias cdf='cd ~/richsoni-config/'
   #Personal Stuff
-  alias rgraph='cd Meta/stats/R'
   alias code='cd ~/code'
-  alias todo='vim ~/Dropbox/gtd/todo.txt'
-  alias gifts='vi ~/Dropbox/Public/gift_ideas.txt'
+  alias todo='vim ~/todo.txt'
   alias gr='cd $(git rev-parse --show-toplevel)'
-  #Ticket Evo Stuff
-  alias e='cd ~/workspace/exchange'
-  alias et='cd ~/workspace/exchange3'
-  alias eu='cd ~/workspace/exchange-upstream'
-  alias p='cd ~/workspace/pos.rb'
-  alias c='cd ~/workspace/carbon'
-  alias cu='cd ~/workspace/carbon-upstream'
-  alias dasboot='ds kill && ds start'
-  hpr(){
-    hub pull-request -h richsoni:$(git symbolic-ref --short HEAD) -b ticketevolution:master
-  }
+
 #Rails Shortcuts
   alias r='rails'
   alias be='bundle exec'
@@ -58,5 +46,3 @@
   alias becsbdc='bundle exec cap sandbox deploy:current'
   alias becsl='bundle exec cap staging log'
   alias rr='ranger'
-#arch
-  alias s='sudo systemctl'

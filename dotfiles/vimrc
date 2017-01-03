@@ -11,7 +11,7 @@
 
  "global
     Plugin 'gmarik/Vundle.vim'
-    Plugin 'unblevable/quick-scope'
+    " Plugin 'unblevable/quick-scope'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'benmills/vimux'
     Plugin 'kien/ctrlp.vim'

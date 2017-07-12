@@ -1,14 +1,8 @@
- set nocompatible
- filetype off
- au BufEnter /private/tmp/crontab.* setl backupcopy=yes
- " let g:do_filetype = 0
- " au BufWinEnter,BufAdd * if expand('<afile>') == "" | let g:do_filetype = 1 | endif
- set rtp+=~/.vim/bundle/Vundle.vim
- set rtp+=~/Code/projects/vim/vim-mpc
+ filetype plugin indent on
  runtime! init/**.vim
+
+ set rtp+=~/.vim/bundle/Vundle.vim
  call vundle#begin()
-
-
  "global
     Plugin 'gmarik/Vundle.vim'
     " Plugin 'vim-scripts/quick-scope'
@@ -61,12 +55,6 @@
  " "colors
     Plugin 'vim-scripts/tir_black'
     Plugin 'twerth/ir_black'
-
  call vundle#end()
-
- filetype plugin indent on
  set background=dark
  colorscheme grb256
- " autocmd BufEnter,BufNewFile,BufRead * if &filetype == "" | setlocal ft=2dotxt | endif
- " autocmd BufEnter,BufNewFile,BufRead * if &filetype == "" | setf 2dotxt | endif
- " autocmd BufEnter,BufNewFile,BufRead * syntax on

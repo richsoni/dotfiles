@@ -1,0 +1,2 @@
+#!/usr/bin/env ruby
+puts `curl -s --get 'https://makeitpersonal.co/lyrics' --data-urlencode 'artist=#{`lstn artist`}' --data-urlencode 'title=#{`lstn song`}'`

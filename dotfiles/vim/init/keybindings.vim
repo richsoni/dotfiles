@@ -1,4 +1,7 @@
+nmap cow * :setlocal <C-R>=<SNR>56_toggle("wrap")<CR><CR>
+
 inoremap <C-X><C-s> <NOP>
+nnoremap GG G
 nnoremap <c-w>f :vertical wincmd f<CR>
 nnoremap / ms/
 " nnoremap _ 

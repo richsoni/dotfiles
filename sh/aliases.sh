@@ -1,6 +1,8 @@
 #MAC OS X STUFF
   alias thes='dict -d moby-thes'
   alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+  alias vp='vimpager'
+  alias vc='vimcat'
   alias gr='Rscript $CONFIG_PATH/graph.r'
   alias wifion="networksetup -setairportpower 'en1' on"
   alias wifioff="networksetup -setairportpower 'en1' off"

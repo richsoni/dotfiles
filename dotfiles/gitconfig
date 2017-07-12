@@ -3,6 +3,7 @@
 [alias]
   type = "!git config -l | grep alias | cut -c 7-"
 
+  cae = commit --allow-empty
   c = commit --verbose
   scc = "!SKIP_CHECKS=all git commit"
   au= add -u .
@@ -68,7 +69,6 @@
   mla = "!git la --author='Rich Soni' --author='richsoni'"
   mlal = "!git lal --author='Rich Soni' --author='richsoni'"
 
-
   sl = stash list
   sa = stash apply
   ss = stash show
@@ -110,6 +110,7 @@
   log  = less
   show = less
   diff = less
+  grep = less
 
 [rerere]
   enabled = true

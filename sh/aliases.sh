@@ -34,7 +34,6 @@
   alias cdf='cd ~/richsoni-config/'
   #Personal Stuff
   alias code='cd ~/code'
-  alias todo='vim ~/todo.txt'
   alias gr='cd $(git rev-parse --show-toplevel)'
 
 #Rails Shortcuts
@@ -48,3 +47,5 @@
   alias becsbdc='bundle exec cap sandbox deploy:current'
   alias becsl='bundle exec cap staging log'
   alias rr='ranger'
+
+  alias vmore='vim -u ~/.vimrc.more -'

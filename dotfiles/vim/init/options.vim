@@ -1,5 +1,6 @@
 autocmd QuickFixCmdPost *grep* cwindow
 
+set cm=blowfish2
 set autowrite
 set path+=**
 "UX Stuff
@@ -46,3 +47,4 @@ set noswapfile
 set nobackup
 "for vimux
 let g:VimuxOrientation = "h"
+set iskeyword+=\-

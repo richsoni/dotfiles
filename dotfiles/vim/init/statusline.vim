@@ -5,7 +5,7 @@
 "TEST
 set statusline=\ 
 set statusline+=%n-
-set statusline+=%t "Path to file
+set statusline+=%F "Path to file
 set statusline+=\ 
 set statusline+=%M  "state of file
 set statusline+=%= "switch to right

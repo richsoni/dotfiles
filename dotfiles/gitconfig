@@ -14,6 +14,7 @@
   csc = "!SKIP_CHECKS=all git commit"
   ;COMMMIT ALL
   ca= "!git add .; git add -u .; git c"
+  cam=ca --amend
 
   ch = checkout
   cl = checkout @{-1}

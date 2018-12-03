@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby -W0
+puts 
 
 class IncomingData
   def self.get

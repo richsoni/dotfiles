@@ -42,7 +42,7 @@ class IncomingData
   end
 
   def self.mpc
-    @mpc ||= `mpc`
+    @mpc ||= `mpc 2> /dev/null`
   end
 
   def self.get_from_commands

@@ -23,6 +23,7 @@
   }
   alias ls="ls -G"
   alias q='cd ~/quicklinks;clear; ls'
+  alias cdp='cd -P'
   alias v='vim'
   alias m='make'
   alias l="ls -G"

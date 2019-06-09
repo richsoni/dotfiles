@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+
+file=File.expand_path('~/timer')
+if !File.exists?(file)
+  `touch #{file}`
+end
+
+
+now=`date +%s`.to_i
+last_touch=`stat -f%c ~/timer`.to_i
+
+total_seconds = now - last_touch
+
+secs = (total_seconds % 60).to_i
+mins = (total_seconds / 60).to_i
+
+puts "#{mins}:#{secs}"

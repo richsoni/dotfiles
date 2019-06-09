@@ -47,6 +47,7 @@
   lal = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --all
   mls  = "!git ls --author='Rich Soni' --author='richsoni'"
   ml = "!git ll --author='Rich Soni' --author='richsoni'"
+  ljs = log --format='{ \"hashes\":{ \"commit\":\"%H\", \"tree\":\"%T\", \"parents\":\"%P\" }, \"author\":{ \"date\": \"%aI\", \"name\": \"%an\", \"email\":\"%ae\" }, \"committer\":{ \"date\": \"%cI\", \"name\": \"%cn\", \"email\":\"%ce\" } }'
   mla = "!git la --author='Rich Soni' --author='richsoni'"
   mlal = "!git lal --author='Rich Soni' --author='richsoni'"
 

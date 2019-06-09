@@ -1,9 +1,10 @@
 echo "~/.zshrc"
+source ~/.local_profile
 source ~/.profile
 export ZSH=$HOME/.oh-my-zsh
 unsetopt share_history
 setopt no_share_history
-plugins=(git)
+plugins=(git yarn)
 
 source $ZSH/oh-my-zsh.sh
 source ~/richsoni-config/zsh/prompt.zsh

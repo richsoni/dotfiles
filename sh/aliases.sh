@@ -34,7 +34,6 @@
   #META
   alias cdf='cd ~/richsoni-config/'
   #Personal Stuff
-  alias code='cd ~/code'
   alias gr='cd $(git rev-parse --show-toplevel)'
 
 #Rails Shortcuts

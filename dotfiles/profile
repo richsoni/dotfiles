@@ -53,7 +53,7 @@
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #lynx
   export WWW_HOME='http://duckduckgo.com'
-cat $CONFIG_PATH/ascii/rocket
+$CONFIG_PATH/ascii/agile-manifesto.sh
 if [[ $(test -e nag) && -n "$TMUX" ]]
 then
   nag

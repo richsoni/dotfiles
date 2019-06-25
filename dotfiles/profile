@@ -1,5 +1,4 @@
 #PATH STUFF
-  export CONFIG_PATH=~/richsoni-config
   export NODE_PATH='/usr/local/lib/node_modules'
   export NODE_REPL_HISTORY_FILE='/home/rich/.node_history'
   #Folder

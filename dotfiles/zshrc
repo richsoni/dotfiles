@@ -7,8 +7,8 @@ setopt no_share_history
 plugins=(git yarn)
 
 source $ZSH/oh-my-zsh.sh
-source ~/richsoni-config/zsh/prompt.zsh
-source ~/richsoni-config/sh/aliases.sh
+source $CONFIG_PATH/zsh/prompt.zsh
+source $CONFIG_PATH/sh/aliases.sh
 bindkey -e
 precmd() {
   underline_prompt

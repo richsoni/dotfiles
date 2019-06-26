@@ -47,13 +47,8 @@
 #global options
   export HISTIGNORE='ls:rl:source:pwd:clear:history'
   export HISTCONTROL=ignoredups
-  # export NAG_IGNORE=true
 #setup rvm
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #lynx
   export WWW_HOME='http://duckduckgo.com'
 $CONFIG_PATH/ascii/agile-manifesto.sh
-if [[ $(test -e nag) && -n "$TMUX" ]]
-then
-  nag
-fi

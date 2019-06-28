@@ -1,0 +1,15 @@
+#! /usr/bin/env ruby
+info = ARGV[0]
+input = ARGV[1]
+output_dir = ARGV[2]
+file = File.open(info, "r")
+
+`mkdir -p #{output_dir}`
+commands = file.read.split("\n").each_with_index.map do |line, index|
+  line = line.split(" ")
+  name = line[0]
+  start_time = line[1]
+  end_time = line[2]
+  `sox #{input} #{output_dir}/#{"%.2d" % (index + 1)}-#{name}.mp3 trim #{start_time} \\=#{end_time} norm fade q 2 0 6`
+end
+puts commands

@@ -1,0 +1,67 @@
+#! /usr/bin/env ruby
+require 'yaml'
+
+album_path = ARGV[0]
+www_path = ARGV[1]
+
+args = %w{ album_path www_path }.
+  each_with_index.
+  reduce({}) {|memo, (name, index)|
+    memo[name.to_sym] = ARGV[index]
+    memo
+  }
+
+args.map {|k,path|
+  if !File.exists?(path || "")
+    puts "USAGE: generate-live-album-info album-path www-richsoni-path"
+    puts "bad path: '#{path}' for parameter '#{k}'"
+    exit
+  end
+}
+
+gatsby_path = args[:www_path]+"/packages/gatsby-site"
+
+tracks = Dir.glob(args[:album_path]+"/*.wav").
+  map {|file|
+    parts=(file.split("/")[-1]).split(".")
+    {
+      :year => parts[0].gsub(/[^\d-]*/,''),
+      :location_slug => parts[1],
+      :source => parts[2],
+      :track => parts[3].gsub(/[^\d]*/,'').to_i,
+      :track_slug => parts[4]
+    }
+  }.
+  sort {|a, b| a[:track] <=> b[:track]}
+
+location_info = YAML.load(File.read("#{gatsby_path}/src/data/locations/#{tracks[0][:location_slug]}.yaml"))
+
+puts "Rich Soni"
+puts tracks[0][:year]
+puts location_info["name"]
+puts "#{location_info["address"]["locality"]}, #{location_info["address"]["region"]}"
+puts ""
+puts "source: Soundboard"
+puts "lineage: Yamaha MG10XU -> Tascam #{tracks[0][:source].upcase}"
+puts ""
+puts "tracks:"
+tracks.each {|track|
+    track_num = "%.2d" % (track[:track] + 1)
+    file_path = "#{gatsby_path}/src/songs/#{track[:track_slug]}.md"
+    track = YAML.load(File.read(file_path))
+    puts "#{track_num} #{track["title"]}"
+}
+# Dir.glob()
+
+# puts "ensuring directory #{output_dir}"
+# `mkdir -p #{output_dir}`
+
+# commands = file.read.split("\n").each_with_index.map do |line, index|
+#   line = line.split(" ")
+#   name = line[0]
+#   start_time = line[1]
+#   end_time = line[2]
+#   puts "sox #{input} #{output_dir}/#{"%.2d" % (index + 1)}-#{name}.mp3 trim #{start_time} \\=#{end_time} norm fade q 2 0 6"
+#   puts `sox #{input} #{output_dir}/#{"%.2d" % (index + 1)}-#{name}.mp3 trim #{start_time} \\=#{end_time} norm fade q 2 0 6`
+# end
+# puts commands

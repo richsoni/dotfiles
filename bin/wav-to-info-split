@@ -47,7 +47,7 @@ commands = file.read.split("\n").each_with_index.map do |line, index|
   end_time = line[2]
   track_number = "%.2d" % (index + 1)
   basename = File.basename(output_dir)
-  file_name="#{output_dir}/#{basename}.t#{track_number}.#{track_name}.wav"
+  file_name="#{output_dir}/#{basename}.t#{track_number}.#{track_name}.flac"
   fork {
     system_log("sox #{input} #{file_name} trim #{start_time} \\=#{end_time} norm fade q 2 0 6")
   }

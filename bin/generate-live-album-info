@@ -1,7 +1,12 @@
 #! /usr/bin/env ruby
 require 'yaml'
 
-album_path = ARGV[0]
+def system_log(str)
+  puts str
+  system(str)
+end
+
+album_path = File.expand_path(ARGV[0])
 www_path = ARGV[1]
 
 args = %w{ album_path www_path }.
@@ -21,47 +26,67 @@ args.map {|k,path|
 
 gatsby_path = args[:www_path]+"/packages/gatsby-site"
 
-tracks = Dir.glob(args[:album_path]+"/*.wav").
+tracks = Dir.glob(args[:album_path]+"/*.flac").
   map {|file|
     parts=(file.split("/")[-1]).split(".")
-    {
-      :year => parts[0].gsub(/[^\d-]*/,''),
+    data = {
+      :date => parts[0].gsub(/[^\d-]*/,''),
+      :file => file,
       :location_slug => parts[1],
       :source => parts[2],
       :track => parts[3].gsub(/[^\d]*/,'').to_i,
       :track_slug => parts[4]
     }
+    file_path = "#{gatsby_path}/src/songs/#{data[:track_slug]}.md"
+    www_info = YAML.load(File.read(file_path))
+    data.merge({
+      :title => www_info["title"]
+    })
   }.
   sort {|a, b| a[:track] <=> b[:track]}
 
+puts "tagging flac files"
+
 location_info = YAML.load(File.read("#{gatsby_path}/src/data/locations/#{tracks[0][:location_slug]}.yaml"))
+date = tracks[0][:date]
 
-puts "Rich Soni"
-puts tracks[0][:year]
-puts location_info["name"]
-puts "#{location_info["address"]["locality"]}, #{location_info["address"]["region"]}"
-puts ""
-puts "source: Soundboard"
-puts "lineage: Yamaha MG10XU -> Tascam #{tracks[0][:source].upcase}"
-puts ""
-puts "tracks:"
 tracks.each {|track|
-    track_num = "%.2d" % (track[:track] + 1)
-    file_path = "#{gatsby_path}/src/songs/#{track[:track_slug]}.md"
-    track = YAML.load(File.read(file_path))
-    puts "#{track_num} #{track["title"]}"
+  [
+    ["ALBUM", "#{track[:date]}: Rich Soni Live at #{location_info["name"]}"],
+    ["ARTIST", "Rich Soni"],
+    ["TITLE", track[:title]],
+    ["TRACKNUMBER", "%.2d" % (track[:track])],
+    ["DATE", track[:date]]
+  ].each {|cons|
+    system_log("metaflac --remove-tag='#{cons[0]}' --set-tag='#{cons[0]}=#{cons[1]}' #{track[:file]}")
+  }
 }
-# Dir.glob()
 
-# puts "ensuring directory #{output_dir}"
-# `mkdir -p #{output_dir}`
+output = [
+"Rich Soni",
+date,
+location_info["name"],
+"#{location_info["address"]["locality"]}, #{location_info["address"]["region"]}",
+"",
+"source: Soundboard",
+"lineage: Yamaha MG10XU -> Tascam #{tracks[0][:source].upcase}",
+"",
+"tracks:",
+tracks.map {|track|
+  track_num = "%.2d" % (track[:track])
+  "#{track_num}. #{track[:title]}"
+},
+].flatten
+output.each {|o| puts o}
 
-# commands = file.read.split("\n").each_with_index.map do |line, index|
-#   line = line.split(" ")
-#   name = line[0]
-#   start_time = line[1]
-#   end_time = line[2]
-#   puts "sox #{input} #{output_dir}/#{"%.2d" % (index + 1)}-#{name}.mp3 trim #{start_time} \\=#{end_time} norm fade q 2 0 6"
-#   puts `sox #{input} #{output_dir}/#{"%.2d" % (index + 1)}-#{name}.mp3 trim #{start_time} \\=#{end_time} norm fade q 2 0 6`
-# end
-# puts commands
+file_path = "#{album_path}/#{File.basename(album_path)}.txt"
+puts ""
+puts ""
+puts "Write the above content to '#{file_path}'? [Y/n]"
+response = (STDIN.gets).chomp
+if response == "Y"
+  file = File.open(file_path, "w")
+  output.each {|o| file.puts o}
+  file.close
+  puts "wrote #{file_path}"
+end

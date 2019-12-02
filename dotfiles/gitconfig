@@ -1,4 +1,5 @@
 [alias]
+  root="git rev-parse --show-toplevel"
   bad= "!git status --short | grep --color=always ' M|UU|AA|DU'"
   type= "!git config -l | grep alias | cut -c 7-"
   reset-upstream="! git branch --set-upstream-to=origin/`git cb` `git cb`"
@@ -78,6 +79,9 @@
 
   t=tag
 
+  author-counts="!f() { \
+    git log $@ --pretty=format:%an | sed 's/[^a-zA-Z ]//g' | sort | uniq -c | sort; \
+  }; f"
 ;dont compalain about whitespace when merging
 [apply]
   whitespace = nowarn

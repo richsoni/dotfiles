@@ -48,4 +48,4 @@
   alias becsl='bundle exec cap staging log'
   alias rr='ranger'
 
-  alias vmore='vim -u ~/.vimrc.more -'
+  alias vmore='vim -u ~/.Vimrc.more -'

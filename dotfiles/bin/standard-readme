@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+path = ARGV[0]
+
+def cmd(str)
+  puts "$ #{str}"
+  res = `#{str}`
+  puts res
+  res
+end
+
+cmd("pandoc #{ARGV[0]} | pup 'h1'")

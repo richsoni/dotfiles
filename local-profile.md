@@ -1,4 +1,4 @@
-# Local Profile
+# .local_profile
 
 The ~/.local-profile is outside of source control.  A few of them are:
 1. Define local `$CONFIG_PATH` allowing config to live in any folder

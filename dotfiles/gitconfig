@@ -1,5 +1,5 @@
 [alias]
-  root="git rev-parse --show-toplevel"
+  root="rev-parse --show-toplevel"
   bad= "!git status --short | grep --color=always ' M|UU|AA|DU'"
   type= "!git config -l | grep alias | cut -c 7-"
   reset-upstream="! git branch --set-upstream-to=origin/`git cb` `git cb`"

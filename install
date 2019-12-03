@@ -1,3 +1,6 @@
 find dotfiles -maxdepth 1 -exec bash -c 'ln -sfn $PWD/dotfiles/$( basename {} ) ~/.$( basename {} )' \;
 ln -sfn $PWD/bin/ ~/bin
+touch $HOME/.local_profile
 
+# source script in ./local-profile.md
+sh -c "$(cat ./local-profile.md | sed -n "/::PARSE-START/,/::PARSE-END/p" | grep -v ::PARSE)"

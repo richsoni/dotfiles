@@ -7,9 +7,9 @@ def system_log(str)
 end
 
 album_path = File.expand_path(ARGV[0])
-www_path = ARGV[1]
+cms_path = ARGV[1]
 
-args = %w{ album_path www_path }.
+args = %w{ album_path cms_path }.
   each_with_index.
   reduce({}) {|memo, (name, index)|
     memo[name.to_sym] = ARGV[index]
@@ -24,8 +24,6 @@ args.map {|k,path|
   end
 }
 
-gatsby_path = args[:www_path]+"/packages/gatsby-site"
-
 tracks = Dir.glob(args[:album_path]+"/*.flac").
   map {|file|
     parts=(file.split("/")[-1]).split(".")
@@ -37,17 +35,17 @@ tracks = Dir.glob(args[:album_path]+"/*.flac").
       :track => parts[3].gsub(/[^\d]*/,'').to_i,
       :track_slug => parts[4]
     }
-    file_path = "#{gatsby_path}/src/songs/#{data[:track_slug]}.md"
+    file_path = "#{cms_path}/content/songs/#{data[:track_slug]}.md"
     www_info = YAML.load(File.read(file_path))
     data.merge({
-      :title => www_info["title"]
+      :title => www_info["title"].gsub(/'/,"")
     })
   }.
   sort {|a, b| a[:track] <=> b[:track]}
 
 puts "tagging flac files"
 
-location_info = YAML.load(File.read("#{gatsby_path}/src/data/locations/#{tracks[0][:location_slug]}.yaml"))
+location_info = YAML.load(File.read("#{cms_path}/content/locations/#{tracks[0][:location_slug]}.yaml"))
 date = tracks[0][:date]
 
 tracks.each {|track|

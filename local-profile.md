@@ -11,7 +11,7 @@ The ~/.local-profile is outside of source control.  A few of them are:
 
 This script will setup a ~/.local_profile with CONFIG_PATH populated.
 
-The `../install` script evals the code directly from here (between `::PARSE-START` and `::PARSE-END`)
+The `../install` script evals the code directly from here (between `PARSE-START` and `PARSE-END` tags)
 
 ```sh
 # ::PARSE-START by the ../install script

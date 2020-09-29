@@ -69,6 +69,6 @@ class Tarot
   end
 end
 
-tarot = Tarot.new(Date.parse("2019-09-21"))
+tarot = Tarot.new(Date.parse("2020-09-21"))
 puts "Major: #{tarot.get_major_arcana}"
 puts "Minor: #{tarot.get_minor_arcana}"

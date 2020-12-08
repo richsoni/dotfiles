@@ -1,1 +1,0 @@
-nmcli n off && nmcli n on && nmtui

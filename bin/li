@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-puts `pwd`
-git_branch = `git branch 2> /dev/null | grep '*'`.sub("* ", '')
-puts git_branch unless git_branch.empty?
-puts `lstn 2> /dev/null`

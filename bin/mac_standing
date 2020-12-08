@@ -1,9 +1,0 @@
-IS_THUNDERBOLT=`/usr/sbin/system_profiler SPDisplaysDataType | grep -q Thunderbolt && echo true`;
-IS_MONUTED=`ls /Volumes/ | grep -q Chronicle && echo true`;
-if [[ $IS_THUNDERBOLT = "true" ||  $IS_MONUTED = "true" ]]
-  then
-  STATUS='STANDING'
-else
-  STATUS='Sitting'
-fi
-echo `date "+%Y-%m-%d-%H:%M $STATUS"` >> ~/standing.txt

@@ -1,9 +1,0 @@
-#! /usr/bin/env ruby
-FILE    = "/Users/richsoni/pom"
-
-touched = File.mtime(FILE)
-elapsed_seconds = Time.now - touched
-
-elapsed_mins = (elapsed_seconds / 60).to_i
-
-puts "#{25 - elapsed_mins} remaining"

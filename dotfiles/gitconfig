@@ -87,9 +87,6 @@
 
   t=tag
 
-  author-counts="!f() { \
-    git log $@ --pretty=format:%an | sed 's/[^a-zA-Z ]//g' | sort | uniq -c | sort; \
-  }; f"
 ;dont compalain about whitespace when merging
 [apply]
   whitespace = nowarn
@@ -132,5 +129,3 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
-## HISTORIAN SHORTCUTS

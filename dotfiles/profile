@@ -1,6 +1,5 @@
 #PATH STUFF
   export NODE_PATH='/usr/local/lib/node_modules'
-  export NODE_REPL_HISTORY_FILE='/home/rich/.node_history'
   #Folder
   export PATH=./node_modules/.bin:$PATH
   #User
@@ -43,7 +42,6 @@
   export LC_ALL=en_US.UTF-8
 # define preferred tools
   export EDITOR=vim
-  export PAGER=vimpager
 #global options
   export HISTIGNORE='ls:rl:source:pwd:clear:history'
   export HISTCONTROL=ignoredups
@@ -52,4 +50,3 @@
 #lynx
   export WWW_HOME='http://duckduckgo.com'
   # export GIT_PAGER='cat'
-# $CONFIG_PATH/ascii/agile-manifesto.sh

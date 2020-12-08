@@ -51,4 +51,5 @@
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #lynx
   export WWW_HOME='http://duckduckgo.com'
-$CONFIG_PATH/ascii/agile-manifesto.sh
+  # export GIT_PAGER='cat'
+# $CONFIG_PATH/ascii/agile-manifesto.sh

@@ -1,4 +1,12 @@
 [alias]
+  author-board="shortlog --summary --numbered --email"
+  total-commits="rev-list --all --count"
+  first-commit="rev-list --max-parents=0 HEAD"
+  last-commit="!git rev-list -n 1 HEAD"
+  commits-by-month="!git log --pretty='format:%cd' --date=format:'%Y-%m' | uniq -c | awk '{print ""$2","$1}'"
+  commits-by-author-by-month="!git log --pretty='format:%cd %cn' --date=format:'%Y-%m' | sort | uniq -c | awk '{print $2","$1","$3" "$4" "$5}'"
+  authors-per-month="!git log --pretty='format:%cd %cn' --date=format:'%Y-%m' | sort | grep -v GitHub | uniq -c | awk '{print $2}' | uniq -c"
+
   root="rev-parse --show-toplevel"
   bad= "!git status --short | grep --color=always ' M|UU|AA|DU'"
   type= "!git config -l | grep alias | cut -c 7-"
@@ -124,3 +132,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+## HISTORIAN SHORTCUTS

@@ -103,6 +103,7 @@
 [core]
   excludesfile = $HOME/.gitignore_global
   editor = "vim"
+	ignorecase = false
 [diff]
   tool = vimdiff
 [web]

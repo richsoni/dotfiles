@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+cmd = "tell application \"QuickTime Player\" to set rate of document 1 to #{ARGV[0]}"
+`osascript -e '#{cmd}'`

@@ -42,6 +42,10 @@
   export LC_ALL=en_US.UTF-8
 # define preferred tools
   export EDITOR=vim
+# <<<<<<< HEAD
+# =======
+#   export PAGER=less
+# >>>>>>> update stuff
 #global options
   export HISTIGNORE='ls:rl:source:pwd:clear:history'
   export HISTCONTROL=ignoredups

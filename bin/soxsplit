@@ -52,9 +52,3 @@ else
   Process.waitall
   puts "Done!"
 end
-
-# puts `cat -n $SPLITFILE | xargs -L1 echo $INPUT $OUTPUT_DIR | xargs -L1 sh -c 'echo $0 $1/$2.$3.wav $4 $5'`
-
-# `sox '${audioSource}' '${outputDirectory}/${tracknum}.${key}${extname}' trim ${start} \\=${end}`
-
-

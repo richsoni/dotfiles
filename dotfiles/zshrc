@@ -15,5 +15,6 @@ precmd() {
 }
 
 zstyle ':completion:*' completer _complete _ignored _files
+setopt magic_equal_subst
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

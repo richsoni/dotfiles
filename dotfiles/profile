@@ -6,14 +6,12 @@
   export PATH=$PATH:/usr/local/bin
   export PATH=$PATH:$HOME/.bin
   export PATH=$PATH:$HOME/bin
-  export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
   export PATH=$PATH:$CONFIG_PATH/node_modules/.bin
   #System
   export PATH=$PATH:$NODE_PATH
   export PATH=$PATH:/usr/local/heroku/bin
   export PATH=$PATH:/usr/local/sbin
   export PATH=$PATH:/usr/local/share
-  export PATH=$PATH:/Applications/Postgres93.app/Contents/MacOS/bin
   export PATH=$PATH:bin
   export PATH=$PATH:'script'
 
@@ -54,3 +52,6 @@
 #lynx
   export WWW_HOME='http://duckduckgo.com'
   # export GIT_PAGER='cat'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+require('optparse')
+require('open3')
+
+options = {
+  :splitfile => './Splitfile',
+  :output_dir => './splits',
+  :dry_run => false
+}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: soxsplit input-file"
+  opts.on("-s SPLITFILE", "--splitfile SPLITFILE", "Path to Splitfile (defaults to #{options[:splitfile]})") do |s|
+    options[:splitfile] = s
+  end
+
+  opts.on("-o OUTPUT_DIR", "--output-dir OUTPUT_DIR", "Path to output directory (defaults to #{options[:output_dir]})") do |o|
+    options[:output_dir] = o
+  end
+
+  opts.on("-n", "--dry-run", "dry run") do |o|
+    options[:dry_run] = o
+  end
+
+end.parse!
+
+source = ARGV.pop
+raise "Need to specify a file to process" unless source
+
+cmds = File.read(options[:splitfile]).split(/\n/).each_with_index.map do |line, index|
+  key, start_time, end_time = line.split(" ")
+  "#{index + 1} #{line} #{index}"
+  "sox '#{source}' '#{options[:output_dir]}/#{index + 1}.#{key}#{File.extname(source)}' trim #{start_time} \\=#{end_time}"
+end
+
+if options[:dry_run]
+  puts cmds if options[:dry_run]
+else
+  mkdir = "mkdir #{options[:output_dir]}"
+  `#{mkdir}`
+  cmds.each do |cmd|
+    Process.fork do
+      puts cmd
+      stdout, stderr, status = Open3.capture3(cmd)
+      puts stdout if stdout.length > 0
+      if stderr.length > 0
+        puts "ERROR: #{stderr} from #{cmd}"
+      end
+    end
+  end
+  Process.waitall
+  puts "Done!"
+end
+
+# puts `cat -n $SPLITFILE | xargs -L1 echo $INPUT $OUTPUT_DIR | xargs -L1 sh -c 'echo $0 $1/$2.$3.wav $4 $5'`
+
+# `sox '${audioSource}' '${outputDirectory}/${tracknum}.${key}${extname}' trim ${start} \\=${end}`
+
+
